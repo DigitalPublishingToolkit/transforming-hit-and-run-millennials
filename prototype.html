@@ -2,81 +2,91 @@
 <html>
 
 <head>
+
+	<!-- for more info on the line below, please check: http://www.w3schools.com/css/css_rwd_viewport.asp -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 
 	<link href="css/reset.css" rel="stylesheet">
+
+	<!-- We commented that out because we are not using this. -->
 	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"> -->
 	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="css/prototype.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="css/prototype.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<!-- We need the following two scripts to allow the user to drag and drop things.
+			The second script will allow this functionality in touch screens -->
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
 </head>
+
 <body>
 	<div class="top"> <!-- Here: hamburger button & LOGO -->
 			<div class="header">
 				<i class="fa fa-align-justify fa-lg" aria-hidden="true"></i>
 				<h1 id="logo">Newspaper</h1>
 				<img class="explore" src="images/explorebutton.png" />
-			
-			</div>
+			</div><!-- end .header -->
 
 		<div class="navigation">
 			 <ul class="pagetabs">
+				<!-- for now, we're using images but we'll soon probably use vector instead -->
 			 	<li> <img src="images/RELATEDARTBUTTON2.png" alt="Related Articles"/> </li>
 				<li> <img src="images/ARTICLEBUTTON1.png" alt="Article"/> </li>
 			 	<li> <img src="images/DISCUSSIONBUTTON2.png" alt="Discussion"/> </li>
 			 </ul>
-		</div>
-	</div>
-		<!--<div class="login"> 
+		</div><!-- end .navigation -->
+	</div><!-- end .top -->
+
+		<!--<div class="login">
 			<button class="loginbutton">Log In</button>
 		</div>-->
 
 <!-- Here: CONTENT-->
-	<div id="content">
+<div id="content">
 
-<h2 id="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-<p id="meta">Author Date Time</p>
+	<h2 id="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+	<p id="meta">Author Date Time</p>
 
-<p id="TextCard1"><img src="images/TEXTCARD1.png" alt="TextCard1"/></p>
+	<div id="sortable">
+		<p id="TextCard1"><img src="images/TEXTCARD1.png" alt="TextCard1"/></p>
 
-<p id="GOEXPLORE">You've read 5 articles from us... <br> Time to GO EXPLORE more.</p>
+		<p id="GOEXPLORE">You've read 5 articles from us... <br> Time to GO EXPLORE more.</p>
 
-<p id="ImageCard1"><img src="images/IMAGECARD1.png" alt="ImageCard1"/></p>
+		<p id="ImageCard1"><img src="images/IMAGECARD1.png" alt="ImageCard1"/></p>
+	</div>
 
-<p id="updatetags">Receive updates about... <br> [Author] [Topic] [Tag] </p>
-<p id="updatesocial">On... <br> (Facebook) (Twitter) (Whatsapp) (Email)</p>
-<p id="updateday">Days... <br> Monday - Tuesday - Wednesday - Thursday - Friday - Weekend </p>
+	<p id="updatetags">Receive updates about... <br> [Author] [Topic] [Tag] </p>
+	<p id="updatesocial">On... <br> (Facebook) (Twitter) (Whatsapp) (Email)</p>
+	<p id="updateday">Days... <br> Monday - Tuesday - Wednesday - Thursday - Friday - Weekend </p>
 
-<p id="footer">www.newspaper.nl</p>
+	<p id="footer">www.newspaper.nl</p>
 
+</div><!-- end #content -->
 
+	<div id="share">
+		<i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> <!-- Here: SHARE BUTTON -->
+	</div>
 
-</div>
+	<div id="backtotop">
+		<i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i> <!-- Here: ARROWS UP BUTTON -->
+	</div>
 
-		
-				<div id="share">
-					<i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> <!-- Here: SHARE BUTTON -->
-				</div>
-
-				<div id="backtotop">
-					<i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i> <!-- Here: ARROWS UP BUTTON -->
-				</div>
-
-
-
-<script>
+<!--<script>
     $(document).ready(function(){
 
     // jQuery methods go here...
 
     });
         //end document.ready
-
-</script>
+</script>-->
+<!-- moved this to an external file: js/script.js -->
+<script src="js/script.js"></script>
 
 </body>
 

@@ -3,9 +3,17 @@
 	display: -webkit-flex;
 	display: flex;
 }
-.pagetabs li{    
+.pagetabs li{
 	width: 33%;
-    text-align: center;
+  text-align: center;
+}
+
+li.selected{
+	border-bottom: 3px solid #008080;
+}
+
+.tab-icon{
+	margin-top: 5px;
 }
 
 #logo{
@@ -100,4 +108,17 @@
 
 #footer {
 	margin-top: 100px;
+}
+
+/* svg styles */
+#explore-graphic{
+	fill: #008080;
+}
+
+#center{
+	/* just as an example! */
+	/* if you comment this out, the center will be filled as the rest of the svg */
+	fill: white;
+	stroke: #008080;
+  stroke-width:3px;
 }

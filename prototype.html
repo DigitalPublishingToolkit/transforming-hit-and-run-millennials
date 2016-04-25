@@ -36,8 +36,13 @@
 		<div class="navigation">
 			 <ul class="pagetabs">
 				<!-- for now, we're using images but we'll soon probably use vector instead -->
-			 	<li> <img src="images/RELATEDARTBUTTON2.png" alt="Related Articles"/> </li>
+			 	<li>
+					<a href="#explore">
+						<img src="images/RELATEDARTBUTTON2.png" alt="Explore"/>
+					</a>
+				 </li>
 				<li class="selected">
+					<a href="#article">
 					<!-- <img src="images/ARTICLEBUTTON1.png" alt="Article"/>  -->
 
 					<svg class="tab-icon" height="30" viewBox="0 0 30 30" width="30" >
@@ -55,8 +60,13 @@
 					  </g>
 					 </g>
 					</svg>
+					</a>
 				</li>
-			 	<li> <img src="images/DISCUSSIONBUTTON2.png" alt="Discussion"/> </li>
+			 	<li>
+					<a href="#discussion">
+						<img src="images/DISCUSSIONBUTTON2.png" alt="Discussion"/>
+					</a>
+				</li>
 			 </ul>
 		</div><!-- end .navigation -->
 	</div><!-- end .top -->
@@ -68,6 +78,7 @@
 <!-- Here: CONTENT-->
 <div id="content">
 
+	<div class="tabContent" id="article">
 	<h2 id="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 	<p id="meta">Author Date Time</p>
 
@@ -80,7 +91,17 @@
 	</div>
 
 	<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>
-	
+	</div><!-- end #article -->
+
+	<!-- explore -->
+	<div  class="tabContent"  id="explore">
+		<p>Hello, this is the EXPLORE tab.</p>
+	</div><!-- end #explore -->
+
+	<!-- discussion -->
+	<div  class="tabContent" id="discussion">
+		<p>Hello, this is the DISCUSSION tab.</p>
+	</div><!-- end #explore -->
 
 	<p id="footer"><img src="images/footer.png" alt="Footer"></p>
 

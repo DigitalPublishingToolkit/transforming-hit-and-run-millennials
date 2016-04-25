@@ -1,7 +1,10 @@
 
 $(document).ready(function(){
 
-  $( "#sortable" ).sortable();
+  $( "#sortable" ).sortable({
+    axis: "y", //restraints the dragging to the vertical axis
+    delay: 1000 //requires one second (1000 miliseconds) before dragging
+  });
   $( "#sortable" ).disableSelection();
 
   //this runs everytime the sorting is done

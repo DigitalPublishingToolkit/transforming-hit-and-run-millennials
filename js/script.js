@@ -44,4 +44,110 @@ $(document).ready(function(){
     //alert('clicked on '+bla.target.nodeName);
   });
 
+  /* ////////
+  Paginated content, retrieved from http://stackoverflow.com/questions/11277529/wrap-text-every-2500-characters-in-a-div-for-pagination-using-php-or-javascrip
+
+  with some slight changes
+  (html() instead of text(), fixed page height instead of window.height() )
+  ////// */
+
+  var contentBox = $('#paginated-content');
+
+  //get the text as an array of word-like things
+  var words = contentBox.html().split(' ');
+
+  //define the page height
+  var pageHeight = 300;
+
+  function paginate() {
+        //create a div to build the pages in
+        var newPage = $('<div class="articleTextPage" />');
+        contentBox.empty().append(newPage);
+
+        //start off with no page text
+        var pageText = null;
+        for(var i = 0; i < words.length; i++) {
+            //add the next word to the pageText
+            var betterPageText = pageText ? pageText + ' ' + words[i]
+                                          : words[i];
+            newPage.html(betterPageText);
+
+            //Check if the page is too long
+            // if(newPage.height() > $(window).height()) {
+            if(newPage.height() > pageHeight) { //page height is 300px (defined above)
+                //revert the text
+                newPage.html(pageText);
+
+                //and insert a copy of the page at the start of the document
+                newPage.clone().insertBefore(newPage);
+
+                //start a new page
+                pageText = null;
+            } else {
+                //this longer text still fits
+                pageText = betterPageText;
+            }
+        }
+    }
+
+    //$(window).resize(paginate).resize();
+    //not necessary if the page has fixed height and width
+    //instead, call the function only once
+    paginate();
+
+    /* ////////
+    Position all pages in a stack
+    ////// */
+
+    var numPages = $('#paginated-content').children().length;
+
+    function pilePages(){
+
+      for(var n=0; n < numPages; n++){
+        $('.articleTextPage').eq(n).css({
+            zIndex: 100 - n , //change 100 by another number if there are too many pages
+            top: n * (- (pageHeight + 40 )) - ( n * 4.5), //TO DO: check these values later
+            left: n  * 4
+          });
+
+      } //end for
+
+      $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  / 2));
+
+    } //end pilePages function
+
+    pilePages();
+
+    /* ////////
+    Position all images from img-gallery in a stack
+    ////// */
+    var numImages = $('#img-gallery').children().length;
+    var imgHeight;
+    var galHeight = numImages * 210; //check/fix
+
+    function pileImages(){
+
+      for(var n=0; n < numImages; n++){
+        imgHeight = $('.article-img').eq(n).height();
+
+        $('.article-img').eq(n).css({
+            zIndex: 100 - n , //change 100 by another number if there are too many pages
+            top: n * (- imgHeight  ) - ( n * 4.5), //TO DO: check these values later
+            left: n  * 4
+          });
+
+
+      } //end for
+
+      $('#img-gallery').css({
+        marginBottom: - (galHeight/2) - 60 ,
+        marginTop: 40
+      });
+
+    }// end pileImages function
+
+    //call pileImages function
+    pileImages();
+
+
 });//end document.ready

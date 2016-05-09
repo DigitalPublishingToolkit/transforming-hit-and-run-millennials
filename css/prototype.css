@@ -1,4 +1,4 @@
-.pagetabs {
+.pagetabs, .intTab {
 	list-style: none;
 	display: -webkit-flex;
 	display: flex;
@@ -6,6 +6,16 @@
 .pagetabs li{
 	width: 33%;
   text-align: center;
+}
+.intTab li{
+	width: 50%;
+	text-align: center;
+}
+.tabIntContent{
+	display: none;
+}
+.tabIntContent:first-of-type{
+	display: block;
 }
 
 li.selected{

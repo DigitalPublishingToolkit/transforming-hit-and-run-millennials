@@ -44,6 +44,27 @@ $(document).ready(function(){
     //alert('clicked on '+bla.target.nodeName);
   });
 
+  var curIntContent;
+  var curIntTab;
+
+
+  $('.intTab a').on('click', function(blaEvent){
+    //remove .selected from all li
+    $('.intTab li').removeClass('selected');
+    //add .selected to selected tab
+    curIntTab = $(this).parent();
+    $(curIntTab).addClass('selected');
+    //defines the current content tab
+    curIntContent = $(this).attr('href');
+    //hides all itesm with class .tabContent
+    $('.tabIntContent').hide();
+    //shows current content tab
+    $(curIntContent).show();
+    //disables page 'scroll' to anchor tag
+    blaEvent.preventDefault();
+    //alert('clicked on '+bla.target.nodeName);
+  });
+
   /* ////////
   Paginated content, retrieved from http://stackoverflow.com/questions/11277529/wrap-text-every-2500-characters-in-a-div-for-pagination-using-php-or-javascrip
 
@@ -51,6 +72,7 @@ $(document).ready(function(){
   (html() instead of text(), fixed page height instead of window.height() )
   ////// */
 
+if($('#paginated-content').length){
   var contentBox = $('#paginated-content');
 
   //get the text as an array of word-like things
@@ -95,9 +117,13 @@ $(document).ready(function(){
     //instead, call the function only once
     paginate();
 
+  } // end if
+
     /* ////////
     Position all pages in a stack
     ////// */
+
+if($('#paginated-content').length){
 
     var numPages = $('#paginated-content').children().length;
 
@@ -149,5 +175,6 @@ $(document).ready(function(){
     //call pileImages function
     pileImages();
 
+}// end if
 
 });//end document.ready

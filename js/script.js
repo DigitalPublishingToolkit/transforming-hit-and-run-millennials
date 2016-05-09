@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+/*
   $( "#sortable" ).sortable({
     axis: "y", //restraints the dragging to the vertical axis
     delay: 1000 //requires one second (1000 miliseconds) before dragging
@@ -16,6 +17,7 @@ $(document).ready(function(){
         console.log('On start -> '+ $(ui.item).attr('id')+ ' at position '+ui.item.index());
       }
   });
+  */
 
   //still not saving the position of the items, just allowing the user to play around with the interface for now.
 
@@ -132,13 +134,14 @@ if($('#paginated-content').length){
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- (pageHeight + 40 )) - ( n * 4.5), //TO DO: check these values later
+            top: n * (- (pageHeight + 16 )) - ( n * 4.5), //TO DO: check these values later
             left: n  * 4
           });
 
       } //end for
 
-      $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  / 2));
+     // $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));
+      $('#paginated-content').css('height',pageHeight + 30 + numPages * 4);
 
     } //end pilePages function
 
@@ -158,7 +161,7 @@ if($('#paginated-content').length){
 
         $('.article-img').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- imgHeight  ) - ( n * 4.5), //TO DO: check these values later
+            top: n * (- imgHeight - 16 ) - ( n * 4.5), //TO DO: check these values later
             left: n  * 4
           });
 
@@ -166,7 +169,7 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        marginBottom: - (galHeight/2) - 60 ,
+        marginBottom: - (galHeight/2) + 15 ,
         marginTop: 40
       });
 

@@ -1,3 +1,55 @@
+/* regular */
+@font-face {
+    font-family: 'liberation_serifregular';
+    src: url('font/LiberationSerif-Regular-webfont.eot');
+    src: url('font/LiberationSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/LiberationSerif-Regular-webfont.woff') format('woff'),
+         url('font/LiberationSerif-Regular-webfont.ttf') format('truetype'),
+         url('font/LiberationSerif-Regular-webfont.svg#liberation_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'liberation_serifitalic';
+    src: url('font/LiberationSerif-Italic-webfont.eot');
+    src: url('font/LiberationSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/LiberationSerif-Italic-webfont.woff') format('woff'),
+         url('font/LiberationSerif-Italic-webfont.ttf') format('truetype'),
+         url('font/LiberationSerif-Italic-webfont.svg#liberation_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'liberation_serifbold_italic';
+    src: url('font/LiberationSerif-BoldItalic-webfont.eot');
+    src: url('font/LiberationSerif-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/LiberationSerif-BoldItalic-webfont.woff') format('woff'),
+         url('font/LiberationSerif-BoldItalic-webfont.ttf') format('truetype'),
+         url('font/LiberationSerif-BoldItalic-webfont.svg#liberation_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'liberation_serifbold';
+    src: url('font/LiberationSerif-Bold-webfont.eot');
+    src: url('font/LiberationSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/LiberationSerif-Bold-webfont.woff') format('woff'),
+         url('font/LiberationSerif-Bold-webfont.ttf') format('truetype'),
+         url('font/LiberationSerif-Bold-webfont.svg#liberation_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{font-family: 'liberation_serifregular' ;}
+
+
 .pagetabs, .intTab {
 	list-style: none;
 	display: -webkit-flex;
@@ -10,6 +62,8 @@
 .intTab li{
 	width: 50%;
 	text-align: center;
+	padding: 8px;
+    background-color: #ccc;
 }
 .tabIntContent{
 	display: none;
@@ -20,6 +74,18 @@
 
 li.selected{
 	border-bottom: 3px solid #008080;
+}
+
+.intTab li.selected {
+    border-bottom: 3px solid transparent;
+    background-color: transparent;
+}
+
+.intTab a {
+	font-family: 'liberation_serifbold';
+    font-size: .9em;
+    text-decoration: none;
+    color: #008080;
 }
 
 .tab-icon{
@@ -57,21 +123,24 @@ li.selected{
 }
 
 #content {
-	  background-color: #ebeced;
-    padding: 20px;
+	background-color: #ebeced;
+}
+
+#article {
+	padding: 20px;
 }
 
 #title {
-	  font-weight: bold;
+	  font-family: 'liberation_serifbold';
     font-size: 22px;
 }
 
 #meta {
-    font-size: 16px;
+    font-size: 14px;
     color: gray;
     text-align: left;
     margin-top: 7px;
-    margin-bottom: 7px;
+    margin-bottom: 14px;
 }
 
 #paginated-content{
@@ -83,11 +152,11 @@ li.selected{
 }
 
 .articleTextPage {
-		width: 250px;
+		/* width: 250px; */
 	  background-color: #fff;
     /*border: 1px solid black;*/
 		box-shadow: 1px 1px 3px #999;
-    padding: 25px;
+    padding: 15px;
 		font-size: .8em;
 		line-height: 1.15em;
 		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
@@ -96,7 +165,7 @@ li.selected{
 }
 
 #img-gallery{
-	width: 280px; /* same as .articleTextPage + padding - img border*/
+	width: 250px; /* same as .articleTextPage + padding - img border*/
 	margin: 0 auto; /* this line will place the pages horizontally centered in the window */
 	margin-bottom: 10px;
 	position: relative;
@@ -107,7 +176,7 @@ li.selected{
 #img-gallery img{
 	box-shadow: 1px 1px 3px #999;
 	border: 10px solid #fff;
-	width: 100%;
+	width: 230px;
 	position: relative;
 }
 
@@ -151,6 +220,8 @@ li.selected{
     padding: 10px;
     position: fixed;
     bottom: 10%;
+    left: 0;
+    z-index: 500;
 }
 
 #backtotop {
@@ -165,6 +236,7 @@ li.selected{
 
 #footer {
 	margin-top: 100px;
+	text-align: center;
 }
 
 /* svg styles */

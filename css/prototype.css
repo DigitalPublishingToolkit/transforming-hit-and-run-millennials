@@ -98,16 +98,46 @@ li.selected{
 	margin-left: 14px;
 }
 
-.explore {
-	vertical-align: bottom;
-    float: right;
-    margin-right: 4px;
-}
-
 .header {
 	background-color: black;
 	color: white;
 	padding: 3% 3% 3% 5%;
+}
+
+.fa-user:before {
+    
+	vertical-align: bottom;
+    float: right;
+    margin-right: 7px;
+    margin-left: 100px;
+}
+
+.fa-home:before {
+    
+	vertical-align: bottom;
+    float: right;
+    margin-right: 4px; 
+}
+
+
+.fa-2x {
+	color: #666;
+    margin-top: 5px;
+}
+
+.options {
+	display:inline-block;
+	padding-bottom: 6px;
+}
+
+.fa-volume-up {
+    
+    margin-left: 220px;
+}
+
+.fa-bookmark {
+    margin-right: 4px; 
+    margin-left: 255px;
 }
 
 /* content */

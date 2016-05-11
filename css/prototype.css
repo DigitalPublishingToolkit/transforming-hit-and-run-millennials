@@ -171,7 +171,12 @@ li.selected{
 
 .fa-2x {
 	color: #666;
-    margin-top: 5px;
+    margin-top: 7px;
+    font-size: 26px;
+}
+
+.fa-compass {
+	margin-top: 8px;
 }
 
 .options {

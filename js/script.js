@@ -67,6 +67,27 @@ $(document).ready(function(){
     //alert('clicked on '+bla.target.nodeName);
   });
 
+  var curUpdContent;
+  var curUpdTab;
+
+
+  $('.updateTabs a').on('click', function(blaEvent){
+    //remove .selected from all li
+    $('.updateTabs li').removeClass('selected');
+    //add .selected to selected tab
+    curUpdTab = $(this).parent();
+    $(curUpdTab).addClass('selected');
+    //defines the current content tab
+    curUpdContent = $(this).attr('href');
+    //hides all itesm with class .tabContent
+    $('.tabUpdContent').hide();
+    //shows current content tab
+    $(curUpdContent).show();
+    //disables page 'scroll' to anchor tag
+    blaEvent.preventDefault();
+    //alert('clicked on '+bla.target.nodeName);
+  });
+
   /* ////////
   Paginated content, retrieved from http://stackoverflow.com/questions/11277529/wrap-text-every-2500-characters-in-a-div-for-pagination-using-php-or-javascrip
 
@@ -117,7 +138,7 @@ if($('#paginated-content').length){
     //$(window).resize(paginate).resize();
     //not necessary if the page has fixed height and width
     //instead, call the function only once
-    paginate();
+    //paginate();
 
   } // end if
 
@@ -169,7 +190,7 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        marginBottom: - (galHeight/2) + 15 ,
+        //marginBottom: - (galHeight/2) + 15 ,
         marginTop: 40
       });
 
@@ -179,5 +200,41 @@ if($('#paginated-content').length){
     pileImages();
 
 }// end if
+
+//update tab clicks
+$('.tabUpdContent span').on('click', function(){
+  $(this).toggleClass('clicked');
+});
+
+//hide all divs except #article
+$("#when").hide();
+$("#where").hide();
+
+
+//TOUR
+
+// Instance the tour
+var tour = new Tour({
+  steps: [
+  {
+    element: "#article",
+    title: "Title of my step",
+    content: "Content of my step"
+  }//,
+  // {
+  //   element: "#my-other-element",
+  //   title: "Title of my step",
+  //   content: "Content of my step"
+  // }
+]});
+console.log(tour);
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start(true);
+
+//END TOUR
 
 });//end document.ready

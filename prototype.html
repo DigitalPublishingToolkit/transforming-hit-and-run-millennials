@@ -16,12 +16,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link href="css/prototype.css" rel="stylesheet">
 
+	<!-- tour -->
+	<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 
 	<!-- We need the following two scripts to allow the user to drag and drop things.
 			The second script will allow this functionality in touch screens -->
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/bootstrap-tour-standalone.min.js"></script>
 
 </head>
 
@@ -30,8 +34,10 @@
 			<div class="header">
 				<i class="fa fa-align-justify fa-lg" aria-hidden="true"></i>
 				<h1 id="logo">Newspaper</h1>
+				<span id="service">
 				<i class="fa fa-user fa-lg" aria-hidden="true" alt="user"></i>
 				<i class="fa fa-home fa-lg" aria-hidden="true" alt="home"></i>
+			</span>
 			</div><!-- end .header -->
 
 		<div class="navigation">
@@ -82,34 +88,31 @@
 
 	<div class="tabContent" id="article">
 	<h2 id="title">Facebook is going to start showing you pieces people actually read</h2>
-	<p id="meta">Alex Hern @alexhern <br/> Friday 22 April 2016 11.50 BST</p>
-		
-		<div class= "options"> 
+	<span id="meta">Alex Hern @alexhern <br/> Friday 22 April 2016 11.50 BST</span>
+
+		<span class= "options">
 		  <i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
 		  <i class="fa fa-bookmark fa-lg" aria-hidden="true"></i>
-		</div>
+		</span>
 
 	<div id="sortable">
 
 		<div id="paginated-content">
+			<div class="articleTextPage">
 <p class="lead">Facebook is changing its algorithm yet again, and this time it wants to show you more things that you’ll actually spend time reading or watching.</p>
 <p>The social network looks at a wealth of data when deciding which posts you actually see on News Feed, but until now it hasn’t cared too much about what you actually do when you click away from Facebook. It says that’s going to change.</p>
 <p>“We’re learning that the time people choose to spend reading or watching content they clicked on from News Feed is an important signal that the story was interesting to them,” said software engineer Moshe Blank and research scientist Jie Xu in a post on the company’s website.</p>
-<p>As a result, the site will now attempt to pick links which have a higher reading time. But don’t think that you’ll have a News Feed filled with 30,000 word New Yorker epics. “We will also be looking at the time spent within a threshold,” the pair said, “so as not to accidentally treat longer articles preferentially.”</p>
-<p>It seems that part of the reason for this change is that only recently has Facebook had enough data on user behaviour off-site to create the right metrics. The site still can’t tell what happens to desktop users who click a link that takes them outside Facebook, but the steadily increasing proportion of users who are on the company’s mobile apps, as well as the introduction of Instant Articles, means that Facebook can now hoover up data about a critical mass of its users.</p>
-<p>That also lets it be smart in terms of how it measures reading time. For instance, the algorithm won’t count loading time towards average time reading, only actual time spent reading and watching content.</p>
-<p>The change is the latest example of Facebook tweaking the News Feed in ways that it hopes will encourage users to spend more time on the site. Last summer, it put a similar change in place when it came to posts on the site, promoting the posts which were read for more time even if no links were clicked. And in 2014, it changed the algorithm to penalise “clickbait” – links which users opened then immediately closed. “We learned that this often happened when the article someone clicked on wasn’t what they had expected from the post or the headline,” Blank and Xu wrote.</p>
-
+</div>
 
 		</div><!-- end #paginated-content -->
 
-	<p id="GOEXPLORE">You've read 5 articles from us... <br> Time to GO EXPLORE more.</p>
+	<p><a id="GOEXPLORE" href="#explore">You've read 5 articles from us... <br> Time to GO EXPLORE more.</a></p>
 
-		 <div id="img-gallery"> 
+		 <div id="img-gallery">
 			<!-- all images should have the same size/proportion otherwise it does not look good (personal thought) -->
 			<img class="article-img" src="images/article-01.jpg" />
-			<img class="article-img" src="images/article-02.jpg" />
-			<img class="article-img" src="images/article-03.jpg" />
+			<!--<img class="article-img" src="images/article-02.jpg" />
+			<img class="article-img" src="images/article-03.jpg" />-->
 		 </div> <!-- end article img-gallery -->
 
 		<!-- <p id="TextCard1"><img src="images/TEXTCARD1.png" alt="TextCard1"/></p> -->
@@ -118,11 +121,29 @@
 
 	<i class="fa fa-share-alt fa-lg"> 60 Shares</i>
 
-	<br>
+	<img id="poll" src="images/poll.png" alt="Poll">
 
-	<p id= "poll"><img src="images/poll.png" alt="Poll"></p>
+	<!--<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>-->
 
-	<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>
+<div id="newsUpdate">
+	<h3>Stay Updated with the Newspaper</h3>
+	<p>Only get the notifications you want, when you want and where you want.</p>
+	<ul class="updateTabs">
+		<li class="selected"><a href="#what">What</a></li>
+		<li><a href="#when">When</a></li>
+		<li><a href="#where">Where</a></li>
+	</ul>
+	<div class="tabUpdContent" id="what">
+		<span>Author</span> <span>Social Media</span> <span>Privacy</span> <span>Podcast</span> <span>Copyright</span> <span>Software</span>
+	</div>
+	<div class="tabUpdContent" id="when">
+		<span>Monday</span> <span>Tuesday</span> <span>Wednesday</span> <span>Thursday</span> <span>Friday</span> <span>Weekend</span>
+	</div>
+	<div class="tabUpdContent" id="where">
+		<span><i class="fa fa-facebook" aria-hidden="true"></i></span> <span>Email</span> <span>Twitter</span> <span>Whatsapp</span>
+	</div>
+</div>
+
 	</div><!-- end #sortable -->
 </div><!-- end #article -->
 
@@ -136,7 +157,7 @@
 		<!-- end tab -->
 		<!-- explore content -->
 		<div class="tabIntContent" id="tab1">
-			Content tab 1</div>
+			<img src="images/Explore-Public.png" alt="Explore Public Tab" /></div>
 			<div class="tabIntContent" id="tab2">
 				Content tab 2</div>
 				<!-- end explore content -->

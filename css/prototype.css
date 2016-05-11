@@ -50,7 +50,7 @@
 body{font-family: 'liberation_serifregular' ;}
 
 
-.pagetabs, .intTab {
+.pagetabs, .intTab, .updateTabs {
 	list-style: none;
 	display: -webkit-flex;
 	display: flex;
@@ -63,13 +63,40 @@ body{font-family: 'liberation_serifregular' ;}
 	width: 50%;
 	text-align: center;
 	padding: 8px;
-    background-color: #ccc;
+  background-color: #ccc;
+}
+.updateTabs li{
+  width: 33%;
+  text-align: center;
+  padding: 12px;
+  background-color: #ccc;
+}
+.updateTabs li.selected{
+  background-color: #fff;
 }
 .tabIntContent{
 	display: none;
 }
 .tabIntContent:first-of-type{
 	display: block;
+}
+
+/* update tabs */
+.tabUpdContent span{
+  background-color: rgb(241, 241, 241);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 6px 4px;
+  display: inline-block;
+}
+
+.tabUpdContent span.clicked{
+  background-color: #C0E0E0;
+}
+
+#what, #when, #where{
+  background-color: #fff;
+  padding: 20px;
 }
 
 li.selected{
@@ -88,6 +115,20 @@ li.selected{
     color: #008080;
 }
 
+.updateTabs li.selected{
+  border-bottom: none;
+}
+.updateTabs li a{
+  color: #000;
+  text-decoration: none;
+}
+.updateTabs li.selected a{
+  color: #008080;
+  text-decoration: underline;
+  -moz-text-decoration-color: #008080; /* Code for Firefox */
+  text-decoration-color: #008080;
+}
+
 .tab-icon{
 	margin-top: 5px;
 }
@@ -98,6 +139,14 @@ li.selected{
 	margin-left: 14px;
 }
 
+#service{
+  float: right;
+}
+
+#service .fa:first-of-type{
+  margin-right: 6px;
+}
+
 .header {
 	background-color: black;
 	color: white;
@@ -105,7 +154,7 @@ li.selected{
 }
 
 .fa-user:before {
-    
+
 	vertical-align: bottom;
     float: right;
     margin-right: 7px;
@@ -113,10 +162,10 @@ li.selected{
 }
 
 .fa-home:before {
-    
+
 	vertical-align: bottom;
     float: right;
-    margin-right: 4px; 
+    margin-right: 4px;
 }
 
 
@@ -126,18 +175,18 @@ li.selected{
 }
 
 .options {
-	display:inline-block;
 	padding-bottom: 6px;
+  float: right;
+}
+
+.options .fa:first-of-type{
+  margin-right: 12px;
 }
 
 .fa-volume-up {
-    
-    margin-left: 220px;
 }
 
 .fa-bookmark {
-    margin-right: 4px; 
-    margin-left: 255px;
 }
 
 /* content */
@@ -238,6 +287,9 @@ li.selected{
 #ImageCard1 {
 	text-align: center;
 }
+
+/* explore public */
+#tab1 img{width: 100%;}
 
 
 /* bottom */

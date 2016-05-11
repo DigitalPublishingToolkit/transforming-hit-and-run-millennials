@@ -67,12 +67,18 @@ body{font-family: 'liberation_serifregular' ;}
 }
 .updateTabs li{
   width: 33%;
+  font-size: 16px;
   text-align: center;
-  padding: 12px;
-  background-color: #ccc;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #CCCCCC
+
+  
 }
 .updateTabs li.selected{
   background-color: #fff;
+  color: #3B8080;
+   /*box-shadow: inset 2px 2px 5px rgba(63,63,63, 0.8);*/
 }
 .tabIntContent{
 	display: none;
@@ -88,6 +94,14 @@ body{font-family: 'liberation_serifregular' ;}
   border-radius: 20px;
   margin: 6px 4px;
   display: inline-block;
+  font-size: 14px;
+
+  
+}
+
+#newsUpdate div {
+  box-shadow: 1px 1px 3px #999;
+  margin-bottom: 40px;
 }
 
 .tabUpdContent span.clicked{
@@ -101,6 +115,8 @@ body{font-family: 'liberation_serifregular' ;}
 
 li.selected{
 	border-bottom: 3px solid #008080;
+  font-weight: bold;
+  
 }
 
 .intTab li.selected {
@@ -121,12 +137,13 @@ li.selected{
 .updateTabs li a{
   color: #000;
   text-decoration: none;
+  
 }
 .updateTabs li.selected a{
-  color: #008080;
-  text-decoration: underline;
+  color: #3B8080;
+  /*text-decoration: underline;
   -moz-text-decoration-color: #008080; /* Code for Firefox */
-  text-decoration-color: #008080;
+  /*text-decoration-color: #008080;*/
 }
 
 .tab-icon{
@@ -175,6 +192,13 @@ li.selected{
     font-size: 26px;
 }
 
+.articleShares {
+
+  font-size:12px;
+  color:#CCCCCC;
+  float: right;
+}
+
 .fa-compass {
 	margin-top: 8px;
 }
@@ -219,11 +243,11 @@ li.selected{
     font-size: 22px;
 }
 
-#meta {
+.meta {
     font-size: 14px;
     color: gray;
     text-align: left;
-    margin-top: 7px;
+    margin-top: 12px;
     margin-bottom: 14px;
 }
 
@@ -288,6 +312,20 @@ li.selected{
 	text-align: center;
 }
 
+#newUpdateHeader{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  /* text-decoration: underline;
+  -moz-text-decoration-color: #008080; /* Code for Firefox */
+  /*text-decoration-color: #008080;*/
+}
+
+#newUpdateText{
+  margin-top: 7px;
+  margin-bottom: 12px;
+}
+
 #updatetags {
 	margin-top: 7px;
 	margin-bottom: 7px;
@@ -345,6 +383,7 @@ li.selected{
     z-index: 500;
 }
 
+
 #comment {
 	width: 100%;
     height: auto;
@@ -355,7 +394,19 @@ li.selected{
     display: none; 
 }
 
-#comment img{width: 100%;}
+.subscribe {
+
+  width:70%;  
+  float: center;
+}
+
+.poll {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width:80%;
+
+}
+
 
 #backtotop {
 	position: fixed;

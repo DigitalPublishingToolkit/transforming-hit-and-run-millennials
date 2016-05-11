@@ -217,23 +217,40 @@ $("#where").hide();
 var tour = new Tour({
   steps: [
   {
-    element: "#article",
-    title: "Title of my step",
-    content: "Content of my step"
-  }//,
-  // {
-  //   element: "#my-other-element",
-  //   title: "Title of my step",
-  //   content: "Content of my step"
-  // }
-]});
-console.log(tour);
+    //element: "#title",
+    placement: "bottom",
+    orphan: true,
+    title: "Welcome to the Usability test!",
+    content: "Introduce new users to your product by walking them through it step by step."
+  },
+   {
+     element: ".pagetabs",
+     placement: "bottom",
+     title: "Second step",
+     content: "This is the content of the second step..."
+   },
+    {
+      element: "#discussionTour",
+      placement: "bottom",
+      title: "Third step",
+      content: "This is the content of the third step..."
+    },
+     {
+       element: "#exploreTour",
+       placement: "bottom",
+       title: "Fourth step",
+       content: "This is the content of the third step..."
+     }
+],
+  storage: false
+});
+//console.log(tour);
 
 // Initialize the tour
 tour.init();
 
 // Start the tour
-tour.start(true);
+tour.start();
 
 //END TOUR
 

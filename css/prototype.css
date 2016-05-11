@@ -333,3 +333,8 @@ li.selected{
 	stroke: #008080;
   stroke-width:3px;
 }
+
+/* tour */
+.popover{
+  width: 276px;
+}

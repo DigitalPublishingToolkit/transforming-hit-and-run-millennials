@@ -13,18 +13,25 @@
 	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"> -->
 	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"> -->
 
+	<!-- used only in the tour
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link href="css/prototype.css" rel="stylesheet">
 
 	<!-- tour -->
 	<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">
 
-	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<!-- We need the following two scripts to allow the user to drag and drop things.
 			The second script will allow this functionality in touch screens -->
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- used only in the tour
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
 	<script src="js/bootstrap-tour-standalone.min.js"></script>
 
 </head>
@@ -43,7 +50,7 @@
 		<div class="navigation">
 			 <ul class="pagetabs">
 				<!-- for now, we're using images but we'll soon probably use vector instead -->
-			 	<li>
+			 	<li id="exploreTour">
 					<a href="#explore">
 						<i class="fa fa-compass fa-2x" aria-hidden="true"></i>
 						<!-- <img src="images/RELATEDARTBUTTON2.png" alt="Explore"/> -->
@@ -70,7 +77,7 @@
 					</svg>
 					</a>
 				</li>
-			 	<li>
+			 	<li id="discussionTour">
 					<a href="#discussion">
 						<img src="images/DISCUSSIONBUTTON2.png" alt="Discussion"/>
 					</a>

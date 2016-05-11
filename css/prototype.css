@@ -248,6 +248,20 @@ li.selected{
 		/* the top values will vary accod=rding to the page and will be set via JS */
 }
 
+.pagenr, .imgnr {text-align: center; font-size: .8em;}
+.imgnr{
+	position: relative;
+	top: -2.5em;
+	z-index: 300;
+	background-color: rgba(255, 255, 255, .5);
+	padding: 3px 0;
+}
+
+#interaction {
+	margin-top: 40px;
+}
+
+
 #img-gallery{
 	width: 250px; /* same as .articleTextPage + padding - img border*/
 	margin: 0 auto; /* this line will place the pages horizontally centered in the window */
@@ -300,6 +314,23 @@ li.selected{
 #tab2 img {
     width: 100%;}
 
+#logIn {
+    width: 100%;
+    position: fixed;
+    background-color: #eee;
+    height: 100%;
+    text-align: center;
+}
+
+#logIn img{
+	width: 80%;
+}
+
+/* discussion */
+#discussion img {
+    width: 100%;
+}
+
 /* bottom */
 
 #share {
@@ -313,6 +344,18 @@ li.selected{
     left: 0;
     z-index: 500;
 }
+
+#comment {
+	width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 7%;
+    left: 0;
+    z-index: 500;
+    display: none; 
+}
+
+#comment img{width: 100%;}
 
 #backtotop {
 	position: fixed;

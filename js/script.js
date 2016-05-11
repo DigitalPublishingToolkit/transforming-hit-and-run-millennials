@@ -39,12 +39,63 @@ $(document).ready(function(){
     curContent = $(this).attr('href');
     //hides all itesm with class .tabContent
     $('.tabContent').hide();
+
+  //hides/shows the share button
+    if(curContent == "#article"){
+      $('#share').show();
+      $('#comment').hide();
+    }else{
+      $('#share').hide();
+      if(curContent == "#discussion"){
+        $('#comment').show();
+      }else{
+        $('#comment').hide();
+      }
+    }
     //shows current content tab
     $(curContent).show();
     //disables page 'scroll' to anchor tag
     blaEvent.preventDefault();
     //alert('clicked on '+bla.target.nodeName);
   });
+
+//EXPLORE
+$('#GOEXPLORE').on('click', function(bla){
+  //alert('clicked on '+bla.target.nodeName);
+    //remove .selected from all li
+    $('.pagetabs li').removeClass('selected');
+    //add .selected to selected tab
+    curTab = $('#exploreTour');
+    $(curTab).addClass('selected');
+    //defines the current content tab
+    curContent = $(this).attr('href');
+    //hides all itesm with class .tabContent
+    $('.tabContent').hide();
+
+  //hides/shows the share button
+    if(curContent == "#article"){
+      $('#share').show();
+      $('#comment').hide();
+    }else{
+      $('#share').hide();
+      if(curContent == "#discussion"){
+        $('#comment').show();
+      }else{
+        $('#comment').hide();
+      }
+    }
+    //shows current content tab
+    $(curContent).show();
+    //disables page 'scroll' to anchor tag
+    bla.preventDefault();
+    
+  });
+
+//LOG IN HIDE
+$('#logIn').on("click", function(){
+  $(this).hide();
+});
+
 
   var curIntContent;
   var curIntTab;
@@ -220,26 +271,26 @@ var tour = new Tour({
     //element: "#title",
     placement: "bottom",
     orphan: true,
-    title: "Welcome to the Usability test!",
-    content: "Introduce new users to your product by walking them through it step by step."
+    title: "Welcome to the Newspaper!",
+    content: "First time here? To take a quick tour click on 'Next'."
   },
    {
      element: ".pagetabs",
      placement: "bottom",
-     title: "Second step",
-     content: "This is the content of the second step..."
+     title: "You are now on the Article Section",
+     content: "Swipe to read the rest of the article and to see the other pictures."
    },
     {
       element: "#discussionTour",
       placement: "bottom",
-      title: "Third step",
-      content: "This is the content of the third step..."
+      title: "Discussion Section",
+      content: "Tap here to discover the 'Trending Voices', the comments from our readers and the poll results."
     },
      {
        element: "#exploreTour",
        placement: "bottom",
-       title: "Fourth step",
-       content: "This is the content of the third step..."
+       title: "Explore Section",
+       content: "Here you can read and listen to all our different stories. Log in to create your Personal Explore section."
      }
 ],
   storage: false

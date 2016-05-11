@@ -67,12 +67,18 @@ body{font-family: 'liberation_serifregular' ;}
 }
 .updateTabs li{
   width: 33%;
+  font-size: 16px;
   text-align: center;
-  padding: 12px;
-  background-color: #ccc;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #CCCCCC
+
+  
 }
 .updateTabs li.selected{
   background-color: #fff;
+  color: #3B8080;
+   /*box-shadow: inset 2px 2px 5px rgba(63,63,63, 0.8);*/
 }
 .tabIntContent{
 	display: none;
@@ -88,6 +94,14 @@ body{font-family: 'liberation_serifregular' ;}
   border-radius: 20px;
   margin: 6px 4px;
   display: inline-block;
+  font-size: 14px;
+
+  
+}
+
+#newsUpdate div {
+  box-shadow: 1px 1px 3px #999;
+  margin-bottom: 40px;
 }
 
 .tabUpdContent span.clicked{
@@ -102,6 +116,7 @@ body{font-family: 'liberation_serifregular' ;}
 li.selected{
 	border-bottom: 3px solid #008080;
   font-weight: bold;
+  
 }
 
 .intTab li.selected {
@@ -122,12 +137,13 @@ li.selected{
 .updateTabs li a{
   color: #000;
   text-decoration: none;
+  
 }
 .updateTabs li.selected a{
-  color: #008080;
-  text-decoration: underline;
+  color: #3B8080;
+  /*text-decoration: underline;
   -moz-text-decoration-color: #008080; /* Code for Firefox */
-  text-decoration-color: #008080;
+  /*text-decoration-color: #008080;*/
 }
 
 .tab-icon{
@@ -174,6 +190,13 @@ li.selected{
 	color: #666;
     margin-top: 7px;
     font-size: 26px;
+}
+
+.fa-share-alt span{
+
+  font-size:12px;
+  color:#008080;
+  float: right;
 }
 
 .fa-compass {
@@ -276,8 +299,12 @@ li.selected{
 }
 
 #newUpdateHeader{
-  margin-top: 7px;
+  margin-top: 20px;
   font-size: 18px;
+  font-weight: bold;
+  /* text-decoration: underline;
+  -moz-text-decoration-color: #008080; /* Code for Firefox */
+  /*text-decoration-color: #008080;*/
 }
 
 #newUpdateText{
@@ -307,6 +334,9 @@ li.selected{
 /* explore public */
 #tab1 img{width: 100%;}
 
+/* explore personal*/
+#tab2 img {
+    width: 100%;}
 
 /* bottom */
 
@@ -320,6 +350,19 @@ li.selected{
     bottom: 10%;
     left: 0;
     z-index: 500;
+}
+
+.subscribe {
+
+  width:70%;  
+  float: center;
+}
+
+.poll {
+  margin-top: 40px;
+  margin-bottom: 40;
+  width:80%;
+
 }
 
 #backtotop {

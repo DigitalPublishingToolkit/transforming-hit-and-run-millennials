@@ -64,7 +64,7 @@ body{font-family: 'liberation_serifregular' ;
 .intTab li{
   width: 50%;
 	text-align: center;
-	padding: 15px 0px 10px 0px;
+	padding: 22px 0px 10px 0px;
   background-color: #ccc;
 }
 .updateTabs li{
@@ -127,8 +127,8 @@ li.selected{
 }
 
 .intTab a {
-	font-family: 'liberation_serifbold';
-    font-size: .9em;
+	font-family: 'liberation_serif';
+    font-size: 1em;
     text-decoration: none;
     color: #008080;
 }
@@ -172,6 +172,7 @@ li.selected{
 
 .navigation {
      background-color: #fff;
+     box-shadow: 0px 2px 10px #a8a8a8;
    }
 
 #explore {

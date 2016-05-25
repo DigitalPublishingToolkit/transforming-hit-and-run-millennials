@@ -20,7 +20,7 @@
   <link href="css/prototype.css" rel="stylesheet">
 
 	<!-- tour -->
-	<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+	<!--<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">-->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -32,7 +32,7 @@
 	<!-- used only in the tour
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
 
-	<script src="js/bootstrap-tour-standalone.min.js"></script>
+	<!--<script src="js/bootstrap-tour-standalone.min.js"></script> -->
 
 </head>
 
@@ -49,38 +49,57 @@
 
 		<div class="navigation">
 			 <ul class="pagetabs">
-				<!-- we are using font awesome instead of images as before-->
+				<!-- we are using svgsinstead of images as before-->
+
 			 	<li id="exploreTour">
 					<a href="#explore">
-						<i class="fa fa-compass fa-2x" aria-hidden="true"></i>
-						<!-- <img src="images/RELATEDARTBUTTON2.png" alt="Explore"/> -->
+	<!-- this is the code for the svg of the compass -->
+						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+				 <svg class="tab-icon" height="30" width="30" viewBox="0 0 50 50"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  version="1.1"><g transform="translate(-342.75096,-335.55404)">
+				 	<g transform="translate(44.219714,-162.50846)">
+				 		<path class="svg-element" d="m330.49 510.53-13.36 5.72c-0.19 0.08-0.34 0.23-0.42 0.42l-5.73 13.35c-0.12 0.3-0.06 0.66 0.18 0.89 0.15 0.16 0.36 0.24 0.57 0.24 0.1 0 0.21-0.02 0.32-0.07l13.36-5.72c0.19-0.08 0.34-0.23 0.43-0.42l5.72-13.35c0.13-0.3 0.06-0.66-0.17-0.89-0.23-0.23-0.59-0.3-0.89-0.17zm-17.22 18.28 4.46-10.4 5.95 5.95-10.4 4.46zm11.54-5.6-5.95-5.95 10.4-4.46-4.45 10.41z"/>
+				 		<path id="compass"  d="m321.27 498.42c-12.35 0-22.39 10.04-22.39 22.39 0 12.34 10.05 22.39 22.39 22.39 12.35 0 22.39-10.05 22.39-22.39 0-12.35-10.04-22.39-22.39-22.39z" />
+				 		<path class="svg-element" d="m321.27 504.41c0.62 0 1.13-0.51 1.13-1.14 0-0.63-0.51-1.14-1.13-1.14-0.62 0-1.13 0.51-1.13 1.14 0 0.63 0.51 1.14 1.13 1.14z" />
+				 		<path class="svg-element" d="m321.27 536.47c-0.62 0-1.13 0.51-1.13 1.13 0 0.63 0.51 1.14 1.13 1.14 0.62 0 1.13-0.51 1.13-1.14 0-0.62-0.51-1.13-1.13-1.13z" />
+				 		<path class="svg-element" d="m338.44 519.68c-0.62 0-1.14 0.51-1.14 1.13 0 0.63 0.51 1.14 1.14 1.14 0.62 0 1.13-0.51 1.13-1.14 0-0.62-0.51-1.13-1.13-1.13z" />
+				 		<path class="svg-element" d="m305.82 519.68c-0.62 0-1.13 0.51-1.13 1.13 0 0.63 0.51 1.14 1.13 1.14 0.62 0 1.13-0.51 1.13-1.14 0-0.62-0.51-1.13-1.13-1.13z" />
+				 		<path class="svg-element" d="m321.32 502.11c-0.62 0-1.14 0.51-1.14 1.13 0 0.63 0.51 1.14 1.14 1.14 0.62 0 1.13-0.51 1.13-1.14 0-0.62-0.51-1.13-1.13-1.13z" /></g></g>
+				 	</svg>
+						 								 
 					</a>
 				 </li>
 				<li class="selected">
 					<a href="#article">
-					<!-- <img src="images/ARTICLEBUTTON1.png" alt="Article"/>  -->
+	
+	<!-- this is the code for the svg of the article section-->
+				 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-					<svg class="tab-icon" height="30" viewBox="0 0 30 30" width="30" >
-						<!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
-	          <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
-	          <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
-						<!-- we should work with the proper icons, the translate() below should not be here (but if we remove it now, we won't be able to see our graphic)-->
-					 <g transform="translate(-4 -1025.8)">
-					  <g id="explore-graphic" transform="translate(17,-220)">
-					   <path id="b-arrow" d="m3.8191 1266.6h-5.7c-0.65 0-0.87 0.31-0.94 0.49-0.076 0.18-0.14 0.56 0.32 1l2.4 2.4c0.29 0.29 0.68 0.45 1.1 0.45 0.41 0 0.8-0.16 1.1-0.45l2.4-2.4c0.46-0.46 0.4-0.83 0.32-1-0.074-0.18-0.3-0.49-0.95-0.49z"/>
-					   <path id="t-arrow" d="m-1.8291 1252.6h5.7c0.65 0 0.87-0.3 0.95-0.49 0.076-0.18 0.14-0.56-0.32-1l-2.4-2.4c-0.58-0.58-1.6-0.58-2.2 0l-2.4 2.4c-0.46 0.46-0.4 0.83-0.32 1 0.076 0.18 0.3 0.49 0.94 0.49z"/>
-					   <path id="r-arrow" d="m12.575 1258.6-2.4-2.4c-0.25-0.25-0.5-0.37-0.75-0.37-0.35 0-0.75 0.26-0.75 1v5.7c0 0.74 0.4 1 0.75 1 0.25 0 0.5-0.13 0.75-0.38l2.4-2.4c0.29-0.29 0.45-0.68 0.45-1.1 0-0.41-0.16-0.8-0.45-1.1z"/>
-					   <path id="l-arrow" d="m-7.425 1255.8c-0.25 0-0.5 0.13-0.75 0.37l-2.4 2.4c-0.29 0.29-0.45 0.68-0.45 1.1s0.16 0.8 0.45 1.1l2.4 2.4c0.25 0.25 0.5 0.38 0.75 0.38s0.47-0.13 0.6-0.35c0.1-0.17 0.15-0.39 0.15-0.65v-5.7c0-0.74-0.41-1-0.75-1z"/>
-					   <path id="center" d="m1 1255.3c-2.4 0-4.4 2-4.4 4.4s2 4.4 4.4 4.4 4.4-2 4.4-4.4-2-4.4-4.4-4.4z"/>
-					  </g>
-					 </g>
-					</svg>
+				<svg class="tab-icon"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60"  version="1.1"><defs id="defs5468"/>
+						<metadata id="metadata5471"/><g id="layer1" transform="matrix(2.5755217,0,0,2.5755217,-516.1798,-982.12384)">
+						<g transform="translate(-326.20743,-190.57619)"  >
+							<path  class="svg-element" d="m540.46 589.13-5.66 0c-0.65 0-0.87 0.31-0.94 0.49-0.08 0.18-0.13 0.56 0.32 1.01l2.36 2.36c0.29 0.29 0.68 0.45 1.09 0.45 0.41 0 0.8-0.16 1.09-0.45l2.36-2.36c0.46-0.46 0.4-0.83 0.32-1.01-0.07-0.18-0.3-0.49-0.95-0.49z" />
+							<path  class="svg-element" d="m547.7 581.84-2.36-2.36c-0.25-0.25-0.5-0.37-0.75-0.37-0.35 0-0.75 0.26-0.75 1l0 5.66c0 0.74 0.4 1 0.75 1 0.25 0 0.5-0.13 0.75-0.37l2.36-2.36c0.29-0.29 0.45-0.68 0.45-1.09 0-0.41-0.16-0.8-0.45-1.09z" />
+							<path class="svg-element" d="m534.8 576.73 5.66 0c0.65 0 0.87-0.3 0.95-0.49 0.08-0.18 0.14-0.56-0.32-1.02l-2.36-2.36c-0.58-0.58-1.6-0.58-2.19 0l-2.36 2.36c-0.46 0.46-0.4 0.83-0.32 1.01 0.44 0.37 0.51 0.48 0.94 0.5z" />
+							<path  class="svg-element" d="m530.68 579.1c-0.25 0-0.5 0.13-0.75 0.37l-2.36 2.36c-0.29 0.29-0.45 0.68-0.45 1.09 0 0.42 0.16 0.8 0.45 1.09l2.36 2.36c0.25 0.25 0.5 0.38 0.75 0.38 0.25 0 0.47-0.13 0.6-0.35 0.1-0.17 0.15-0.39 0.15-0.65l0-5.66c-0.05-0.56-0.34-0.89-0.75-0.99z" /></g>
+							<rect  width="8.66" height="8.66" x="207.1" y="388.08" rx="0" ry="0.66" style="stroke-linejoin:round;stroke-miterlimit:4;stroke-width:0.7;"/></g>
+						</svg>
+
+					
 					</a>
 				</li>
 			 	<li id="discussionTour">
 					<a href="#discussion">
-						<i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
-					</a>
+	<!-- this is the code for the svg of the discussion section-->
+						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<svg class="tab-icon" id="comment-bubble"  height="30px" width="30px" viewBox="0 0 130 130"xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  version="1.1">
+						<g transform="translate(-297.56273,-309.68797)"><g transform="translate(-172.18243,85.083111)">
+							<g transform="matrix(5.139704,0,0,5.139704,-1955.2443,-1438.8038)"><path class="svg-element" d="m478.25 336.04c-0.99 0-1.79-0.8-1.79-1.79 0-0.98 0.8-1.79 1.79-1.79 0.98 0 1.78 0.8 1.78 1.79 0 0.99-0.8 1.79-1.78 1.79z" />
+								<path class="svg-element" d="m483.61 336.04c-0.98 0-1.79-0.8-1.79-1.79 0-0.98 0.8-1.79 1.79-1.79 0.98 0 1.79 0.8 1.79 1.79 0 0.99-0.8 1.79-1.79 1.79z" />
+								<path class="svg-element" d="m488.97 336.04c-0.98 0-1.79-0.8-1.79-1.79 0-0.98 0.8-1.79 1.79-1.79 0.99 0 1.79 0.8 1.79 1.79 0 0.99-0.8 1.79-1.79 1.79z" /></g><g transform="matrix(-5.139704,0,0,5.139704,3015.9905,-1438.8038)" >
+								<path  d="M490.44 347.07 487.17 343.71c-1.16 0.35-2.35 0.52-3.56 0.52-6.23 0-11.29-4.51-11.29-10.05 0-5.54 5.07-10.04 11.3-10.04 6.23 0 11.3 4.51 11.3 10.04 0 2.91-1.41 5.66-3.88 7.57l1.08 4.82z" /></g></g></g>
+							</svg>
+						</a>
 				</li>
 			 </ul>
 		</div><!-- end .navigation -->

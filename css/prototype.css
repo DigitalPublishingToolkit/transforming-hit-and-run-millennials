@@ -62,9 +62,9 @@ body{font-family: 'liberation_serifregular' ;
   text-align: center;
 }
 .intTab li{
-	width: 50%;
+  width: 50%;
 	text-align: center;
-	padding: 8px;
+	padding: 15px 0px 10px 0px;
   background-color: #ccc;
 }
 .updateTabs li{
@@ -146,10 +146,6 @@ li.selected{
   /*text-decoration: underline;
   -moz-text-decoration-color: #008080; /* Code for Firefox */
   /*text-decoration-color: #008080;*/
-}
-
-.tab-icon{
-	margin-top: 5px;
 }
 
 #logo{
@@ -456,18 +452,44 @@ li.selected{
 	text-align: center;
 }
 
-/* svg styles */
-#explore-graphic{
-	fill: #008080;
+/* General navigation svg styles */
+.selected .tab-icon  {   /* the svg selected is turquiose */
+  stroke: #008080;  
+  stroke: 1.5;
+  
+  
+}
+.tab-icon {   /* default svg color when not selected */
+  stroke: #696969;
+  stroke-width: 1;
+  padding-top: 10px;
+  fill: none;
+  }
+
+.selected .svg-element { /*fills the little svg elements when active*/
+fill: #008080;
 }
 
-#center{
+/*  Style for the explore section svg*/
+
+
+#compass {
+ stroke-width: 2;
+
+}
+
+
+/*  Style for the article section svg*/
+
+
+
+  /*.explore-graphic{
 	/* just as an example! */
 	/* if you comment this out, the center will be filled as the rest of the svg */
-	fill: white;
-	stroke: #008080;
-  stroke-width:3px;
-}
+	/*fill: white; */
+	/*stroke: #008080;
+  stroke-width:2px;
+} */
 
 /* tour */
 .popover{

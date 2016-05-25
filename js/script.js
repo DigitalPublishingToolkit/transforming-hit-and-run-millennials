@@ -298,10 +298,10 @@ var tour = new Tour({
 //console.log(tour);
 
 // Initialize the tour
-tour.init();
+//tour.init();
 
 // Start the tour
-tour.start();
+//tour.start();
 
 //END TOUR
 

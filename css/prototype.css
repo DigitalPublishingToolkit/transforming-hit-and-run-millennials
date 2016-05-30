@@ -343,6 +343,11 @@ object{
 	position: relative;
   }
 
+  .relatedArticles {
+  width:100%;
+
+  }
+
 #TextCard1 {
 	text-align:center;
 }
@@ -614,6 +619,9 @@ stroke-width: 3px;
  stroke: white;
  stroke-width: 3;
  fill: none;
+}
+#shared {
+  display:none;
 }
 
 .share-svg {

@@ -150,7 +150,7 @@ li.selected{
 
 #logo{
 	display: inline;
-	font-size: 23px;
+	font-size: 20px;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   vertical-align: top;
@@ -233,7 +233,7 @@ li.selected{
 }
 
 .options {
-	padding-bottom: 6px;
+	padding: 20px 0px 5px 0px;
   float: right;
 }
 
@@ -604,6 +604,12 @@ stroke-width: 3px;
 
 }
 
+.article-svg {
+  stroke: #696969;
+  stroke-width: 1px;
+  fill:none;
+
+}
 #share {
  stroke: white;
  stroke-width: 3;

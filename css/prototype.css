@@ -464,7 +464,7 @@ input[type="checkbox"]{display:none;}
 }
 .social ul {
   margin-left :10%;
-  margin-bottom: 30%;
+  margin-bottom: 23%;
   color:#fff;
   height:36px;
   width:180px;
@@ -502,8 +502,8 @@ input[type="checkbox"]{display:none;}
 }*/
 
 
-#facebook  {background:#3b5998}
-#twitter  {background:#6CDFEA}
+#facebook {background:#3b5998}
+#twitter {background:#6CDFEA}
 #whatsapp {background:#34af23}
 
 
@@ -534,9 +534,6 @@ input[type="checkbox"]{display:none;}
 
 }
 
-.relatedArticles {
-  width: 100%;
-}
 
 #backtotop {
 	position: fixed;
@@ -621,8 +618,10 @@ stroke-width: 3px;
 
 .share-svg {
  stroke: white;
- stroke-width: 10;
+ stroke-width: 4px;
+ fill:white;
  }
+
 
 #fill-svg {
   fill: white;

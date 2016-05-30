@@ -150,8 +150,9 @@ li.selected{
 
 #logo{
 	display: inline;
-	font-size: 22px;
+	font-size: 21px;
   text-align: left;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -268,7 +269,7 @@ object{
 
 .content {
 	background-color: #ebeced;
-  padding-top: 80px;
+  padding-top: 90px;
 
 }
 
@@ -277,16 +278,17 @@ object{
 }
 
 #title {
-	  font-family: 'liberation_serifbold';
-    font-size: 22px;
+	  font-family: 'liberation_serifregular';
+    font-size: 26px;
+    margin: 8px 0px;
+    line-height: 25px;
 }
 
 .meta {
-    font-size: 14px;
-    color: gray;
+    font-size: 12px;
+    color: #696969;
     text-align: left;
-    margin-top: 12px;
-    margin-bottom: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #paginated-content{

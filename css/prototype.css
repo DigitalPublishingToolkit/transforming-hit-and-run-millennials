@@ -150,26 +150,27 @@ li.selected{
 
 #logo{
 	display: inline;
-	font-size: 21px;
+	font-size: 23px;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
+
 
 }
+
 
 #service{
   float: right;
 }
 
-#service .fa:first-of-type{
-  margin-right: 6px;
-}
+
 
 /* position and z-index make the navigation and the header to a fixed one (via class .top) */
 
 .header {
 	background-color: black;
 	color: white;
-	padding: 3% 3% 3% 5%;
+	padding: 4% 3% 2% 3%;
  }
 
 .navigation {
@@ -599,7 +600,7 @@ stroke-width: 3px;
 
 .main-nav-svg {
    stroke: white;
-   stroke-width: 0.8;
+   stroke-width: 1px;
 
 }
 
@@ -616,4 +617,5 @@ stroke-width: 3px;
 
 #fill-svg {
   fill: white;
+  padding-top: 2px;
 }

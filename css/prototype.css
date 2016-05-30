@@ -73,7 +73,8 @@ body{font-family: 'liberation_serifregular' ;
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #CCCCCC
+  background-color: #CCCCCC;
+  font-family: 'Open Sans', sans-serif;
 
   
 }
@@ -113,6 +114,7 @@ body{font-family: 'liberation_serifregular' ;
 #what, #when, #where{
   background-color: #fff;
   padding: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 li.selected{
@@ -199,22 +201,6 @@ li.selected{
 
 }*/
 
-.fa-user:before {
-
-	vertical-align: bottom;
-    float: right;
-    margin-right: 7px;
-    margin-left: 100px;
-}
-
-.fa-home:before {
-
-	vertical-align: bottom;
-    float: right;
-    margin-right: 4px;
-}
-
-
 .fa-2x {
 	color: #666;
     margin-top: 7px;
@@ -228,10 +214,6 @@ li.selected{
   float: right;
 }
 
-.fa-compass {
-	margin-top: 8px;
-}
-
 .options {
 	padding: 20px 0px 5px 0px;
   float: right;
@@ -241,15 +223,9 @@ li.selected{
   margin-right: 12px;
 }
 
-.fa-volume-up {
-}
 
-.fa-bookmark {
-}
 .pagetabs li a{width: 100%; height: auto; display: inline-block;  }
 
-object{
-  pointer-events: none;
   /* This will 'remove' any rights from the <object> of responding to the mouse/pointer.
   We can use this solution when we don't need :hover support inside the SVG.*/
 }
@@ -295,9 +271,9 @@ object{
 #paginated-content{
 	white-space: pre-wrap; /* respect line breaks */
 	margin-bottom: 10px;
-	/*position: relative;
+	/*position: relative;*/
 	top: 0;
-	left: 0;*/
+	left: 0;
 }
 
 .articleTextPage {
@@ -315,11 +291,11 @@ object{
 
 .pagenr, .imgnr {text-align: center; font-size: .8em;}
 .imgnr{
-	position: relative;
-	top: -2.5em;
-	z-index: 300;
-	background-color: rgba(255, 255, 255, .5);
-	padding: 3px 0;
+  position: relative;
+  top: -2.5em;
+  z-index: 200;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 3px 0;
 }
 
 #interaction {
@@ -360,8 +336,9 @@ object{
 
 #newUpdateHeader{
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
   /* text-decoration: underline;
   -moz-text-decoration-color: #008080; /* Code for Firefox */
   /*text-decoration-color: #008080;*/
@@ -369,22 +346,26 @@ object{
 
 #newUpdateText{
   margin-top: 7px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #updatetags {
 	margin-top: 7px;
 	margin-bottom: 7px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #updatesocial {
 	margin-top: 7px;
 	margin-bottom: 7px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #updateday {
 	margin-top: 7px;
 	margin-bottom: 7px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #ImageCard1 {

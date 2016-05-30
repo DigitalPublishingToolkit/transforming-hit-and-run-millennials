@@ -566,14 +566,14 @@ input[type="checkbox"]{display:none;}
 /* General navigation svg styles */
 .selected .tab-icon  {   /* the svg selected is turquiose */
   stroke: #008080;  
-  stroke: 2;
+  stroke: 2.5px;
   
   
 }
 .tab-icon {   /* default svg color when not selected */
   stroke: #696969;
-  stroke-width: 1;
-  padding:10px 0px;
+  stroke-width: 1.5px;
+  padding:10px 0px 0px 0px;
   fill: none;
   }
 
@@ -583,9 +583,14 @@ fill: #008080;
 
 /*  Style for the explore section svg*/
 
-#compass {
+/* #compass {
  stroke-width: 1;
 
+}*/
+
+#comment-bubble {
+stroke-width: 3px;
+  
 }
 
 /*  Style for the top menu svgs*/

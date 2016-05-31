@@ -58,12 +58,14 @@
 					<h1 id="logo">NEWSPAPER</h1> 
 					<span id="service">
 <!--SVG code for USER button-->
+<span id="user">
 				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 						<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-						<svg class="main-nav-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 360 360" height="30" width="30" version="1.1" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+						<svg  class="main-nav-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 360 360" height="30" width="30" version="1.1" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 						<circle cx="129.38" cy="60" r="60" style="stroke-width:12"/>
 						<path d="m129.38,150c-60.061,0-108.75,48.689-108.75,108.75h217.5c-0.01-60.06-48.69-108.75-108.75-108.75z" style="stroke-width:12" />
 						</svg>
+					</span>
 <!--SVG code for HOME Button-->
 				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 					<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -173,9 +175,9 @@
 
 			<div class="articleTextPage">
 			<p class="lead">The first week of this sprint, our team needed some inspiration so we decided to have a creative brainstorming session all together. Initially, we used a series of method cards of the Design Methods Toolkit from the MediaLAB Amsterdam to get some necessary insights for our redesign and usability processes. These were the cards we picked: Written scenario, Navigation map, Customer experience, Emotional journey, Wireframes, Clickable Prototype, Through other eyes, Heuristic evaluation, Think out loud.</p>
-			<p>
+			<!--<p>
 			In this way, we could gain a more focused understanding or vision about defining goals, knowing context, knowing the user, framing insights, ideation, prototyping and testing.
-		</p>			
+		</p>	-->		
 			<p class="pagenr">1/6</p>
 		</div>	
 
@@ -204,7 +206,9 @@
 
 	<!--<img class="poll" src="images/poll.png" alt="Poll">-->
 
-<hr>
+<hr class="lines">
+
+<h2 class="subheader">POLL</h2>
 <div class="poll">
 	<span>Do you hate Donald Trump?</span></br>
 	<span class="pollOptions">Yes</span>
@@ -218,18 +222,18 @@
 	<input id="submit-button" type="submit" name="submit" value="Submit"></input>
 </div>
 
-<hr>
+<!--<hr class="lines">
 	<!--<img class="pollresultsArticle" src="images/pollresultsArticle.png" alt="PollResultsArticle">-->
 
-	<img class= "relatedArticles" src="images/relatedarticles.png" alt="relatedArticles">
+	
+   <!--<img class= "relatedArticles" src="images/relatedarticles.png" alt="relatedArticles">-->
 
 
-
-
+<hr class="lines">
 	<!--<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>-->
 
 <div id="newsUpdate" >
-	<h3 id="newUpdateHeader">Stay Updated with the News</h3>
+	<span class="subheader">News Butler</span>
 	<p id="newUpdateText">Get the news you want, when you want and where you want.</p>
 	<ul class="updateTabs">
 		<li class="selected"><a href="#what">What</a></li>
@@ -252,8 +256,6 @@
 		<span><i class="fa fa-facebook" aria-hidden="true"></i></span> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> <span><i class="fa fa-twitter" aria-hidden="true"></i></span> <span><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
 
 		<button class="signUpdate">SIGN UP</button>
-		
-
 	</div>
 </div>
 

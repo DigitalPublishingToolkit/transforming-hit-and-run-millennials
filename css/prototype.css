@@ -64,8 +64,9 @@ body{font-family: 'liberation_serifregular' ;
 .intTab li{
   width: 50%;
 	text-align: center;
-	padding: 19px 0px 4px 0px;
+	padding: 19px 0px 5px 0px;
   background-color: #ccc;
+  
 }
 .updateTabs li{
   width: 33%;
@@ -74,13 +75,14 @@ body{font-family: 'liberation_serifregular' ;
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #CCCCCC;
-  font-family: 'Open Sans', sans-serif;
+  
 
   
 }
 .updateTabs li.selected{
   background-color: #fff;
   color: #3B8080;
+ 
    /*box-shadow: inset 2px 2px 5px rgba(63,63,63, 0.8);*/
 }
 .tabIntContent{
@@ -105,6 +107,9 @@ body{font-family: 'liberation_serifregular' ;
 #newsUpdate div {
   box-shadow: 1px 1px 3px #999;
   margin-bottom: 40px;
+  position:relative;
+  float:left;
+
 }
 
 .tabUpdContent span.clicked{
@@ -124,7 +129,7 @@ body{font-family: 'liberation_serifregular' ;
 }
 
 .signUpdate {
-      display: -webkit-inline-box;
+    display: -webkit-inline-box;
     float: right;
     margin-top: 8px;
 }
@@ -141,7 +146,7 @@ li.selected{
 }
 
 .intTab a {
-	font-family: 'liberation_serif';
+	  font-family: 'Open Sans', sans-serif;;
     font-size: 1em;
     text-decoration: none;
     color: #008080;
@@ -153,6 +158,7 @@ li.selected{
 .updateTabs li a{
   color: #000;
   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
   
 }
 .updateTabs li.selected a{
@@ -202,12 +208,13 @@ li.selected{
 #headingExplore {
     padding: 6px 88px 5px 94px;
     display: flex;
-    margin-bottom: 7px;
+    margin-top: 14px;
     position: relative;
     text-align: center;
     background-color: rgba(0, 128, 128, 0.29);
     font-family: 'open sans';
     color: #FFFFFF;
+    font-weight: lighter;
 }
 
 .top {
@@ -291,6 +298,7 @@ li.selected{
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     float: left;
+    line-height: 15px;
 }
 
 #paginated-content{
@@ -566,15 +574,31 @@ input[type="checkbox"]{display:none;}
 }
 
 .poll {
-  margin: 20px 20px 100px 0px;
-  width:100%;
+  padding:0px 0px 90px 0px;
+  margin-bottom: 10px;
+  width:85%;
   font-family: 'Open Sans', sans-serif;
-}
+  /*background-color: white;*/
+  position: relative;
+  }
 
 .poll span {
   font-size: 19px;  
   position:relative; 
   }
+
+  .subheader {
+  font-size: 24px;
+  /*position:relative;
+  float:left;*/
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  margin: 5px 0px;
+  padding:0px;
+
+  }
+
 
 #submit-button{
  font-family: 'Open Sans', sans-serif;
@@ -583,10 +607,10 @@ input[type="checkbox"]{display:none;}
  float:right;
  text-align: center;
  color:white;
- border-radius: 50px;
+ border-radius: 20px;
  border:none;
  vertical-align: top;
- padding:13px;
+ padding:10px;
  position:relative; 
  margin: 10px;
 }
@@ -595,14 +619,13 @@ input[type="checkbox"]{display:none;}
  background-color:#fff;
  text-align: center;
  color: black;
- border: 1px solid #eee;
+ border: 1px solid #5a5a5a;
  position:relative;  
- top: 5px;
- margin: 10px;
+ top: 15px;
+ margin: 0px 5px 0px 0px;
  float:left;
  padding:10px;
  border-radius: 20px;
- width: 30px;
 }
 
 .clicked {
@@ -611,8 +634,8 @@ input[type="checkbox"]{display:none;}
  text-align: center;
  color: black;
  position:relative;  
- top: 5px;
- margin: 10px;
+ top: 15px;
+ margin: 0px 5px 0px 0px;
  float:left;
  padding:11px;
  border-radius: 20px;
@@ -632,10 +655,14 @@ input[type="checkbox"]{display:none;}
   background: linear-gradient(90deg, #008040 67%, #004080 33%);
   top: 5px;
   float:left;
-  width:250px;
+  width:270px;
   font-size: 12px;
   font-weight: bold;
+  margin-left: 0px;
 }
+
+
+
 
 #left {
   position: relative;
@@ -729,7 +756,14 @@ stroke-width: 4px;
   float: right;
   height:30;
   position: relative;
-  top: -20px
+  top: -18px;
+ }
+
+ .lines {
+   border:0.5px solid;
+   color: #737373;
+   background-color: #737373;
+ 
  }
 
 }

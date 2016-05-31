@@ -37,6 +37,18 @@ $(".results").hide();
 
   });
 
+// action for click on the user icon in the top nav bar
+
+  $("#user").click(function(){
+  swal({
+       title: "Login",
+       text: "Log in or register on this website",
+       imageUrl: "images/user.png"    
+       });
+
+
+  });
+
 
 /*
   $( "#sortable" ).sortable({
@@ -185,7 +197,6 @@ $('#logIn').on("click", function(){
 
 if($('#paginated-content').length){ //if the div with the id 'paginated content' has a specific length, than do everything from the next lines
   var contentBox = $('#paginated-content');
- console.log(numPages);
   //get the text as an array of word-like things
   var words = contentBox.html().split(' ');
 

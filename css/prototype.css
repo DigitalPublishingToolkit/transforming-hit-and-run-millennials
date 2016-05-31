@@ -117,6 +117,18 @@ body{font-family: 'liberation_serifregular' ;
   font-family: 'Open Sans', sans-serif;
 }
 
+
+.fa-arrow-circle-right:before {
+    content: "\f0a9";
+    padding-left: 270px;
+}
+
+.signUpdate {
+      display: -webkit-inline-box;
+    float: right;
+    margin-top: 8px;
+}
+
 li.selected{
 	border-bottom: 3px solid #008080;
   font-weight: bold;

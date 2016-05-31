@@ -61,14 +61,12 @@ body{font-family: 'liberation_serifregular' ;
 	width: 33%;
   text-align: center;
 }
-.intTab li {
-    width: 50%;
-    text-align: center;
-    padding: 15px 0px 8px 0px;
-    background-color: #ccc;
-    margin-bottom: 10px;
+.intTab li{
+  width: 50%;
+	text-align: center;
+	padding: 19px 0px 4px 0px;
+  background-color: #ccc;
 }
-
 .updateTabs li{
   width: 33%;
   font-size: 16px;
@@ -190,8 +188,9 @@ li.selected{
 }
 
 #headingExplore {
-    padding: 20px 100px 5px 150px;
+    padding: 6px 88px 5px 94px;
     display: flex;
+    margin-bottom: 7px;
     position: relative;
     text-align: center;
     background-color: rgba(0, 128, 128, 0.29);
@@ -254,7 +253,7 @@ li.selected{
 }
 
 #headingArticle {
-    padding: 2px 127px 2px 135px;
+    padding: 2px 69px 2px 80px;
     position: relative;
     text-align: center;
     background-color: rgba(0, 128, 128, 0.29);
@@ -279,6 +278,7 @@ li.selected{
     color: #696969;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
+    float: left;
 }
 
 #paginated-content{
@@ -525,7 +525,7 @@ input[type="checkbox"]{display:none;}
 /* end share function */
 
 #headingDiscussion {
-    padding: 11px 80px 5px 138px;
+    padding: 6px 8px 5px 84px;
     display: flex;
     margin-top: 10px;
     position: relative;
@@ -711,6 +711,8 @@ stroke-width: 4px;
   padding: 20px 0px 5px 0px;
   float: right;
   height:30;
+  position: relative;
+  top: -20px
  }
 
 }
@@ -719,6 +721,7 @@ stroke-width: 4px;
  stroke-width: 3;
  fill: none;
 }
+
 #shared {
   display:none;
 }
@@ -737,6 +740,6 @@ stroke-width: 4px;
 
 .active {
   fill: #008080;  
-  stroke:#008080;
+  stroke:black;
   stroke-width: 1px;
 }

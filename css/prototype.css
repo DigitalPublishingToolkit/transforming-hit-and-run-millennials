@@ -61,12 +61,14 @@ body{font-family: 'liberation_serifregular' ;
 	width: 33%;
   text-align: center;
 }
-.intTab li{
-  width: 50%;
-	text-align: center;
-	padding: 19px 0px 4px 0px;
-  background-color: #ccc;
+.intTab li {
+    width: 50%;
+    text-align: center;
+    padding: 15px 0px 8px 0px;
+    background-color: #ccc;
+    margin-bottom: 10px;
 }
+
 .updateTabs li{
   width: 33%;
   font-size: 16px;
@@ -188,9 +190,8 @@ li.selected{
 }
 
 #headingExplore {
-    padding: 6px 88px 5px 94px;
+    padding: 20px 100px 5px 150px;
     display: flex;
-    margin-bottom: 7px;
     position: relative;
     text-align: center;
     background-color: rgba(0, 128, 128, 0.29);
@@ -253,7 +254,7 @@ li.selected{
 }
 
 #headingArticle {
-    padding: 2px 69px 2px 80px;
+    padding: 2px 127px 2px 135px;
     position: relative;
     text-align: center;
     background-color: rgba(0, 128, 128, 0.29);
@@ -524,7 +525,7 @@ input[type="checkbox"]{display:none;}
 /* end share function */
 
 #headingDiscussion {
-    padding: 6px 8px 5px 84px;
+    padding: 11px 80px 5px 138px;
     display: flex;
     margin-top: 10px;
     position: relative;

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
  
-
+$(".results").hide();
  // Changes the .options elements in the article page
   
 
@@ -21,6 +21,21 @@ $(document).ready(function(){
        });
 
      });    
+$(".results").hide();
+
+//poll simulation
+
+  $(".pollOptions").click(function(){
+   $(this).toggleClass('clicked'); 
+  });
+
+  $("#submit-button").click(function(){
+    $(".pollOptions").hide();
+    $("#submit-button").hide();
+    $(".results").show();
+
+
+  });
 
 
 /*

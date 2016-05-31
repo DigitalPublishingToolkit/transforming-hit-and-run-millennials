@@ -554,7 +554,7 @@ input[type="checkbox"]{display:none;}
 }
 
 .poll {
-  margin: 50px 20px 70px 0px;
+  margin: 20px 20px 100px 0px;
   width:100%;
   font-family: 'Open Sans', sans-serif;
 }
@@ -617,22 +617,27 @@ input[type="checkbox"]{display:none;}
 }
 
 #Yes {
-  background-color:green;
+  background: linear-gradient(90deg, #008040 67%, #004080 33%);
   top: 5px;
   float:left;
-  width:200px;
+  width:250px;
   font-size: 12px;
   font-weight: bold;
 }
 
-#No {
-  background-color:red;
-  top: 5px;
-  float:right;
-  width:60px;
-  font-size: 12px;
-  font-weight: bold;
+#left {
+  position: relative;
+  float:left;
+
 }
+
+#right {
+  position: relative;
+  float:right;
+
+
+}
+
 
 
 #backtotop {

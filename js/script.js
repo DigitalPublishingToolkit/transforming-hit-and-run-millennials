@@ -1,5 +1,27 @@
 
 $(document).ready(function(){
+ 
+
+ // Changes the .options elements in the article page
+  
+
+      $("#listen").click(function(){ //adds/removes teh class .active to the 'listen' svg when clicked
+      $(this).toggleClass('active');
+      });
+
+
+       // $("#User img").hide();
+
+       $("#saveLater").click(function(){ //this calls the aler window on click of the save for later icon
+       // $("#User img").toggle();
+       swal({
+       title: "Login",
+       text: "Log in to save this article for reading it later",
+       imageUrl: "images/user.png"    
+       });
+
+     });    
+
 
 /*
   $( "#sortable" ).sortable({
@@ -146,9 +168,9 @@ $('#logIn').on("click", function(){
   (html() instead of text(), fixed page height instead of window.height() )
   ////// */
 
-if($('#paginated-content').length){
+if($('#paginated-content').length){ //if the div with the id 'paginated content' has a specific length, than do everything from the next lines
   var contentBox = $('#paginated-content');
-
+ console.log(numPages);
   //get the text as an array of word-like things
   var words = contentBox.html().split(' ');
 
@@ -157,6 +179,7 @@ if($('#paginated-content').length){
 
   function paginate() {
         //create a div to build the pages in
+
         var newPage = $('<div class="articleTextPage" />');
         contentBox.empty().append(newPage);
 
@@ -169,7 +192,7 @@ if($('#paginated-content').length){
             newPage.html(betterPageText);
 
             //Check if the page is too long
-            // if(newPage.height() > $(window).height()) {
+          //  if(newPage.height() > $(window).height()) {
             if(newPage.height() > pageHeight) { //page height is 300px (defined above)
                 //revert the text
                 newPage.html(pageText);
@@ -189,7 +212,7 @@ if($('#paginated-content').length){
     //$(window).resize(paginate).resize();
     //not necessary if the page has fixed height and width
     //instead, call the function only once
-    //paginate();
+  //  paginate();
 
   } // end if
 
@@ -200,24 +223,23 @@ if($('#paginated-content').length){
 if($('#paginated-content').length){
 
     var numPages = $('#paginated-content').children().length;
-
     function pilePages(){
 
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- (pageHeight + 16 )) - ( n * 4.5), //TO DO: check these values later
+            top: n *  (- (pageHeight + 16 )) - ( n * 4.5), //TO DO: check these values later
             left: n  * 4
           });
 
       } //end for
 
-     // $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));
-      $('#paginated-content').css('height',pageHeight + 30 + numPages * 4);
+       //  $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));
+         $('#paginated-content').css('height',pageHeight + 30 + numPages * 4);
 
     } //end pilePages function
 
-    pilePages();
+  // pilePages();
 
     /* ////////
     Position all images from img-gallery in a stack
@@ -241,7 +263,7 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        //marginBottom: - (galHeight/2) + 15 ,
+        marginBottom: - (galHeight/2) + 15 ,
         marginTop: 40
       });
 
@@ -305,4 +327,9 @@ var tour = new Tour({
 
 //END TOUR
 
+
+
+
+
 });//end document.ready
+

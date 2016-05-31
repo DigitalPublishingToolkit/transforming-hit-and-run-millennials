@@ -214,14 +214,6 @@ li.selected{
   float: right;
 }
 
-.options {
-	padding: 20px 0px 5px 0px;
-  float: right;
-}
-
-.options .fa:first-of-type{
-  margin-right: 12px;
-}
 
 
 .pagetabs li a{width: 100%; height: auto; display: inline-block;  }
@@ -239,7 +231,7 @@ li.selected{
 
 .lead{
 	color: #666;
-	/*font-size: 1.2em;*/
+/*	font-size: 1.2em;*/
 	padding-left: .5em;
 	border-left: 3px solid #ddd;
 }
@@ -271,28 +263,29 @@ li.selected{
 #paginated-content{
 	white-space: pre-wrap; /* respect line breaks */
 	margin-bottom: 10px;
-	/*position: relative;*/
+  margin-top:15px;
+	position: relative;
 	top: 0;
 	left: 0;
 }
 
 .articleTextPage {
-		/* width: 250px; */
-	  background-color: #fff;
+		width: 250px; 
+    background-color: #fff;
     /*border: 1px solid black;*/
 		box-shadow: 1px 1px 3px #999;
     padding: 15px;
-		font-size: .8em;
+		font-size: 1em;
 		line-height: 1.15em;
 		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
-		/*position: relative;*/
+		position: relative;
 		/* the top values will vary accod=rding to the page and will be set via JS */
 }
 
 .pagenr, .imgnr {text-align: center; font-size: .8em;}
 .imgnr{
   position: relative;
-  top: -2.5em;
+  top: -420px;
   z-index: 200;
   background-color: rgba(255, 255, 255, .5);
   padding: 3px 0;
@@ -306,10 +299,10 @@ li.selected{
 #img-gallery{
 	width: 315px; /* same as .articleTextPage + padding - img border*/
 	margin: 0 auto; /* this line will place the pages horizontally centered in the window */
-	margin-bottom: 10px;
+	/*margin-bottom: 10px;
 	position: relative;
-	top: 0;
-	left: 0;
+	/*top: 40px;
+	left: 0;*/
   }
 
 #img-gallery img{
@@ -390,6 +383,20 @@ li.selected{
 #logIn img{
 	width: 80%;
 }
+/*#User img {
+  width: 80%;
+  position: relative;
+  float:right;
+  z-index: 99999;
+}
+
+#User {
+   width: 100%;
+   text-align: center;
+   height: 100%;
+   z-index: 99999;
+
+}*/
 
 /* discussion */
 #discussion img {
@@ -514,7 +521,7 @@ input[type="checkbox"]{display:none;}
 }
 
 .poll {
-  margin-top: 40px;
+  margin-top: 120px;
   margin-bottom: 40px;
   width:80%;
 
@@ -555,7 +562,7 @@ input[type="checkbox"]{display:none;}
 /* General navigation svg styles */
 .selected .tab-icon  {   /* the svg selected is turquiose */
   stroke: #008080;  
-  stroke: 2.5px;
+  stroke-width: 2.5px;
   
   
 }
@@ -572,13 +579,13 @@ fill: #008080;
 
 /*  Style for the explore section svg*/
 
-/* #compass {
- stroke-width: 1;
+ #compass {
+ stroke-width: 1.3px;
 
-}*/
+}
 
 #comment-bubble {
-stroke-width: 3px;
+stroke-width: 4px;
   
 }
 
@@ -590,10 +597,14 @@ stroke-width: 3px;
 
 }
 
-.article-svg {
+.options {
   stroke: #696969;
   stroke-width: 1px;
   fill:none;
+  padding: 20px 0px 5px 0px;
+  float: right;
+  height:30;
+ }
 
 }
 #share {
@@ -615,4 +626,10 @@ stroke-width: 3px;
 #fill-svg {
   fill: white;
   padding-top: 2px;
+}
+
+.active {
+  fill: #008080;  
+  stroke:#008080;
+  stroke-width: 1px;
 }

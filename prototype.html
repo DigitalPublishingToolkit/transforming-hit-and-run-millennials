@@ -19,7 +19,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href="css/prototype.css" rel="stylesheet">
+    <link href="css/prototype.css" rel="stylesheet">
+
+    <!-- Code for the SweetAlert windows -->
+
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
 	<!-- tour -->
 	<!--<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">-->
@@ -56,8 +61,8 @@
 				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 						<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 						<svg class="main-nav-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 360 360" height="30" width="30" version="1.1" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-						<circle cx="129.38" cy="60" r="60" style="fill:white"/>
-						<path d="m129.38,150c-60.061,0-108.75,48.689-108.75,108.75h217.5c-0.01-60.06-48.69-108.75-108.75-108.75z" style="stroke-width:10" />
+						<circle cx="129.38" cy="60" r="60" style="stroke-width:12"/>
+						<path d="m129.38,150c-60.061,0-108.75,48.689-108.75,108.75h217.5c-0.01-60.06-48.69-108.75-108.75-108.75z" style="stroke-width:12" />
 						</svg>
 <!--SVG code for HOME Button-->
 				<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -72,16 +77,16 @@
 
 		<div class="navigation">
 			 <ul class="pagetabs">
-				<!-- we are using svgsinstead of images as before-->
+				<!-- we are using svgs instead of images as before-->
 
 			 	<li id="exploreTour">
 					<a href="#explore">
 	<!-- this is the code for the svg of the compass -->
 						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-				 <svg class="tab-icon" height="30" width="30" viewBox="0 0 47 45"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" >
+				 <svg id="compass" class="tab-icon" height="30" width="30" viewBox="0 0 47 45"  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" >
 						 <path  class="svg-element" d="m31.574,12.389-13.074,5.6021c-0.18911,0.08104-0.33191,0.22771-0.4149,0.4149l-5.604,13.068c-0.11965,0.29718-0.05598,0.64453,0.17368,0.87031,0.14665,0.15245,0.35507,0.23349,0.55769,0.23349,0.10227,0,0.21034-0.0232,0.30875-0.06558l13.074-5.6021c0.18911-0.08104,0.33578-0.22772,0.41876-0.4149l5.6001-13.068c0.1235-0.29525,0.0598-0.6426-0.16982-0.87224-0.22577-0.22578-0.57699-0.29139-0.87031-0.16596zm-16.854,17.895,4.3613-10.182,5.8202,5.8202-10.182,4.3613zm11.298-5.4805-5.824-5.8202,10.183-4.3651-4.3593,10.185z"/>
-						 <path  id="compass" d="m22.547,0.53468c-12.084,0-21.916,9.8301-21.916,21.914,0,12.082,9.834,21.916,21.916,21.916,12.088,0,21.916-9.836,21.916-21.916,0.00098-12.084-9.8292-21.914-21.916-21.914z" />
+						 <path   d="m22.547,0.53468c-12.084,0-21.916,9.8301-21.916,21.914,0,12.082,9.834,21.916,21.916,21.916,12.088,0,21.916-9.836,21.916-21.916,0.00098-12.084-9.8292-21.914-21.916-21.914z" />
 						 <path  style="stroke-width:0;" class="svg-element"d="m22.547,6.3992c0.60981,0,1.1077-0.49787,1.1077-1.1115,0-0.61366-0.49787-1.1115-1.1077-1.1115-0.60979,0-1.1077,0.49788-1.1077,1.1115,0,0.61366,0.49788,1.1115,1.1077,1.1115z" />
 						 <path class="svg-element" d="m22.547,37.775c-0.60979,0-1.1077,0.49788-1.1077,1.1058,0,0.61366,0.49788,1.1115,1.1077,1.1115,0.60981,0,1.1077-0.49787,1.1077-1.1115,0.002-0.60787-0.49594-1.1058-1.1077-1.1058z" />
 						 <path class="svg-element" d="m39.351,21.341c-0.60981,0-1.1115,0.49594-1.1115,1.1077,0,0.61559,0.50173,1.1135,1.1115,1.1135,0.60979,0,1.1077-0.49787,1.1077-1.1135,0-0.61173-0.49788-1.1077-1.1077-1.1077z" />
@@ -127,45 +132,51 @@
 
 <!-- Here: CONTENT-->
 <div class="content">
-
-	<div class="tabContent" id="article">
+<div class="tabContent" id="article">
 	<h2 id="title">Facebook is going to start showing you pieces people actually read</h2>
 	<span class="meta">Alex Hern @alexhern <br/> Friday 22 April 2016 11.50 BST</span>
+
+	    <!--  <span id="User">		
+				<img src="images/login.png" alt="logIn">
+			</span>-->
 	
-	<span class= "options">
 <!--SVG for the audio button ' listen to the article'-->
+		<span class= "options" id="listen" >
 		  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 					<!-- Created with Inkscape (http://www.inkscape.org/) -->
-					<svg class="article-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+					<svg  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 					  <path  d="m10.737,0.55078c-0.129-0.072-0.287-0.072-0.414,0.008l-6.782,4.07h-2.64c-0.227,0-0.41,0.184-0.41,0.409v5.505c0,0.226,0.184,0.41,0.41,0.41h2.639l6.784,4.07c0.064,0.039,0.138,0.059,0.21,0.059,0.069,0,0.14-0.018,0.202-0.053,0.129-0.074,0.208-0.211,0.208-0.357v-13.764c0.001-0.146-0.078-0.282-0.207-0.357z" />
-					 <path  d="m12.768,3.43c1.4505,3.0655,1.8715,6.131,0,9.1964" />
-					 <path  d="m3.1698,4.9925,0,5.8482" />
+					 <path d="m12.768,3.43c1.4505,3.0655,1.8715,6.131,0,9.1964" />
+					 	<path  d="m3.1698,4.9925,0,5.8482" />
 					</svg>
-
+				</span>
+			<span class= "options"  id="saveLater">
 <!-- SVG for the save for later button-->
 		  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 					<!-- Created with Inkscape (http://www.inkscape.org/) -->
-					<svg class="article-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewbox="0 0 40 40">
+					<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewbox="0 0 40 40">
 					<path d="m14.689,0.4849-13.768,0c-0.227,0-0.41,0.184-0.41,0.41v22.023c0,0.166,0.1,0.314,0.252,0.377,0.156,0.069,0.33,0.029,0.449-0.088l1.371-1.372c0.004-0.001,0.004-0.003,0.006-0.005l5.215-5.213,6.594,6.59c0.078,0.078,0.182,0.12,0.291,0.12,0.051,0,0.104-0.01,0.156-0.032,0.152-0.062,0.252-0.211,0.252-0.377v-22.023c0-0.226-0.183-0.41-0.408-0.41z" />
-</svg>
-		</span>
+					</svg>
+			</span>
 
-	<div id="mainArticlePage">
+	
 
+<div id="mainArticlePage">
 		<div id="paginated-content">
 			<div class="articleTextPage">
-			<p class="lead">Facebook is changing its algorithm yet again, and this time it wants to show you more things that you’ll actually spend time reading or watching.</p>
-			<p>The social network looks at a wealth of data when deciding which posts you actually see on News Feed, but until now it hasn’t cared too much about what you actually do when you click away from Facebook. It says that’s going to change.</p>
-			<p>“We’re learning that the time people choose to spend reading or watching content they clicked on from News Feed is an important signal that the story was interesting to them,” said software engineer Moshe Blank and research scientist Jie Xu in a post on the company’s website.</p>
+			<p class="lead">The first week of this sprint, our team needed some inspiration so we decided to have a creative brainstorming session all together. Initially, we used a series of method cards of the Design Methods Toolkit from the MediaLAB Amsterdam to get some necessary insights for our redesign and usability processes. These were the cards we picked: Written scenario, Navigation map, Customer experience, Emotional journey, Wireframes, Clickable Prototype, Through other eyes, Heuristic evaluation, Think out loud.</p>
+			<p>
+			In this way, we could gain a more focused understanding or vision about defining goals, knowing context, knowing the user, framing insights, ideation, prototyping and testing.
+		</p>			
 			<p class="pagenr">1/6</p>
 		</div>	
 
-
-		</div><!-- end #paginated-content -->
+	</div><!-- end #paginated-content -->
 
 <!--
 	<p id="interaction"><a id="GOEXPLORE" href="#explore">You've read 5 articles from us... <br> Time to GO EXPLORE more.</a></p>
 -->
+	<div>
 		 <div id="img-gallery">
 			<!-- all images should have the same size/proportion otherwise it does not look good (personal thought) -->
 			<img class="article-img" src="images/article-01.jpg" />
@@ -174,7 +185,7 @@
 			<p class="imgnr">1/3</p>
 
 		 </div> <!-- end article img-gallery -->
-
+</div>
 		<!-- <p id="TextCard1"><img src="images/TEXTCARD1.png" alt="TextCard1"/></p> -->
 
 		<!--<p id="ImageCard1"><img src="images/IMAGECARD1.png" alt="ImageCard1"/></p> -->
@@ -186,6 +197,8 @@
 	<img class="poll" src="images/html-poll.png" alt="Poll">
 
 	<img class= "relatedArticles" src="images/relatedarticles.png" alt="relatedArticles">
+
+
 
 
 	<!--<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>-->
@@ -211,7 +224,7 @@
 
 <img class="subscribe" src="images/html-subscribe.png" alt="subscribe">
 
-	</div><!-- end #sortable -->
+	
 <!-- Begin of the share function -->
 
 		<div id="share-content">
@@ -243,7 +256,7 @@
 		    </ul>
 		  </div>
 		</div>
-
+</div><!-- end #sortable -->
 </div><!-- end #article -->
 
 	<!-- explore -->

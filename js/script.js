@@ -146,7 +146,7 @@ $('#GOEXPLORE').on('click', function(bla){
 
 $('.ranking').hide();
 
-$('.yinOn').on('click', function() {
+$('.TitleYin').on('click', function() {
   $('.yin').toggle();
   $('.ranking').hide();
 });

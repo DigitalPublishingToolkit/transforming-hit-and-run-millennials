@@ -47,7 +47,9 @@
 
 }
 
-body{font-family: 'liberation_serifregular' ;
+body{
+  font-family: 'liberation_serifregular';
+  background-color: #EBECED;
 
 }
 
@@ -171,12 +173,10 @@ li.selected{
 
 #logo{
 	display: inline;
-	font-size: 20px;
+	font-size: 24px;
   text-align: left;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Julius Sans One';
   vertical-align: top;
-
-
 }
 
 
@@ -348,10 +348,9 @@ li.selected{
 #img-gallery{
 	width: 315px; /* same as .articleTextPage + padding - img border*/
 	margin: 0 auto; /* this line will place the pages horizontally centered in the window */
-	margin-bottom: 10px;
 	position: relative;
-	top: 40px
 	left: 0;
+  padding:0px;
   }
 
 #img-gallery img{
@@ -671,10 +670,10 @@ input[type="checkbox"]{display:none;}
 }
 
 #Yes {
-  background: linear-gradient(90deg, #008040 67%, #004080 33%);
+  background: linear-gradient(90deg, #ffcc80 67%, #a5d6a7 33%);
   top: 5px;
   float:left;
-  width:270px;
+  width:320px;
   font-size: 12px;
   font-weight: bold;
   margin-left: 0px;
@@ -709,9 +708,23 @@ input[type="checkbox"]{display:none;}
 }
 
 #footer {
-	margin-top: 100px;
-	text-align: center;
+	margin-top: 50px;
+	text-align: left;
+  position:relative;
+  background-color: #434343;
+  color: white;
+  font-family: 'Open Sans';
+  font-weight:lighter;
+  padding:5px;
+  display:inline-block;
+
 }
+
+#footer li {
+  margin: 10px;
+  padding:5px;  
+}
+
 
 
 
@@ -810,6 +823,16 @@ stroke-width: 4px;
 
 .active {
   fill: #008080;  
-  stroke:black;
-  stroke-width: 1px;
+  stroke: none;
+  stroke-width: 3px;
+}
+
+/*Social Media SVG in the footer */
+
+.footer-svg {
+ stroke: white;
+ stroke-width: 6px;
+ fill:none;
+ margin:0px 5px;
+
 }

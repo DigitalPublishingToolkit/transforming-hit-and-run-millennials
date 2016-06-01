@@ -289,7 +289,7 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        marginBottom: - (galHeight/2) + 25 ,
+        marginBottom: - (galHeight/2) + 50,
         marginTop: 50
       });
 

@@ -239,6 +239,15 @@ li.selected{
   
 }
 
+.TitleYin {
+    font-family: 'open sans';
+    background-color: black;
+    color: white;
+    text-align: -webkit-center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 /*.content h2, img {
  margin-top: 70px;
 

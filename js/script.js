@@ -142,6 +142,35 @@ $('#GOEXPLORE').on('click', function(bla){
     
   });
 
+//YEAR IN NEWS ON AND OFF
+
+$('.ranking').hide();
+
+$('.yinOn').on('click', function() {
+  $('.yin').toggle();
+  
+});
+
+$('.yin').on('click', function(){
+  $(this).attr('src','images/ranking.png');
+});
+
+$('.ranking').on('click', function(){
+  $(this).attr('src','images/yin.png');
+});
+
+
+//RANKING ON AND OFF
+
+$('.yin').on('click', function(){
+  $('.ranking').show();
+  $('.yin').hide();
+
+});
+
+
+
+
 //LOG IN HIDE
 $('#logIn').on("click", function(){
   $(this).hide();

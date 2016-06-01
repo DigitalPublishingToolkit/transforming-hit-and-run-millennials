@@ -142,6 +142,21 @@ $('#GOEXPLORE').on('click', function(bla){
     
   });
 
+
+//YIN TITLE AND SYMBOL ROTATE
+
+//var= YinON
+//var= YinOff
+
+//if ( YinOn == '.yin', '.ranking') {
+  //$('.fa-caret-left').show();
+  //$('.fa-caret-down').hide();
+//}else{
+  //  $('.fa-caret-down').show();
+    //$('.fa-caret-left').hide();
+//}
+
+
 //YEAR IN NEWS ON AND OFF
 
 $('.ranking').hide();
@@ -168,7 +183,6 @@ $('.yin').on('click', function(){
   $('.yin').hide();
 
 });
-
 
 
 

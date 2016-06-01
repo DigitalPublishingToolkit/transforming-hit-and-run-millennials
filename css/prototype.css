@@ -239,6 +239,8 @@ li.selected{
   
 }
 
+/*PERSONAL EXPLORE*/
+
 .TitleYin {
     font-family: 'open sans';
     background-color: black;
@@ -246,7 +248,18 @@ li.selected{
     text-align: -webkit-center;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 80px;
 }
+
+.fa-caret-left:before {
+    content: "\f0d9";
+    padding-left: 60px;
+}
+
+.fa-caret-down:before{
+  content: "\f0d7";
+}
+
 
 /*.content h2, img {
  margin-top: 70px;

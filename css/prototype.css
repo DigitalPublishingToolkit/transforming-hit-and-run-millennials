@@ -251,13 +251,20 @@ li.selected{
     padding-left: 80px;
 }
 
+#year {
+    border: 1px solid white;
+    padding: 3px 3px 3px 6px;
+    margin-right: 1em;
+}
+
 .fa-caret-left:before {
     content: "\f0d9";
     padding-left: 60px;
 }
 
-.fa-caret-down:before{
-  content: "\f0d7";
+.fa-caret-down:before {
+    content: "\f0d7";
+    padding-left: 55px;
 }
 
 

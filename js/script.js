@@ -144,19 +144,6 @@ $('#GOEXPLORE').on('click', function(bla){
 
 
 //YIN TITLE AND SYMBOL ROTATE
-
-//var= YinON
-//var= YinOff
-
-//if ( YinOn == '.yin', '.ranking') {
-  //$('.fa-caret-left').show();
-  //$('.fa-caret-down').hide();
-//}else{
-  //  $('.fa-caret-down').show();
-    //$('.fa-caret-left').hide();
-//}
-
-
 //YEAR IN NEWS ON AND OFF
 
 $('.ranking').hide();
@@ -164,12 +151,14 @@ $('.ranking').hide();
 $('.TitleYin').on('click', function() {
   $('.yin').toggle();
   $('.ranking').hide();
+  if($('#caret').hasClass('fa-caret-left')){
+    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  } else{
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+  }
+
 });
 
-
-$('.yin').on('click', function(){
-  $(this).attr('src','images/ranking.png');
-});
 
 $('.ranking').on('click', function(){
   $(this).attr('src','images/yin.png');
@@ -181,7 +170,7 @@ $('.ranking').on('click', function(){
 $('.yin').on('click', function(){
   $('.ranking').show();
   $('.yin').hide();
-
+  $(this).attr('src','images/ranking.png');
 });
 
 

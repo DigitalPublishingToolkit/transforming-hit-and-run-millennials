@@ -107,13 +107,14 @@ body{
   
 }
 
-#newsUpdate div {
-  box-shadow: 1px 1px 3px #999;
+#newsUpdate {
   margin-bottom: 40px;
   position:relative;
-  float:left;
+  top: 400px;
+  margin-right:10px;
 
 }
+
 
 .tabUpdContent span.clicked{
   background-color: #C0E0E0;
@@ -123,6 +124,7 @@ body{
   background-color: #fff;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
+  box-shadow: 1px 1px 3px #999;
 }
 
 
@@ -132,9 +134,20 @@ body{
 }
 
 .signUpdate {
-    display: -webkit-inline-box;
+    position:relative;
     float: right;
-    margin-top: 8px;
+    font-family: 'Open Sans', sans-serif;
+   font-size: 19px;
+   background-color: #008080;
+   float:right;
+   text-align: center;
+   color:white; 
+   border-radius: 20px;
+   border:none;
+   padding:5px;
+   position:relative; 
+   margin: 10px;
+   top: -50px;
 }
 
 li.selected{
@@ -291,6 +304,7 @@ li.selected{
 #article {
 	padding: 20px;
   position:relative;
+  min-height:1200px;
 }
 
 #title {
@@ -351,6 +365,7 @@ li.selected{
 	position: relative;
 	left: 0;
   padding:0px;
+  max-height:210px;
   }
 
 #img-gallery img{
@@ -583,10 +598,11 @@ input[type="checkbox"]{display:none;}
 .poll {
   padding:0px 0px 90px 0px;
   margin-bottom: 10px;
-  width:85%;
+  width:100%;
   font-family: 'Open Sans', sans-serif;
   /*background-color: white;*/
   position: relative;
+  top:400px;
   }
 
 .poll span {
@@ -673,7 +689,7 @@ input[type="checkbox"]{display:none;}
   background: linear-gradient(90deg, #ffcc80 67%, #a5d6a7 33%);
   top: 5px;
   float:left;
-  width:320px;
+  width:85%;
   font-size: 12px;
   font-weight: bold;
   margin-left: 0px;
@@ -835,4 +851,13 @@ stroke-width: 4px;
  fill:none;
  margin:0px 5px;
 
+}
+
+.NewsUpdate-check {
+    stroke-width: 1px;
+    stroke:black;
+    fill:none;
+    background-color:none;
+    position:relative;
+    float:right;
 }

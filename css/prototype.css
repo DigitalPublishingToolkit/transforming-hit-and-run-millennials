@@ -259,10 +259,10 @@ li.selected{
 	cursor: move;
 }*/
 
-#mainArticlePage {
-  
+#mainArticlePage {  
   position:relative;
   top:55px;
+  
 }
 
 .lead{
@@ -290,6 +290,7 @@ li.selected{
 
 #article {
 	padding: 20px;
+  position:relative;
 }
 
 #title {
@@ -313,7 +314,7 @@ li.selected{
 	margin-bottom: 10px;
   margin-top:15px;
 	position: relative;
-	top: 0;
+	top: 40px;
 	left: 0;
 }
 
@@ -347,10 +348,10 @@ li.selected{
 #img-gallery{
 	width: 315px; /* same as .articleTextPage + padding - img border*/
 	margin: 0 auto; /* this line will place the pages horizontally centered in the window */
-	/*margin-bottom: 10px;
+	margin-bottom: 10px;
 	position: relative;
-	/*top: 40px;
-	left: 0;*/
+	top: 40px
+	left: 0;
   }
 
 #img-gallery img{

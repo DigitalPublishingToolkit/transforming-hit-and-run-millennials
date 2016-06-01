@@ -148,8 +148,9 @@ $('.ranking').hide();
 
 $('.yinOn').on('click', function() {
   $('.yin').toggle();
-  
+  $('.ranking').hide();
 });
+
 
 $('.yin').on('click', function(){
   $(this).attr('src','images/ranking.png');

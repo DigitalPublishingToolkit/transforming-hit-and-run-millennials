@@ -26,7 +26,7 @@ $(".results").hide();
 //poll simulation
 
   $(".pollOptions").click(function(){
-   $(this).toggleClass('clicked'); 
+   $(this).toggleClass('clicked-poll'); 
   });
 
   $("#submit-button").click(function(){
@@ -238,7 +238,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
     //$(window).resize(paginate).resize();
     //not necessary if the page has fixed height and width
     //instead, call the function only once
-  //  paginate();
+   paginate();
 
   } // end if
 
@@ -265,7 +265,7 @@ if($('#paginated-content').length){
 
     } //end pilePages function
 
-  // pilePages();
+   pilePages();
 
     /* ////////
     Position all images from img-gallery in a stack
@@ -308,53 +308,6 @@ $('.tabUpdContent span').on('click', function(){
 //hide all divs except #article
 $("#when").hide();
 $("#where").hide();
-
-
-//TOUR
-
-// Instance the tour
-var tour = new Tour({
-  steps: [
-  {
-    //element: "#title",
-    placement: "bottom",
-    orphan: true,
-    title: "Welcome to the Newspaper!",
-    content: "First time here? To take a quick tour click on 'Next'."
-  },
-   {
-     element: ".pagetabs",
-     placement: "bottom",
-     title: "You are now on the Article Section",
-     content: "Swipe to read the rest of the article and to see the other pictures."
-   },
-    {
-      element: "#discussionTour",
-      placement: "bottom",
-      title: "Discussion Section",
-      content: "Tap here to discover the 'Trending Voices', the comments from our readers and the poll results."
-    },
-     {
-       element: "#exploreTour",
-       placement: "bottom",
-       title: "Explore Section",
-       content: "Here you can read and listen to all our different stories. Log in to create your Personal Explore section."
-     }
-],
-  storage: false
-});
-//console.log(tour);
-
-// Initialize the tour
-//tour.init();
-
-// Start the tour
-//tour.start();
-
-//END TOUR
-
-
-
 
 
 });//end document.ready

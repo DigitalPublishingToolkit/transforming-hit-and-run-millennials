@@ -230,11 +230,11 @@ li.selected{
 
 }*/
 
-.fa-2x {
+/*.fa-2x {
 	color: #666;
     margin-top: 7px;
     font-size: 26px;
-}
+}*/
 
 .articleShares {
 
@@ -257,6 +257,12 @@ li.selected{
 /*#sortable{
 	cursor: move;
 }*/
+
+#mainArticlePage {
+  
+  position:relative;
+  top:55px;
+}
 
 .lead{
 	color: #666;
@@ -628,7 +634,7 @@ input[type="checkbox"]{display:none;}
  border-radius: 20px;
 }
 
-.clicked {
+.clicked-poll {
  background-color:#008080;
  opacity: 0.5; 
  text-align: center;
@@ -641,6 +647,17 @@ input[type="checkbox"]{display:none;}
  border-radius: 20px;
 
 }
+
+.clicked {
+ background-color:#008080;
+ text-align: center;
+ color: black;
+ margin: 6px 4px;
+ padding: 6px 12px;
+ border-radius: 20px;
+ display: inline-block;
+}
+
 
 .results {
  text-align: left;

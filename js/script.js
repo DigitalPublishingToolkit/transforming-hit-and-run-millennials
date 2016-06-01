@@ -254,7 +254,7 @@ if($('#paginated-content').length){
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n *  (- (pageHeight + 16 )) - ( n * 4.5), //TO DO: check these values later
+            top: n *  (- pageHeight - 16) - ( n * 4.5), //TO DO: check these values later
             left: n  * 4
           });
 
@@ -289,8 +289,8 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        marginBottom: - (galHeight/2) + 15 ,
-        marginTop: 40
+        marginBottom: - (galHeight/2) + 25 ,
+        marginTop: 50
       });
 
     }// end pileImages function

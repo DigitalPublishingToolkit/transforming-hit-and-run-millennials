@@ -169,13 +169,22 @@ body{
 .tabUpdContent span{
   background-color: rgb(241, 241, 241);
   padding: 12px 12px 6px 12px;
-  border-radius: 20px;
-  margin: 6px 4px;
+  border-radius: 20px;  
   display: inline-block;
   font-size: 14px;
 
 }
 
+#what span, #when span{
+
+padding: 12px 12px 12px 12px;
+margin: 6px 2px;
+
+}
+
+#where span {
+ margin: 6px 7px;
+}
 
 
 #newsUpdate {
@@ -217,8 +226,6 @@ body{
 }
 
 .signUpdate {
-    /* position: relative; */
-    /* float: right; */
     font-family: 'Open Sans', sans-serif;
     font-size: 19px;
     background-color: #008080;
@@ -227,7 +234,7 @@ body{
     color: white;
     border-radius: 20px;
     border: none;
-    padding: 5px;
+    padding: 4px 4px 6px 4px;
     position: relative;
     /* margin: 60px; */
     top: 8px;
@@ -935,7 +942,7 @@ input[type="checkbox"]{display:none;}
 }
 
 #footer {
-	margin-top: 70px;
+	margin-top: 90px;
 	text-align: left;
   position:relative;
   background-color: #434343;
@@ -1070,18 +1077,21 @@ stroke-width: 4px;
 }
 
 .NewsUpdate-check {
-    stroke-width: 1px;
-    stroke:black;
-    fill:none;
-    background-color:none;
+    stroke-width: 1.5px;
+    stroke:white;
+    fill:#008080;
     position:relative;
     float:right;
 }
 
 .NewsUpdate-svg {
-
   stroke-width: 1px;
   stroke:#696969;
   fill:none;
 
+}
+
+#arrowWhen{
+  position:relative;
+  top:35px;
 }

@@ -180,7 +180,7 @@ body{
 #newsUpdate {
   margin: 10px 15px;
   position:relative;
-  top: 400px;
+  top: 450px;
 }
 
 
@@ -577,8 +577,8 @@ li.selected{
   margin-top: 7px;
   margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  line-height: normal;
+  /*font-style: italic;*/
+  line-height: 18px;
 }
 
 #updatetags {

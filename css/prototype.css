@@ -140,6 +140,33 @@ body{
 	display: block;
 }
 
+.linesEx {
+    border: 0.5px solid;
+    color: #737373;
+    background-color: #737373;
+    width: 90%;
+    text-align: left;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.subheaderExDutch{
+   margin-left: 20px;
+    padding-bottom: 9px;
+    font-family: 'open sans';
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.subheaderExWorld{
+   margin-left: 20px;
+    padding-bottom: 9px;
+    font-family: 'open sans';
+    font-size: x-large;
+    font-weight: lighter;
+}
+
 /* update tabs */
 .tabUpdContent span{
   background-color: rgb(241, 241, 241);
@@ -560,6 +587,8 @@ li.selected{
   margin-top: 7px;
   margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  line-height: normal;
 }
 
 #updatetags {
@@ -773,6 +802,9 @@ input[type="checkbox"]{display:none;}
 
   }
 
+#pollText {
+  line-height: normal;
+}
 
 #submit-button{
  font-family: 'Open Sans', sans-serif;

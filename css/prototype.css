@@ -155,6 +155,7 @@ body{
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
+    display: inline-flex;
 }
 
 .subheaderExWorld{
@@ -163,6 +164,7 @@ body{
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
+    display: inline-flex;
 }
 
 /* update tabs */
@@ -326,12 +328,12 @@ li.selected{
 
 .fa-caret-left:before {
     content: "\f0d9";
-    padding-left: 50px;
+    padding-left: 25px;
 }
 
 .fa-caret-down:before {
     content: "\f0d7";
-    padding-left: 55px;
+    padding-left: 25px;
 }
 
 
@@ -390,7 +392,7 @@ li.selected{
    position:relative;
    top:-10px;
    margin:12px 0px 0px 0px;
-   padding: 0px 100px 0px 15px;
+   padding: 0px 15px 0px 15px;
 }
 
 #heading-div-discussion {
@@ -556,9 +558,12 @@ li.selected{
 #related-lines{
  position:relative;
  top:400px;
- width:80%;
+ width:20%;
  float:left;
  margin-left: 15px;
+ border:2px solid;
+ color: #008080;
+ background-color: #008080;
 
 }
 
@@ -997,10 +1002,10 @@ stroke-width: 4px;
 }
 
  .lines {
-   border:0.5px solid;
-   color: #737373;
-   background-color: #737373;
-   width:50%;
+   border:2px solid;
+   color: #008080;
+   background-color: #008080;
+   width:20%;
    text-align:left;
    margin-left: 0px;
  }

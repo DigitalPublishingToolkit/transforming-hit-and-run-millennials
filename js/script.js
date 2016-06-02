@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+
 $(".results").hide();
  // Changes the .options elements in the article page
 
@@ -224,6 +225,7 @@ $('#logIn').on("click", function(){
     //alert('clicked on '+bla.target.nodeName);
   });
 
+ 
   var curUpdContent;
   var curUpdTab;
 
@@ -246,22 +248,6 @@ $('#logIn').on("click", function(){
   });
 
  //action for clicking on the arrow button in the NewsUpdate feature
-
- var TEST
- var TESTS
- var TESTT
-
- $(".NewsUpdate-check").on('click', function(blaEvent){
- TEST = $(this).parent();
- TESTS = $(TEST).parent();
- $(TESTS).addClass('selected');
-
-});
-
-
-
-
-
 
   /* ////////
   Paginated content, retrieved from http://stackoverflow.com/questions/11277529/wrap-text-every-2500-characters-in-a-div-for-pagination-using-php-or-javascrip

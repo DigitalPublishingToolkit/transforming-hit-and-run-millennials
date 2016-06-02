@@ -123,6 +123,9 @@ $(".results").hide();
     }
     //shows current content tab
     $(curContent).show();
+    //add an offset
+    var tabOffset = $('.top').outerHeight();
+    $(window).scrollTop(- tabOffset);
     //disables page 'scroll' to anchor tag
     blaEvent.preventDefault();
     //alert('clicked on '+bla.target.nodeName);
@@ -178,10 +181,10 @@ $('.subheaderExDutch').on('click', function() {
 
 $('.subheaderExWorld').on('click', function() {
   $('.worldtopics').toggle();
-  if($('#caret').hasClass('fa-caret-left')){
-    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  if($('#caretWorld').hasClass('fa-caret-left')){
+    $('#caretWorld').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
+    $('#caretWorld').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });
@@ -193,10 +196,10 @@ $('.subheaderExWorld').on('click', function() {
 
 $('.TitleYin').on('click', function() {
   $('.yin').toggle();
-  if($('#caret').hasClass('fa-caret-left')){
-    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  if($('#caretYin').hasClass('fa-caret-left')){
+    $('#caretYin').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
+    $('#caretYin').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });

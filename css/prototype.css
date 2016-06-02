@@ -145,8 +145,6 @@ body{
     width: 90%;
     text-align: left;
     margin-left: 20px;
-    position: relative;
-    margin-bottom: 20px;
 }
 
 .subheaderExDutch{
@@ -155,16 +153,16 @@ body{
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
-    display: inline-flex;
-}
+    text-align: left;
+  }
 
-.subheaderExWorld{
-   margin-left: 20px;
+.subheaderExWorld {
+    margin-left: 20px;
     padding-bottom: 9px;
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
-    display: inline-flex;
+    text-align: left;
 }
 
 /* update tabs */
@@ -829,7 +827,7 @@ input[type="checkbox"]{display:none;}
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   margin: 5px 0px;
-  padding:0px;
+  padding-top: 10px;
   }
 
 

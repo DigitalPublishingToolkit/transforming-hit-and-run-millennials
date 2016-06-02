@@ -1,0 +1,12 @@
+/* svg styles */
+#article-icon{
+	fill: #008080;
+}
+
+#center{
+	/* just as an example! */
+	/* if you comment this out, the center will be filled as the rest of the svg */
+	fill: white;
+	stroke: #008080;
+  stroke-width:3px;
+}

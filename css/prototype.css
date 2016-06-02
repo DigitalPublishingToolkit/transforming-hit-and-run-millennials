@@ -262,7 +262,7 @@ li.selected{
 	display: inline;
 	font-size: 24px;
   text-align: left;
-  font-family: 'Julius Sans One';
+  font-family: 'Lobster';
   vertical-align: top;
 }
 
@@ -616,12 +616,25 @@ li.selected{
 	text-align: center;
 }
 
+/* fixed tab stuff */
+.tabFix{
+  position: fixed;
+  top: 104px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(235, 236, 237);
+}
+
+.tabFix li{
+  padding-top: 15px;
+}
+/* end fixed tab stuff */
+
 /* explore public */
-#tab1 img{width: 100%;}
+#tab1 img{ width: 100%;}
 
 /* explore personal*/
-#tab2 img {
-    width: 100%;}
+#tab2 img { width: 100%;}
 
 #logIn {
     width: 100%;

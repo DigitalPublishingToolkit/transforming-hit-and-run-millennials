@@ -71,7 +71,7 @@ body{
   width: 50%;
 	text-align: center;
 	padding: 25px 0px 5px 0px;
-  background-color: #ccc;
+  background-color: #d9d9d9;
   margin-bottom: 8px;
  }
 
@@ -119,7 +119,7 @@ body{
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #CCCCCC;
+  background-color: #d9d9d9;
   }
 
 
@@ -428,7 +428,7 @@ li.selected{
    position:relative;
    top:13px;
    padding:10px 15px 1px 15px;
-   background-color: #CCCCCC;
+   background-color: #d9d9d9;
 }
 
 

@@ -78,14 +78,14 @@ body{
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #CCCCCC;
-  
 
-  
+
+
 }
 .updateTabs li.selected{
   background-color: #fff;
   color: #3B8080;
- 
+
    /*box-shadow: inset 2px 2px 5px rgba(63,63,63, 0.8);*/
 }
 .tabIntContent{
@@ -104,7 +104,7 @@ body{
   display: inline-block;
   font-size: 14px;
 
-  
+
 }
 
 #newsUpdate {
@@ -169,7 +169,7 @@ body{
 li.selected{
 	border-bottom: 3px solid #008080;
   font-weight: bold;
-  
+
 }
 
 .intTab li.selected {
@@ -193,7 +193,7 @@ li.selected{
   color: #000;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 .updateTabs li.selected a{
   color: #3B8080;
@@ -234,7 +234,7 @@ li.selected{
 #explore {
   /*position: fixed;*/
   z-index: 9999;
-  width:100%; 
+  width:100%;
 }
 
 #headingExplore {
@@ -254,7 +254,7 @@ li.selected{
   z-index: 9999;
   width:100%;
   margin-top: 0px;
-  
+
 }
 
 /*PERSONAL EXPLORE*/
@@ -324,10 +324,10 @@ li.selected{
 	cursor: move;
 }*/
 
-#mainArticlePage {  
+#mainArticlePage {
   position:relative;
   top:55px;
-  
+
 }
 
 .lead{
@@ -384,8 +384,8 @@ li.selected{
 	left: 0;
 }
 
-.articleTextPage {
-		width: 250px; 
+.articleTextPage, #MessagePage {
+		width: 250px;
     background-color: #fff;
     /*border: 1px solid black;*/
 		box-shadow: 1px 1px 3px #999;
@@ -395,6 +395,12 @@ li.selected{
 		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
 		position: relative;
 		/* the top values will vary accod=rding to the page and will be set via JS */
+}
+
+#MessagePage{
+  /*height: 300px;*/ /* as defined in JS */
+  background-color: rgb(0, 128, 128);
+  color: #fff;
 }
 
 .pagenr, .imgnr {text-align: center; font-size: .8em;}
@@ -522,7 +528,7 @@ li.selected{
 /* bottom */
 
 #share-content{
-  
+
   position: fixed;
   bottom: 2%;
   z-index: 500;
@@ -531,10 +537,10 @@ li.selected{
 
 .label  {
   text-align: center;
-	background-color: #008080;	
+	background-color: #008080;
 	width: 30px;
   height: 30px;
-  padding: 5px;  
+  padding: 5px;
   left: 0;
   position: fixed;
   bottom: 10%;
@@ -560,7 +566,7 @@ input[type="checkbox"]{display:none;}
 
 
 .social {
-  transform-origin:0% 0%;  
+  transform-origin:0% 0%;
   -webkit-transform: scale(0) translateX(-30px);
   -moz-transform:scale(0) translateX(-30px);
   -o-transform:scale(0) translateX(-30px);
@@ -587,7 +593,7 @@ input[type="checkbox"]{display:none;}
 }
 
 .social ul li {
-  font-size:20px;  
+  font-size:20px;
   cursor:pointer;
   width:60px;
   margin:0;
@@ -603,7 +609,7 @@ input[type="checkbox"]{display:none;}
   position:absolute;
   margin-right:50px auto;
   height:0;
-  width:0;  
+  width:0;
   border-left: 0px solid red;
   border-right: 20px solid red;
   border-top: 20px solid transparent;
@@ -636,7 +642,7 @@ input[type="checkbox"]{display:none;}
     bottom: 7%;
     left: 0;
     z-index: 500;
-    display: none; 
+    display: none;
 }
 
 #comment img {
@@ -647,7 +653,7 @@ input[type="checkbox"]{display:none;}
 
 .subscribe {
 
-  width:70%;  
+  width:70%;
   float: center;
 }
 
@@ -662,8 +668,8 @@ input[type="checkbox"]{display:none;}
   }
 
 .poll span {
-  font-size: 19px;  
-  position:relative; 
+  font-size: 19px;
+  position:relative;
   }
 
   .subheader {
@@ -690,7 +696,7 @@ input[type="checkbox"]{display:none;}
  border:none;
  vertical-align: top;
  padding:10px;
- position:relative; 
+ position:relative;
  margin: 10px;
 }
 
@@ -699,7 +705,7 @@ input[type="checkbox"]{display:none;}
  text-align: center;
  color: black;
  border: 1px solid #5a5a5a;
- position:relative;  
+ position:relative;
  top: 15px;
  margin: 0px 5px 0px 0px;
  float:left;
@@ -709,10 +715,10 @@ input[type="checkbox"]{display:none;}
 
 .clicked-poll {
  background-color:#008080;
- opacity: 0.5; 
+ opacity: 0.5;
  text-align: center;
  color: black;
- position:relative;  
+ position:relative;
  top: 15px;
  margin: 0px 5px 0px 0px;
  float:left;
@@ -735,7 +741,7 @@ input[type="checkbox"]{display:none;}
 .results {
  text-align: left;
  color: white;
- position:relative;   
+ position:relative;
  margin: 10px;
  padding:10px 5px;
  /*border-radius: 20px;*/
@@ -793,7 +799,7 @@ input[type="checkbox"]{display:none;}
 
 #footer li {
   margin: 10px;
-  padding:5px;  
+  padding:5px;
 }
 
 
@@ -815,10 +821,10 @@ input[type="checkbox"]{display:none;}
 
 /* General navigation svg styles */
 .selected .tab-icon  {   /* the svg selected is turquiose */
-  stroke: #008080;  
+  stroke: #008080;
   stroke-width: 2.5px;
-  
-  
+
+
 }
 .tab-icon {   /* default svg color when not selected */
   stroke: #696969;
@@ -840,7 +846,7 @@ fill: #008080;
 
 #comment-bubble {
 stroke-width: 4px;
-  
+
 }
 
 /*  Style for the top menu svgs*/
@@ -866,7 +872,7 @@ stroke-width: 4px;
    border:0.5px solid;
    color: #737373;
    background-color: #737373;
- 
+
  }
 
 }
@@ -893,7 +899,7 @@ stroke-width: 4px;
 }
 
 .active {
-  fill: #008080;  
+  fill: #008080;
   stroke: none;
   stroke-width: 3px;
 }

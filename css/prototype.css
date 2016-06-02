@@ -273,6 +273,11 @@ li.selected{
     border: 1px solid white;
     padding: 3px 3px 3px 6px;
     margin-right: 1em;
+    font-size: larger;
+}
+
+#yearInNews{
+  font-size: larger;
 }
 
 .fa-caret-left:before {

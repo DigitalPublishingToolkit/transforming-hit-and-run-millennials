@@ -123,6 +123,9 @@ $(".results").hide();
     }
     //shows current content tab
     $(curContent).show();
+    //add an offset
+    var tabOffset = $('.top').outerHeight();
+    $(window).scrollTop(- tabOffset);
     //disables page 'scroll' to anchor tag
     blaEvent.preventDefault();
     //alert('clicked on '+bla.target.nodeName);

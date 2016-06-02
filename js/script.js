@@ -73,6 +73,23 @@ $(".results").hide();
 
   //still not saving the position of the items, just allowing the user to play around with the interface for now.
 
+  //fixed tab stuff
+  var t = $(".intTab");
+  var pos = 50;
+  $(window).scroll(function() {
+      var windowpos = $(window).scrollTop();
+      if (windowpos >= pos) {
+          t.addClass("tabFix");
+          //add margin to tab1
+          $('#tab1').css('margin-top','50px');
+      } else {
+          t.removeClass("tabFix");
+          //remove margin from tab1
+          $('#tab1').css('margin-top','0px');
+      }
+  });
+  //end fixed tab stuff
+
   //hide all divs except #article
   $("#explore").hide();
   $("#discussion").hide();
@@ -225,7 +242,7 @@ $('#logIn').on("click", function(){
     //alert('clicked on '+bla.target.nodeName);
   });
 
- 
+
   var curUpdContent;
   var curUpdTab;
 

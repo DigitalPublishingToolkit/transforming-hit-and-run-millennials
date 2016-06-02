@@ -155,6 +155,7 @@ body{
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
+    display: inline-flex;
 }
 
 .subheaderExWorld{
@@ -163,6 +164,7 @@ body{
     font-family: 'open sans';
     font-size: x-large;
     font-weight: lighter;
+    display: inline-flex;
 }
 
 /* update tabs */
@@ -326,12 +328,12 @@ li.selected{
 
 .fa-caret-left:before {
     content: "\f0d9";
-    padding-left: 50px;
+    padding-left: 25px;
 }
 
 .fa-caret-down:before {
     content: "\f0d7";
-    padding-left: 55px;
+    padding-left: 25px;
 }
 
 

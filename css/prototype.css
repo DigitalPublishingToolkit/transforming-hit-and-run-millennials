@@ -120,7 +120,6 @@ body{
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #CCCCCC;
-<<<<<<< HEAD
   }
 
 
@@ -354,7 +353,9 @@ li.selected{
   float: right;
 }
 
-.pagetabs li a{width: 100%; height: auto; display: inline-block;  }
+.pagetabs li a {
+  width: 100%; height: auto; display: inline-block; 
+   }
 
   /* This will 'remove' any rights from the <object> of responding to the mouse/pointer.
   We can use this solution when we don't need :hover support inside the SVG.*/
@@ -419,11 +420,11 @@ li.selected{
    position:relative;
    top:13px;
    padding:10px 15px 1px 15px;
-   background-color: #CCCCCC
+   background-color: #CCCCCC;
 }
 
 
-.title-header{
+.title-header {
  position:relative;
  margin:0px 15px;
 
@@ -503,7 +504,8 @@ li.selected{
 
 
 .pagenr, .imgnr {
-  text-align: center; font-size: .8em;}
+  text-align: center; font-size: .8em;
+}
 
 
 #MessagePage{
@@ -716,7 +718,8 @@ input[type="checkbox"]{display:none;}
   text-align:center;
   float:left;
   display:block;
-  height:22px;}
+  height:22px;
+}
 
 /*.social ul:after {
   content:'';
@@ -799,9 +802,10 @@ input[type="checkbox"]{display:none;}
   position:relative;
   float:left;
   line-height: 18px;
+}
 
 
-#submit-button{
+#submit-button {
  font-family: 'Open Sans', sans-serif;
  font-size: 19px;
  background-color: #008080;
@@ -945,7 +949,7 @@ input[type="checkbox"]{display:none;}
   }
 
 .selected .svg-element { /*fills the little svg elements when active*/
-fill: #008080;
+   fill: #008080;
 }
 
 /*  Style for the explore section svg*/
@@ -959,6 +963,15 @@ fill: #008080;
 stroke-width: 4px;
 
 }
+
+ .lines {
+   border:0.5px solid;
+   color: #737373;
+   background-color: #737373;
+   width:50%;
+   text-align:left;
+   margin-left: 0px;
+ }
 
 /*  Style for the top menu svgs*/
 
@@ -979,16 +992,9 @@ stroke-width: 4px;
   top: -18px;
  }
 
- .lines {
-   border:0.5px solid;
-   color: #737373;
-   background-color: #737373;
-   width:50%;
-   text-align:left;
-   margin-left: 0px;
- }
 
-}
+
+
 #share {
  stroke: white;
  stroke-width: 3;

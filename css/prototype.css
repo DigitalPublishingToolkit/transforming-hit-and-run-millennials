@@ -59,6 +59,7 @@ body{
 	display: -webkit-flex;
 	display: flex;
 }
+
 .pagetabs li{
 	width: 33%;
   text-align: center;
@@ -75,8 +76,6 @@ body{
  }
 
 
-
-
 .intTab li.selected {
     border-bottom: 3px solid transparent;
     background-color: transparent;
@@ -84,12 +83,11 @@ body{
 }
 
 #public-explore {
-  box-shadow: -2px -2px 10px #696969 inset;
+  box-shadow: -2px -2px 10px #a8a8a8 inset;
 }
 
 #personal-explore {
-  box-shadow: 2px 2px 10px #696969 inset;
-
+  box-shadow: 2px 2px 10px #a8a8a8 inset;
 }
 
  #personal-explore.selected  {
@@ -101,8 +99,6 @@ body{
 
   }
 
-
-
 .intTab a {
     font-family: 'Open Sans', sans-serif;;
     font-size: 1em;
@@ -110,6 +106,7 @@ body{
     color: #696969;
 
 }
+  
   li.selected a {
    color: #008080;
    font-weight: bold;
@@ -123,21 +120,49 @@ body{
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #CCCCCC;
+  }
 
 
-
-}
 .updateTabs li.selected{
   background-color: #fff;
   color: #3B8080;
 
    /*box-shadow: inset 2px 2px 5px rgba(63,63,63, 0.8);*/
-}
+ }
+
 .tabIntContent{
 	display: none;
 }
+
 .tabIntContent:first-of-type{
 	display: block;
+}
+
+.linesEx {
+    border: 0.5px solid;
+    color: #737373;
+    background-color: #737373;
+    width: 90%;
+    text-align: left;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.subheaderExDutch{
+   margin-left: 20px;
+    padding-bottom: 9px;
+    font-family: 'open sans';
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.subheaderExWorld{
+   margin-left: 20px;
+    padding-bottom: 9px;
+    font-family: 'open sans';
+    font-size: x-large;
+    font-weight: lighter;
 }
 
 /* update tabs */
@@ -149,8 +174,8 @@ body{
   display: inline-block;
   font-size: 14px;
 
-
 }
+
 
 #newsUpdate {
   margin: 10px 15px;
@@ -190,8 +215,6 @@ body{
     padding-left: 270px;
 }
 
-
-
 .signUpdate {
     /* position: relative; */
     /* float: right; */
@@ -219,12 +242,15 @@ li.selected{
   padding-left: 2px;
   padding-right: 1px;
 }
+
 .updateTabs li a{
   color: #000;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
 
-}
+  }
+
+
 .updateTabs li.selected a{
   color: #3B8080;
   /*text-decoration: underline;
@@ -244,8 +270,6 @@ li.selected{
 #service{
   float: right;
 }
-
-
 
 /* position and z-index make the navigation and the header to a fixed one (via class .top) */
 
@@ -329,9 +353,9 @@ li.selected{
   float: right;
 }
 
-
-
-.pagetabs li a{width: 100%; height: auto; display: inline-block;  }
+.pagetabs li a {
+  width: 100%; height: auto; display: inline-block; 
+   }
 
   /* This will 'remove' any rights from the <object> of responding to the mouse/pointer.
   We can use this solution when we don't need :hover support inside the SVG.*/
@@ -360,7 +384,6 @@ li.selected{
 .content {
 	background-color: #ebeced;
   padding-top: 90px;
-
 }
 
 #heading-div-article {
@@ -368,7 +391,6 @@ li.selected{
    top:-10px;
    margin:12px 0px 0px 0px;
    padding: 0px 100px 0px 15px;
-
 }
 
 #heading-div-discussion {
@@ -376,8 +398,8 @@ li.selected{
    top:15px;
    margin:10px 0px 15px 0px;
    padding: 0px 15px 10px 15px;
-
 }
+
 
 #heading-div-discussion p {
   text-align: left;
@@ -390,18 +412,19 @@ li.selected{
   font-family: 'LiberationSerif-Regular-webfont';
   line-height: 15px;
 
+
 }
+
 
 #heading-div-explore {
    position:relative;
    top:13px;
    padding:10px 15px 1px 15px;
-   background-color: #CCCCCC
+   background-color: #CCCCCC;
 }
 
 
-
-.title-header{
+.title-header {
  position:relative;
  margin:0px 15px;
 
@@ -419,12 +442,6 @@ li.selected{
 }
 
 #headingExplore {
-   /* padding: 7px 8px 4px 155px;
-    display: flex;
-    margin-top: 14px;
-    position: relative;
-    text-align: center;
-    background-color: rgba(0, 128, 128, 0.29);*/
     font-family: 'open sans';
     color: #5a5a5a;
     font-weight: lighter;
@@ -433,27 +450,18 @@ li.selected{
 }
 
 #headingDiscussion {
-    /*padding: 10px 8px 5px 140px;
-    display: flex;
-    margin-top: 10px;
-    position: relative;
-    text-align: center;
-    background-color: rgba(0, 128, 128, 0.29);
-    font-family: 'open sans';
-    color: #FFFFFF;*
-    text-align: left;
-    /*background-color: rgba(0, 128, 128, 0.29);*/
+
     font-family: 'open sans';
     color: #FFFFFF;
     font-weight:lighter;
     font-size: 20px;
-    color: #5a5a5a;
-
+   color: #5a5a5a;
 }
+
 #article {
 	padding: 20px 0px;
   position:relative;
-  min-height:1200px;
+  min-height:1400px;
 }
 
 #title {
@@ -494,13 +502,22 @@ li.selected{
 		/* the top values will vary accod=rding to the page and will be set via JS */
 }
 
+
+.pagenr, .imgnr {
+  text-align: center; font-size: .8em;
+}
+
+
 #MessagePage{
   /*height: 300px;*/ /* as defined in JS */
   background-color: rgb(0, 128, 128);
   color: #fff;
 }
 
-.pagenr, .imgnr {text-align: center; font-size: .8em;}
+.pagenr, .imgnr {
+  text-align: center; font-size: .8em;
+}
+
 .imgnr{
   position: relative;
   top: -420px;
@@ -533,6 +550,16 @@ li.selected{
 .relatedArticles {
     position: relative;
     width: 100%;
+    top:400px;
+}
+
+#related-lines{
+ position:relative;
+ top:400px;
+ width:80%;
+ float:left;
+ margin-left: 15px;
+
 }
 
 #TextCard1 {
@@ -560,6 +587,8 @@ li.selected{
   margin-top: 7px;
   margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
+  /*font-style: italic;*/
+  line-height: 18px;
 }
 
 #updatetags {
@@ -687,6 +716,7 @@ input[type="checkbox"]{display:none;}
   transition:.5s;
   opacity:0;
 }
+
 .social ul {
   margin-left :10%;
   margin-bottom: 23%;
@@ -711,7 +741,8 @@ input[type="checkbox"]{display:none;}
   text-align:center;
   float:left;
   display:block;
-  height:22px;}
+  height:22px;
+}
 
 /*.social ul:after {
   content:'';
@@ -735,7 +766,7 @@ input[type="checkbox"]{display:none;}
 /* end share function */
 
 
-}
+
 
 #comment {
 	  width: 100%;
@@ -759,9 +790,8 @@ input[type="checkbox"]{display:none;}
   float: center;
 }
 
-.poll {
-  padding:0px 0px 50px 0px;
-  margin: 10px 15px;
+#poll {
+  margin: 10px 15px 10px 15px;
   width:100%;
   font-family: 'Open Sans', sans-serif;
   /*background-color: white;*/
@@ -769,10 +799,21 @@ input[type="checkbox"]{display:none;}
   top:400px;
   }
 
-.poll span {
-  font-size: 19px;
-  position:relative;
-  }
+#belowarticle {
+ position:relative;
+
+}
+
+.relatedArticles hr {
+
+  position: relative;
+  float:left;
+  top: 400px;
+  margin-left: 15px;
+ 
+
+}
+
 
   .subheader {
   font-size: 24px;
@@ -783,11 +824,20 @@ input[type="checkbox"]{display:none;}
   font-weight: lighter;
   margin: 5px 0px;
   padding:0px;
-
   }
 
 
-#submit-button{
+#question {
+  padding:0px 30px 0px 0px;
+  text-align:left;
+  margin:10px 0px;
+  position:relative;
+  float:left;
+  line-height: 18px;
+}
+
+
+#submit-button {
  font-family: 'Open Sans', sans-serif;
  font-size: 19px;
  background-color: #008080;
@@ -859,19 +909,14 @@ input[type="checkbox"]{display:none;}
 }
 
 
-
-
 #left {
   position: relative;
   float:left;
-
 }
 
 #right {
   position: relative;
   float:right;
-
-
 }
 
 
@@ -886,7 +931,7 @@ input[type="checkbox"]{display:none;}
 }
 
 #footer {
-	margin-top: 250px;
+	margin-top: 70px;
 	text-align: left;
   position:relative;
   background-color: #434343;
@@ -925,8 +970,9 @@ input[type="checkbox"]{display:none;}
   stroke: #008080;
   stroke-width: 2.5px;
 
+ }
 
-}
+
 .tab-icon {   /* default svg color when not selected */
   stroke: #696969;
   stroke-width: 1.5px;
@@ -935,7 +981,7 @@ input[type="checkbox"]{display:none;}
   }
 
 .selected .svg-element { /*fills the little svg elements when active*/
-fill: #008080;
+   fill: #008080;
 }
 
 /*  Style for the explore section svg*/
@@ -949,6 +995,15 @@ fill: #008080;
 stroke-width: 4px;
 
 }
+
+ .lines {
+   border:0.5px solid;
+   color: #737373;
+   background-color: #737373;
+   width:50%;
+   text-align:left;
+   margin-left: 0px;
+ }
 
 /*  Style for the top menu svgs*/
 
@@ -969,16 +1024,9 @@ stroke-width: 4px;
   top: -18px;
  }
 
- .lines {
-   border:0.5px solid;
-   color: #737373;
-   background-color: #737373;
-   width:50%;
-   text-align:left;
-   margin-left: 0px;
- }
 
-}
+
+
 #share {
  stroke: white;
  stroke-width: 3;

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- for more info on the line below, please check: http://www.w3schools.com/css/css_rwd_viewport.asp -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<link href="css/reset.css" rel="stylesheet">
+
+	<!-- We commented that out because we are not using this. -->
+	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"> -->
+	<!-- <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"> -->
+
+	<!-- used only in the tour
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="css/prototype.css" rel="stylesheet">
+
+	<!-- tour -->
+	<link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- We need the following two scripts to allow the user to drag and drop things.
+			The second script will allow this functionality in touch screens -->
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- used only in the tour
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
+	<script src="js/bootstrap-tour-standalone.min.js"></script>
+
+</head>
+
+<body>
+	<div class="top"> <!-- Here: hamburger button & LOGO -->
+			<div class="header">
+				<i class="fa fa-align-justify fa-lg" aria-hidden="true"></i>
+				<h1 id="logo">Newspaper</h1>
+				<span id="service">
+				<i class="fa fa-user fa-lg" aria-hidden="true" alt="user"></i>
+				<i class="fa fa-home fa-lg" aria-hidden="true" alt="home"></i>
+			</span>
+			</div><!-- end .header -->
+
+		<div class="navigation">
+			 <ul class="pagetabs">
+				<!-- for now, we're using images but we'll soon probably use vector instead -->
+			 	<li id="exploreTour">
+					<a href="#explore">
+						<i class="fa fa-compass fa-2x" aria-hidden="true"></i>
+						<!-- <img src="images/RELATEDARTBUTTON2.png" alt="Explore"/> -->
+					</a>
+				 </li>
+				<li class="selected">
+					<a href="#article">
+					<!-- <img src="images/ARTICLEBUTTON1.png" alt="Article"/>  -->
+
+
+						<!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
+	          <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
+	          <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
+						<!-- we should work with the proper icons, the translate() below should not be here (but if we remove it now, we won't be able to see our graphic)-->
+						<!-- <svg class="tab-icon" height="30" viewBox="0 0 30 30" width="30" >
+						 <g transform="translate(-4 -1025.8)">
+						  <g id="explore-graphic" transform="translate(17,-220)">
+						   <path id="b-arrow" d="m3.8191 1266.6h-5.7c-0.65 0-0.87 0.31-0.94 0.49-0.076 0.18-0.14 0.56 0.32 1l2.4 2.4c0.29 0.29 0.68 0.45 1.1 0.45 0.41 0 0.8-0.16 1.1-0.45l2.4-2.4c0.46-0.46 0.4-0.83 0.32-1-0.074-0.18-0.3-0.49-0.95-0.49z"/>
+						   <path id="t-arrow" d="m-1.8291 1252.6h5.7c0.65 0 0.87-0.3 0.95-0.49 0.076-0.18 0.14-0.56-0.32-1l-2.4-2.4c-0.58-0.58-1.6-0.58-2.2 0l-2.4 2.4c-0.46 0.46-0.4 0.83-0.32 1 0.076 0.18 0.3 0.49 0.94 0.49z"/>
+						   <path id="r-arrow" d="m12.575 1258.6-2.4-2.4c-0.25-0.25-0.5-0.37-0.75-0.37-0.35 0-0.75 0.26-0.75 1v5.7c0 0.74 0.4 1 0.75 1 0.25 0 0.5-0.13 0.75-0.38l2.4-2.4c0.29-0.29 0.45-0.68 0.45-1.1 0-0.41-0.16-0.8-0.45-1.1z"/>
+						   <path id="l-arrow" d="m-7.425 1255.8c-0.25 0-0.5 0.13-0.75 0.37l-2.4 2.4c-0.29 0.29-0.45 0.68-0.45 1.1s0.16 0.8 0.45 1.1l2.4 2.4c0.25 0.25 0.5 0.38 0.75 0.38s0.47-0.13 0.6-0.35c0.1-0.17 0.15-0.39 0.15-0.65v-5.7c0-0.74-0.41-1-0.75-1z"/>
+						   <path id="center" d="m1 1255.3c-2.4 0-4.4 2-4.4 4.4s2 4.4 4.4 4.4 4.4-2 4.4-4.4-2-4.4-4.4-4.4z"/>
+						  </g>
+						 </g>
+						</svg> -->
+
+					<!-- SVG DIRECTLY IN HTML -->
+					<!-- <svg height="30" width="30" viewBox="0 0 30 30" id="article-icon"  >
+					 <path id="b-arrow" d="m16.8191 20.8h-5.7c-0.65 0-0.87 0.31-0.94 0.49-0.076 0.18-0.14 0.56 0.32 1l2.4 2.4c0.29 0.29 0.68 0.45 1.1 0.45 0.41 0 0.8-0.16 1.1-0.45l2.4-2.4c0.46-0.46 0.4-0.83 0.32-1-0.074-0.18-0.3-0.49-0.95-0.49z"/>
+					 <path id="t-arrow" d="m11.1709 6.8h5.7c0.65 0 0.87-0.3 0.95-0.49 0.076-0.18 0.14-0.56-0.32-1l-2.4-2.4c-0.58-0.58-1.6-0.58-2.2 0l-2.4 2.4c-0.46 0.46-0.4 0.83-0.32 1 0.076 0.18 0.3 0.49 0.94 0.49z"/>
+					 <path id="r-arrow" d="m25.575 12.8-2.4-2.4c-0.25-0.25-0.5-0.37-0.75-0.37-0.35 0-0.75 0.26-0.75 1v5.7c0 0.74 0.4 1 0.75 1 0.25 0 0.5-0.13 0.75-0.38l2.4-2.4c0.29-0.29 0.45-0.68 0.45-1.1 0-0.41-0.16-0.8-0.45-1.1z"/>
+					 <path id="l-arrow" d="m5.575 10c-0.25 0-0.5 0.13-0.75 0.37l-2.4 2.4c-0.29 0.29-0.45 0.68-0.45 1.1s0.16 0.8 0.45 1.1l2.4 2.4c0.25 0.25 0.5 0.38 0.75 0.38s0.47-0.13 0.6-0.35c0.1-0.17 0.15-0.39 0.15-0.65v-5.7c0-0.74-0.41-1-0.75-1z"/>
+					 <path id="center" d="m14 9.5c-2.4 0-4.4 2-4.4 4.4s2 4.4 4.4 4.4 4.4-2 4.4-4.4-2-4.4-4.4-4.4z"/>
+					</svg> -->
+					<!-- END SVG DIRECTLY IN HTML -->
+
+					<!-- SVG EMBEDDED -->
+					<object data="svg/article-test-optimized.svg" type="image/svg+xml" class="tab-icon" width="30" height="30">
+					  <!-- <img src="yourfallback.jpg" /> -->
+					</object>
+					<!-- END SVG EMBEDDED -->
+					</a>
+				</li>
+			 	<li id="discussionTour">
+					<a href="#discussion">
+						<i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
+					</a>
+				</li>
+			 </ul>
+		</div><!-- end .navigation -->
+	</div><!-- end .top -->
+
+		<!--<div class="login">
+			<button class="loginbutton">Log In</button>
+		</div>-->
+
+<!-- Here: CONTENT-->
+<div id="content">
+
+	<div class="tabContent" id="article">
+	<h2 id="title">Facebook is going to start showing you pieces people actually read</h2>
+	<span class="meta">Alex Hern @alexhern <br/> Friday 22 April 2016 11.50 BST</span>
+
+
+		<span class= "options">
+		  <i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
+		  <i class="fa fa-bookmark fa-lg" aria-hidden="true"></i>
+		</span>
+
+	<div id="mainArticlePage">
+
+		<div id="paginated-content">
+			<div class="articleTextPage">
+<p class="lead">Facebook is changing its algorithm yet again, and this time it wants to show you more things that you’ll actually spend time reading or watching.</p>
+<p>The social network looks at a wealth of data when deciding which posts you actually see on News Feed, but until now it hasn’t cared too much about what you actually do when you click away from Facebook. It says that’s going to change.</p>
+<p>“We’re learning that the time people choose to spend reading or watching content they clicked on from News Feed is an important signal that the story was interesting to them,” said software engineer Moshe Blank and research scientist Jie Xu in a post on the company’s website.</p>
+
+<p class="pagenr">1/6</p>
+</div>
+
+
+		</div><!-- end #paginated-content -->
+
+<!--
+	<p id="interaction"><a id="GOEXPLORE" href="#explore">You've read 5 articles from us... <br> Time to GO EXPLORE more.</a></p>
+-->
+		 <div id="img-gallery">
+			<!-- all images should have the same size/proportion otherwise it does not look good (personal thought) -->
+			<img class="article-img" src="images/article-01.jpg" />
+			<!--<img class="article-img" src="images/article-02.jpg" />
+			<img class="article-img" src="images/article-03.jpg" />-->
+			<p class="imgnr">1/3</p>
+
+		 </div> <!-- end article img-gallery -->
+
+		<!-- <p id="TextCard1"><img src="images/TEXTCARD1.png" alt="TextCard1"/></p> -->
+
+		<!--<p id="ImageCard1"><img src="images/IMAGECARD1.png" alt="ImageCard1"/></p> -->
+
+<!-- <span class="meta"><i class="fa fa-share-alt" aria-hidden="true"></i>60 Shares</span> -->
+
+
+
+	<img class="poll" src="images/html-poll.png" alt="Poll">
+
+	<!--<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>-->
+
+<div id="newsUpdate" >
+	<h3 id="newUpdateHeader">Stay Updated with the News</h3>
+	<p id="newUpdateText">Get the news you want, when you want and where you want.</p>
+	<ul class="updateTabs">
+		<li class="selected"><a href="#what">What</a></li>
+		<li><a href="#when">When</a></li>
+		<li><a href="#where">Where</a></li>
+	</ul>
+	<div class="tabUpdContent" id="what">
+		<span>Author</span> <span>Social Media</span> <span>Privacy</span> <span>Podcast</span> <span>Copyright</span> <span>Software</span>
+	</div>
+	<div class="tabUpdContent" id="when">
+		<span>Monday</span> <span>Tuesday</span> <span>Wednesday</span> <span>Thursday</span> <span>Friday</span> <span>Weekend</span>
+	</div>
+	<div class="tabUpdContent" id="where">
+		<span><i class="fa fa-facebook" aria-hidden="true"></i></span> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> <span><i class="fa fa-twitter" aria-hidden="true"></i></span> <span><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+	</div>
+</div>
+
+<img class="subscribe" src="images/html-subscribe.png" alt="subscribe">
+
+	</div><!-- end #sortable -->
+</div><!-- end #article -->
+
+	<!-- explore -->
+	<div class="tabContent"  id="explore">
+		<!-- tab -->
+		<ul class="intTab">
+			<li class="selected"><a href="#tab1">Public</a></li>
+			<li><a href="#tab2">Personal</a></li>
+		</ul>
+		<!-- end tab -->
+		<!-- explore content -->
+		<div class="tabIntContent" id="tab1">
+			<img src="images/Explore public final-large plus signs-01.png" alt="Explore Public Tab" />
+		</div>
+
+		<div class="tabIntContent" id="tab2">
+			<div id="logIn">
+				<img src="images/login.png" alt="logIn">
+			</div>
+
+				    <img src="images/explore-personal-search bar.png" alt="Search">
+
+				<div id="sortable">
+				   <img src="images/explore-personal-summary of the year.png" alt="Summary">
+				   <img src="images/explore-personal-authors.png" alt="Authors">
+				   <img src="images/explore-personal-topics.png" alt="Topics">
+
+				</div>
+
+		</div> <!-- end Personal Explore tab2 -->
+				<!-- end explore content -->
+	</div><!-- end #explore -->
+
+	<!-- discussion -->
+	<div  class="tabContent" id="discussion">
+		<img src="images/html-comments-01.png" alt="Discussion">
+
+	</div><!-- end #discussion -->
+
+	<p id="footer"><img src="images/footer.png" alt="Footer"></p>
+
+</div><!-- end #content -->
+
+	<div id="share">
+		<i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> <!-- Here: SHARE BUTTON -->
+	</div>
+
+	<div id="comment">
+		<img src="images/html-comments-share thoughts02.png" alt="shareThoughts">
+	</div>
+
+	<div id="backtotop">
+		<i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i> <!-- Here: ARROWS UP BUTTON -->
+	</div>
+
+<!--<script>
+    $(document).ready(function(){
+
+    // jQuery methods go here...
+
+    });
+        //end document.ready
+</script>-->
+<!-- moved this to an external file: js/script.js -->
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

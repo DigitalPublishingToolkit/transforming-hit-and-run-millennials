@@ -402,30 +402,47 @@ li.selected{
    position:relative;
    top:15px;
    margin:10px 0px 15px 0px;
-   padding: 0px 15px 10px 15px;
-
+   padding: 0px 15px 0px 15px;
+   font-family: 'open sans';
 }
 
-#heading-div-discussion p {
+#heading-div-discussion .artTitle {
   text-align: left;
   position:relative;
   top: 3px;
-  margin: 8px 0px 13px 0px;
+  margin: 10px 0px 13px 0px;
   padding-right: 20px;
-  font-size: 18px;
-  color: black;
+  font-size: 20px;
+  color: rgba(63, 63, 63, 0.98);
   font-family: 'LiberationSerif-Regular-webfont';
   line-height: 15px;
+}
 
+#linesDis {
+    border: 0.5px solid;
+    color: #737373;
+    background-color: #737373;
+    width: 65%;
+    text-align: left;
+    margin-left: 0px;
 }
 
 #heading-div-explore {
-   position:relative;
-   top:13px;
-   padding:10px 15px 1px 15px;
-   background-color: #CCCCCC
+    position: relative;
+    top: 13px;
+    padding: 10px 15px 6px 15px;
+    background-color: #CCCCCC;
+    background-color: transparent;
 }
 
+#linesExSection {
+    border: 0.5px solid;
+    color: #737373;
+    background-color: #737373;
+    width: 110%;
+    text-align: left;
+    margin-left: 0px;
+}
 
 
 .title-header{

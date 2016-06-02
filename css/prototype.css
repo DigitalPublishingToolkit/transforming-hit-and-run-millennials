@@ -83,11 +83,11 @@ body{
 }
 
 #public-explore {
-  box-shadow: -2px -2px 10px #a8a8a8 inset;
+  box-shadow: -2px -2px 10px #696969 inset;
 }
 
 #personal-explore {
-  box-shadow: 2px 2px 10px #a8a8a8 inset;
+  box-shadow: 2px 2px 10px #696969 inset;
 }
 
  #personal-explore.selected  {
@@ -553,6 +553,15 @@ li.selected{
     top:400px;
 }
 
+#related-lines{
+ position:relative;
+ top:400px;
+ width:80%;
+ float:left;
+ margin-left: 15px;
+
+}
+
 #TextCard1 {
 	text-align:center;
 }
@@ -782,16 +791,12 @@ input[type="checkbox"]{display:none;}
 
 }
 
-#related-lines {
+.relatedArticles hr {
 
   position: relative;
   float:left;
   top: 400px;
   margin-left: 15px;
-   border:0.5px solid;
-   color: #737373;
-   background-color: #737373;
-   width:50%;
  
 
 }

@@ -146,11 +146,9 @@ $('#GOEXPLORE').on('click', function(bla){
 //YIN TITLE AND SYMBOL ROTATE
 //YEAR IN NEWS ON AND OFF
 
-$('.ranking').hide();
 
 $('.TitleYin').on('click', function() {
   $('.yin').toggle();
-  $('.ranking').hide();
   if($('#caret').hasClass('fa-caret-left')){
     $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
@@ -160,17 +158,15 @@ $('.TitleYin').on('click', function() {
 });
 
 
-$('.ranking').on('click', function(){
-  $(this).attr('src','images/yin.png');
-});
-
-
 //RANKING ON AND OFF
 
 $('.yin').on('click', function(){
-  $('.ranking').show();
-  $('.yin').hide();
-  $(this).attr('src','images/ranking.png');
+ if( $(this).attr('src') == 'images/yin.png'){
+   $(this).attr('src','images/ranking.png');
+ }else{
+   $(this).attr('src','images/yin.png');
+ }
+ 
 });
 
 

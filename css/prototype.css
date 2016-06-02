@@ -120,34 +120,50 @@ body{
   background-color: #C0E0E0;
 }
 
-#what, #when, #where{
+#what {
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 1px 1px 3px #999;
+}
+
+
+#when {
   background-color: #fff;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
 }
 
+#where {
+    background-color: #fff;
+    padding: 20px 20px 60px 20px;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 1px 1px 3px #999;
+}
 
 .fa-arrow-circle-right:before {
     content: "\f0a9";
     padding-left: 270px;
 }
 
+
+
 .signUpdate {
-    position:relative;
-    float: right;
+    /* position: relative; */
+    /* float: right; */
     font-family: 'Open Sans', sans-serif;
-   font-size: 19px;
-   background-color: #008080;
-   float:right;
-   text-align: center;
-   color:white; 
-   border-radius: 20px;
-   border:none;
-   padding:5px;
-   position:relative; 
-   margin: 10px;
-   top: -50px;
+    font-size: 19px;
+    background-color: #008080;
+    float: right;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    position: relative;
+    /* margin: 60px; */
+    top: 8px;
 }
 
 li.selected{
@@ -170,6 +186,8 @@ li.selected{
 
 .updateTabs li.selected{
   border-bottom: none;
+  padding-left: 2px;
+  padding-right: 1px;
 }
 .updateTabs li a{
   color: #000;

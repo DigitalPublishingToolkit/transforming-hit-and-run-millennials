@@ -151,7 +151,7 @@ $('.subheaderExDutch').on('click', function() {
   if($('#caret').hasClass('fa-caret-left')){
     $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });
@@ -164,7 +164,7 @@ $('.subheaderExWorld').on('click', function() {
   if($('#caret').hasClass('fa-caret-left')){
     $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });
@@ -273,9 +273,19 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
         //start off with no page text
         var pageText = null;
         for(var i = 0; i < words.length; i++) {
-            //add the next word to the pageText
+            //add the next word to the pageText (this will be done word by word)
+            //if pageText exists, add a space (' ') to it and the next word (word[i])
+            //else just add the next word (words[i])
+            //Reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+            //equivalent to
+            // if(pageText){
+            //   betterPageText = pageText + ' ' + words[i];
+            // }else{
+            //   betterPageText = words[i]
+            // }
             var betterPageText = pageText ? pageText + ' ' + words[i]
                                           : words[i];
+            //add betterPageText (defined in the line above) as content of newPage
             newPage.html(betterPageText);
 
             //Check if the page is too long
@@ -294,6 +304,10 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
                 pageText = betterPageText;
             }
         }
+        //add 'MessagePage' after the second page ( .eq(1) )
+        $('.articleTextPage').eq(1).after('<div id="MessagePage" class="articleTextPage" />');
+        //define a height to this div
+        $('#MessagePage').css('height', pageHeight+'px');
     }
 
     //$(window).resize(paginate).resize();
@@ -310,6 +324,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
 if($('#paginated-content').length){
 
     var numPages = $('#paginated-content').children().length;
+
     function pilePages(){
 
       for(var n=0; n < numPages; n++){

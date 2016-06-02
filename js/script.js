@@ -196,10 +196,10 @@ $('.subheaderExWorld').on('click', function() {
 
 $('.TitleYin').on('click', function() {
   $('.yin').toggle();
-  if($('#caret').hasClass('fa-caret-left')){
-    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  if($('#caretYin').hasClass('fa-caret-left')){
+    $('#caretYin').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
+    $('#caretYin').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });

@@ -198,54 +198,51 @@
 
 <!-- <span class="meta"><i class="fa fa-share-alt" aria-hidden="true"></i>60 Shares</span> -->
 
-
+<div id="belowArticle">
 
 	<!--<img class="poll" src="images/poll.png" alt="Poll">-->
-<div class="poll">
-<hr class="lines">
-<h2 class="subheader">POLL</h2>
-	<span>Do you hate Donald Trump?</span></br>
-	<span class="pollOptions">Yes</span>
-	<span class="pollOptions">No</span>
-	<span class="results" id="Yes" >
-		<p id="left">67% Yes</p>
-		<p id="right"> 33% N0 </p>
+<div id="poll">
+	<hr class="lines">
+	<h2 class="subheader">POLL</h2>
+		<span>Do you find Facebook's privacy settings clear in relation to the collection and use of data by Facebook itself or by third-parties?</span></br>
+		<span class="pollOptions">No</span>
+		<span class="pollOptions">Yes</span>
+		<span class="results" id="Yes" >
+			<p id="left">67% No</p>
+			<p id="right"> 33% Yes</p>
 		</span>
 	<!--<input type="button" name="answer" value="Yes"></input>
 	<input type="button" name="answer" value="No"></input>-->
-	<input id="submit-button" type="submit" name="submit" value="Submit"></input>
+		<input id="submit-button" type="submit" name="submit" value="Submit"></input>
 </div>
 
-<!--<hr class="lines">
-	<!--<img class="pollresultsArticle" src="images/pollresultsArticle.png" alt="PollResultsArticle">-->
-
-	
-   <!--<img class= "relatedArticles" src="images/relatedarticles.png" alt="relatedArticles">-->
+  <div id="relatedArticles">
+  	<img class= "relatedArticles" src="images/relatedarticles.png" alt="relatedArticles">
+  </div>
 
 
-
-	<!--<p id="updatetags"><img src="images/updatetags.png" alt="Update"></p>-->
-
-<div id="newsUpdate" >
+<div id="newsUpdate">
 	<hr class="lines">
-	<span class="subheader">NEWS UPDATES</span>
-	<p id="newUpdateText">Get the news you want, when you want and where you want.</p>
+	<span class="subheader">SIGN UP to get your Personal News Updates</span>
+	<p id="newUpdateText">GET ONLY THE NEWS YOU WANT. Select your preferred topics, the day you would like to receive the updates, and in which medium.</p>
 	<ul class="updateTabs">
 		<li class="selected"><a href="#what">What</a></li>
 		<li><a href="#when">When</a></li>
 		<li><a href="#where">Where</a></li>
 	</ul>
    <div class="tabUpdContent" id="what">
-		<span>Author</span> <span>Social Media</span> <span>Privacy</span> <span>Podcast</span> <span>Copyright</span> <span>Software</span>
+		<span>A.Hern</span> <span>Facebook</span> <span>Privacy</span> <span>Culture</span> <span>Politics</span> <span>Technology</span>
 		<div class="NewsUpdate-check">
+			
 		<!-- SVG Code for the arrow in the News Update box -->
 		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-					<svg   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+					<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 					  <path d="M12.131,0.501,11.918,0.5c-6.184,0-11.303,5.03-11.416,11.212-0.057,3.051,1.08,5.938,3.197,8.135,2.119,2.196,4.965,3.438,8.016,3.492l0.213,0.002h0.002c6.18,0,11.297-5.03,11.414-11.212,0.111-6.3-4.918-11.516-11.213-11.628z" />
 					 <path  d="m5.2351,11.914,11.869,0.0631" />
 					 <path  d="m12.054,6.6104,5.2402,5.3664-5.2887,5.3642"/>
 					</svg>		
 		<!--<i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>-->
+			
         </div>
 	</div>
 	<div class="tabUpdContent" id="when">
@@ -253,17 +250,19 @@
 		<div class="NewsUpdate-check">
 		<!-- SVG Code for the arrow in the News Update box -->
 		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-					<svg  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+					<svg id="arrowWhen" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="30" width="30"  viewbox="0 0 30 30" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 					  <path d="M12.131,0.501,11.918,0.5c-6.184,0-11.303,5.03-11.416,11.212-0.057,3.051,1.08,5.938,3.197,8.135,2.119,2.196,4.965,3.438,8.016,3.492l0.213,0.002h0.002c6.18,0,11.297-5.03,11.414-11.212,0.111-6.3-4.918-11.516-11.213-11.628z" />
 					 <path  d="m5.2351,11.914,11.869,0.0631" />
 					 <path  d="m12.054,6.6104,5.2402,5.3664-5.2887,5.3642"/>
 					</svg>
+		
          </div>
 	</div>
 	<div class="tabUpdContent" id="where">
-		<span><i class="fa fa-facebook" aria-hidden="true"></i></span> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> <span><i class="fa fa-twitter" aria-hidden="true"></i></span> <span><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+		<span><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span> <span><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></span> <span><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span> <span><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></span>
 		<button class="signUpdate">SIGN UP</button>
 	</div>
+  </div>
 </div>
 
 
@@ -325,8 +324,19 @@
 			<img src="images/searchpublicexplore.png" alt="SearchPublicExplore" />
 			<img src="images/briefingplay.png" alt="BriefingPlay" />
 			<img src="images/topnews.png" alt="TopNews" />
+
+			  <div id="dutchTopics">
+				<hr class="lines">
+				<h2 class="subheaderExDutch">EXPLORE DUTCH TOPICS</h2>
 			<img src="images/dutchtopics.png" alt="DutchTopics" />
+			  </div>
+
+			  <div id="worldTopics">
+				<hr class="lines">
+				<h2 class="subheaderExWorld">EXPLORE WORLD TOPICS</h2>
 			<img src="images/worldtopics.png" alt="WorldTopics" />
+			  </div>
+
 			<img src="images/topvideos.png" alt="TopVideos" />
 			<img src="images/gallery.png" alt="Gallery" />
 		</div>
@@ -341,12 +351,11 @@
 				<div id="sortable">
 
 					<div class="TitleYin" id="TitleYin">
-							<h3><span id='year'> 2016 </span> Year in News <span><i id='caret' class="fa fa-caret-left fa-2x" aria-hidden="true"></i><!--<i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>--></span></h3>
+							<h3><span id='year'> 2016 </span><span id="yearInNews"> Year in News </span><span><i id='caret' class="fa fa-caret-left fa-2x" aria-hidden="true"></i><!--<i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>--></span></h3>
 					</div>
 
-					<div class="YIN">
+					<div>
 				   		<img class="yin" src="images/yin.png" alt="yin">
-						<img class="ranking" src="images/ranking.png" alt="ranking">
 				   	</div>
 				   		<img src="images/authors.png" alt="Authors">
 				   		<img src="images/personaltopics.png" alt="PersonalTopics">
@@ -397,6 +406,8 @@
 		     </li>
    		<li>Contact us </li>
    		<li>Imprint</li>
+   		<li>Terms and Conditions</li>
+   		<li>About</li>
      	<li>Made with 
    			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 				<!-- Created with Inkscape (http://www.inkscape.org/) -->

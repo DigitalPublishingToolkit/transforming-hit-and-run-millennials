@@ -170,13 +170,14 @@ body{
 /* update tabs */
 .tabUpdContent span{
   background-color: rgb(241, 241, 241);
-  padding: 6px 12px;
+  padding: 12px 12px 6px 12px;
   border-radius: 20px;
   margin: 6px 4px;
   display: inline-block;
   font-size: 14px;
 
 }
+
 
 
 #newsUpdate {
@@ -1077,4 +1078,12 @@ stroke-width: 4px;
     background-color:none;
     position:relative;
     float:right;
+}
+
+.NewsUpdate-svg {
+
+  stroke-width: 1px;
+  stroke:#696969;
+  fill:none;
+
 }

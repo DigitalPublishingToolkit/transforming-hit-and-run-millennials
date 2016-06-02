@@ -178,10 +178,10 @@ $('.subheaderExDutch').on('click', function() {
 
 $('.subheaderExWorld').on('click', function() {
   $('.worldtopics').toggle();
-  if($('#caret').hasClass('fa-caret-left')){
-    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  if($('#caretWorld').hasClass('fa-caret-left')){
+    $('#caretWorld').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
+    $('#caretWorld').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });

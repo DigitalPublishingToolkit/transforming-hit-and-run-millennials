@@ -144,6 +144,32 @@ $('#GOEXPLORE').on('click', function(bla){
   });
 
 
+//EXPLORE DUTCH TOPICS TOGGLE
+
+$('.subheaderExDutch').on('click', function() {
+  $('.dutchtopics').toggle();
+  if($('#caret').hasClass('fa-caret-left')){
+    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  } else{
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+  }
+
+});
+
+
+//EXPLORE WORLD TOPICS TOGGLE
+
+$('.subheaderExWorld').on('click', function() {
+  $('.worldtopics').toggle();
+  if($('#caret').hasClass('fa-caret-left')){
+    $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
+  } else{
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+  }
+
+});
+
+
 //YIN TITLE AND SYMBOL ROTATE
 //YEAR IN NEWS ON AND OFF
 

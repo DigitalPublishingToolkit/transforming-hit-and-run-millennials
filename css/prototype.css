@@ -404,10 +404,10 @@ li.selected{
 	position: relative;
   }
 
-  .relatedArticles {
-  width:100%;
-
-  }
+.relatedArticles {
+    position: relative;
+    width: 100%;
+}
 
 #TextCard1 {
 	text-align:center;
@@ -753,7 +753,7 @@ input[type="checkbox"]{display:none;}
 }
 
 #footer {
-	margin-top: 50px;
+	margin-top: 250px;
 	text-align: left;
   position:relative;
   background-color: #434343;

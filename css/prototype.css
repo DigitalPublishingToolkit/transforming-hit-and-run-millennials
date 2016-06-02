@@ -266,7 +266,7 @@ li.selected{
     text-align: -webkit-center;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 80px;
+    padding-left: 40px;
 }
 
 #year {
@@ -282,7 +282,7 @@ li.selected{
 
 .fa-caret-left:before {
     content: "\f0d9";
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 .fa-caret-down:before {

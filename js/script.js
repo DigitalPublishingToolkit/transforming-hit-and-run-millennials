@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
- 
+
 $(".results").hide();
  // Changes the .options elements in the article page
-  
+
 
       $("#listen").click(function(){ //adds/removes teh class .active to the 'listen' svg when clicked
       $(this).toggleClass('active');
@@ -17,17 +17,17 @@ $(".results").hide();
        swal({
        title: "Login",
        text: "Log in to save this article for reading it later",
-       imageUrl: "images/user.png"    
+       imageUrl: "images/user.png"
        });
 
 
-     });    
+     });
 $(".results").hide();
 
 //poll simulation
 
   $(".pollOptions").click(function(){
-   $(this).toggleClass('clicked-poll'); 
+   $(this).toggleClass('clicked-poll');
   });
 
   $("#submit-button").click(function(){
@@ -44,7 +44,7 @@ $(".results").hide();
   swal({
        title: "Login",
        text: "Log in or register on this website",
-       imageUrl: "images/user.png"    
+       imageUrl: "images/user.png"
        });
 
 
@@ -139,7 +139,7 @@ $('#GOEXPLORE').on('click', function(bla){
     $(curContent).show();
     //disables page 'scroll' to anchor tag
     bla.preventDefault();
-    
+
   });
 
 
@@ -178,7 +178,7 @@ $('.TitleYin').on('click', function() {
   if($('#caret').hasClass('fa-caret-left')){
     $('#caret').removeClass('fa-caret-left').addClass('fa-caret-down');
   } else{
-    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left'); 
+    $('#caret').removeClass('fa-caret-down').addClass('fa-caret-left');
   }
 
 });
@@ -192,7 +192,7 @@ $('.yin').on('click', function(){
  }else{
    $(this).attr('src','images/yin.png');
  }
- 
+
 });
 
 
@@ -250,7 +250,7 @@ $('#logIn').on("click", function(){
  var TEST
  var TESTS
  var TESTT
-  
+
  $(".NewsUpdate-check").on('click', function(blaEvent){
  TEST = $(this).parent();
  TESTS = $(TEST).parent();
@@ -384,6 +384,28 @@ $('.tabUpdContent span').on('click', function(){
 $("#when").hide();
 $("#where").hide();
 
+//next tab
+var nextTab, nextTabID;
+
+$(".NewsUpdate-check").on('click', function(){
+  // defines the next tab as being the next to the currently selected tab
+  nextTab = $('.updateTabs li.selected').next();
+  //gets the href of the next tab (which is related to the id of the content to be displayed)
+  nextTabID = $(nextTab).find('a').attr('href');
+
+  //remove .selected from all li
+  $('.updateTabs li').removeClass('selected');
+  //add .selected to selected tab
+  curUpdTab = $(nextTab);
+  $(curUpdTab).addClass('selected');
+  //defines the current content tab
+  curUpdContent = nextTabID;
+  //hides all itesm with class .tabContent
+  $('.tabUpdContent').hide();
+  //shows current content tab
+  $(curUpdContent).show();
+
+});
+
 
 });//end document.ready
-

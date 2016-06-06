@@ -226,6 +226,7 @@ margin: 6px 2px;
   padding: 20px 20px 20px 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
+  margin-bottom: 350px;
 }
 
 #when {
@@ -233,6 +234,7 @@ margin: 6px 2px;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
+  margin-bottom: 350px;
 }
 
 #where {
@@ -240,6 +242,7 @@ margin: 6px 2px;
     padding: 20px 20px 60px 20px;
     font-family: 'Open Sans', sans-serif;
     box-shadow: 1px 1px 3px #999;
+    margin-bottom: 350px;
 }
 
 .fa-arrow-circle-right:before {
@@ -1024,7 +1027,7 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-	margin-top: 160px;
+	margin-top: 50px;
 	text-align: left;
   position:relative;
   background-color: #434343;

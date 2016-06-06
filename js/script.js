@@ -5,9 +5,24 @@ $(".results").hide();
  // Changes the .options elements in the article page
 
 
-      $("#listen").click(function(){ //adds/removes teh class .active to the 'listen' svg when clicked
-      $(this).toggleClass('active');
-      });
+     $('#on').hide();
+
+
+    $('#listen').on('click', function() {
+    if($('#on').hasClass('listen-switch')){
+      $('#off').show();
+      $('#on').hide();
+      $('#on').removeClass('listen-switch');
+      $('#off').addClass('listen-switch');
+    } else{
+      $('#on').show();
+      $('#off').hide();
+      $('#off').removeClass('listen-switch');
+      $('#on').addClass('listen-switch');
+    }
+
+
+});
 
 
        // $("#User img").hide();
@@ -17,10 +32,10 @@ $(".results").hide();
        swal({
        title: "Login",
        html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter <input placeholder=\"e-mail\" type=\"text\"/>",
        showCancelButton: "true",
        imageUrl: "images/social-login.png",
-       imageSize:  "200x80",
+       imageSize:  "200x150",
        showCancelButton:"true",
        confirmButtonColor:"#008080",
        animation:"false",
@@ -51,14 +66,15 @@ $(".results").hide();
   swal({
        title: "Login",
        html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter  <input placeholder=\"e-mail\" type=\"text\"/>",
        showCancelButton: "true",
        imageUrl: "images/social-login.png",
-       imageSize:  "200x80",
+       imageSize:  "200x150",
        showCancelButton:"true",
        confirmButtonColor:"#008080",
        animation:"false",
        confirmButtonText:"Sign in"
+
        });
 
 
@@ -233,8 +249,21 @@ $('.yin').on('click', function(){
 
 
 //LOG IN HIDE
-$('#logIn').on("click", function(){
-  $(this).hide();
+$('li#personal-explore').on("click", function(){
+  //$(this).hide();
+   swal({
+       title: "Login",
+       html: "true",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter <input placeholder=\"e-mail\" type=\"text\"/>",
+       showCancelButton: "true",
+       imageUrl: "images/social-login.png",
+       imageSize:  "200x150",
+       showCancelButton:"true",
+       confirmButtonColor:"#008080",
+       animation:"false",
+       confirmButtonText:"Sign in",
+
+       });
 });
 
 
@@ -578,5 +607,23 @@ $(".NewsUpdate-check").on('click', function(){
   $(curUpdContent).show();
 
 });
+
+//BANNER
+
+$('#banner').on('click', function () {
+  var bP = $('#banner');
+  var bPPos = bP.position();
+  if(bPPos.left == -340){
+    $('#banner').animate({
+    'left': '-5px'
+    }, 800);
+  }else{
+    $('#banner').animate({
+    'left': '-340px'
+    }, 250);
+  }
+
+});
+
 
 });//end document.ready

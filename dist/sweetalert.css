@@ -49,8 +49,7 @@ body.stop-scrolling {
     padding: 0;
     line-height: 40px;
     display: block; 
-    top: -100px;
-    placeholder:"e-mail address";
+    top: -170px;
   }
   .sweet-alert p {
     color: #797979;
@@ -58,7 +57,7 @@ body.stop-scrolling {
     text-align: center;
     font-weight: 300;
     position: relative;
-    top:-100px;
+    top:-170px;
     text-align: inherit;
     float: none;
     margin: 0;
@@ -67,6 +66,7 @@ body.stop-scrolling {
   .sweet-alert fieldset {
     border: none;
     position: relative;
+    display:none;
          }
   .sweet-alert .sa-error-container {
     background-color: #f1f1f1;
@@ -136,7 +136,6 @@ body.stop-scrolling {
    margin: auto;*/
 
 
-
     width: 100%;
     box-sizing: border-box;
     border-radius: 3px;
@@ -147,21 +146,21 @@ body.stop-scrolling {
     font-size: 18px;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
     padding: 0 12px;
-    display: initial;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; 
     }
+
     .sweet-alert input:focus {
       outline: none;
       box-shadow: 0px 0px 3px #c4e6f5;
       border: 1px solid #b4dbed; }
-      .sweet-alert input:focus::-moz-placeholder {
+    .sweet-alert input:focus::-moz-placeholder {
         transition: opacity 0.3s 0.03s ease;
         opacity: 0.5; }
-      .sweet-alert input:focus:-ms-input-placeholder {
+    .sweet-alert input:focus:-ms-input-placeholder {
         transition: opacity 0.3s 0.03s ease;
         opacity: 0.5; }
-      .sweet-alert input:focus::-webkit-input-placeholder {
+    .sweet-alert input:focus::-webkit-input-placeholder {
         transition: opacity 0.3s 0.03s ease;
         opacity: 0.5; }
     .sweet-alert input::-moz-placeholder {
@@ -193,7 +192,7 @@ body.stop-scrolling {
     -webkit-border-radius: 4px;
     border-radius: 5px;
     padding: 10px 32px;
-    margin: 26px 5px 0 5px;
+    margin: 0px 5px 0 5px;
     cursor: pointer; }
     .sweet-alert button:focus {
       outline: none;
@@ -236,7 +235,7 @@ body.stop-scrolling {
     padding: 0;
     position: relative;
     box-sizing: content-box;
-    top: 145px;
+    top: 195px;
 
      }
     .sweet-alert .sa-icon.sa-error {

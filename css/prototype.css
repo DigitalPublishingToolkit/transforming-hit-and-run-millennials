@@ -430,7 +430,7 @@ li.selected{
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     margin: 5px 0px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 
@@ -830,6 +830,15 @@ input[type="checkbox"]{display:none;}
 
 }
 
+/*.RelArt {
+    font-size: 24px;
+    color: #5a5a5a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    margin: 5px 0px;
+    padding-top: 10px;
+}
+*/
 
   .subheader {
   font-size: 24px;
@@ -840,6 +849,17 @@ input[type="checkbox"]{display:none;}
   font-weight: lighter;
   margin: 5px 0px;
   padding-top: 10px;
+  }
+
+  .subheaderUpdate {
+  font-size: 24px;
+  /*position:relative;
+  float:left;*/
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  margin: 5px 0px;
+  padding-top: 15px;
   }
 
 
@@ -1050,6 +1070,16 @@ stroke-width: 4px;
    text-align:left;
    margin-left: 0px;
  }
+
+.linesUpdate {
+    border: 2px solid;
+    color: #008080;
+    background-color: #008080;
+    width: 20%;
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
 
 /*  Style for the top menu svgs*/
 

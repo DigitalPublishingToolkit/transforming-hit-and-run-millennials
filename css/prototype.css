@@ -53,6 +53,15 @@ body{
 
 }
 
+#banner p {
+    position: relative;
+    background-color: firebrick;
+    font-family: 'Open sans';
+    font-size: larger;
+    color: whitesmoke;
+    font-weight: lighter;
+    padding: 10px 0px 10px 25px;
+}
 
 .pagetabs, .intTab, .updateTabs {
 	list-style: none;

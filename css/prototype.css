@@ -189,6 +189,11 @@ body{
 
 }
 
+#more {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
 #what span, #when span{
 
 padding: 12px 12px 12px 12px;
@@ -214,11 +219,10 @@ margin: 6px 2px;
 
 #what {
   background-color: #fff;
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 20px 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
 }
-
 
 #when {
   background-color: #fff;
@@ -246,12 +250,12 @@ margin: 6px 2px;
     float: right;
     text-align: center;
     color: white;
-    border-radius: 20px;
+    border-radius: 7px;
     border: none;
-    padding: 4px 4px 6px 4px;
+    padding: 4px 5px 6px 5px;
     position: relative;
     /* margin: 60px; */
-    top: 8px;
+    top: 11px;
 }
 
 li.selected{
@@ -1175,10 +1179,12 @@ stroke-width: 4px;
 
 .NewsUpdate-check {
     stroke-width: 1.5px;
-    stroke:white;
-    fill:#008080;
-    position:relative;
-    float:right;
+    stroke: white;
+    fill: #008080;
+    position: relative;
+    float: right;
+    top: 15px;
+    padding-right: 10px;
 }
 
 .NewsUpdate-svg {

@@ -18,10 +18,10 @@ $(".results").hide();
        swal({
        title: "Login",
        html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter",
        showCancelButton: "true",
        imageUrl: "images/social-login.png",
-       imageSize:  "200x80",
+       imageSize:  "200x150",
        showCancelButton:"true",
        confirmButtonColor:"#008080",
        animation:"false",
@@ -52,10 +52,10 @@ $(".results").hide();
   swal({
        title: "Login",
        html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter",
        showCancelButton: "true",
        imageUrl: "images/social-login.png",
-       imageSize:  "200x80",
+       imageSize:  "200x150",
        showCancelButton:"true",
        confirmButtonColor:"#008080",
        animation:"false",
@@ -234,8 +234,20 @@ $('.yin').on('click', function(){
 
 
 //LOG IN HIDE
-$('#logIn').on("click", function(){
-  $(this).hide();
+$('li#personal-explore').on("click", function(){
+  //$(this).hide();
+   swal({
+       title: "Login",
+       html: "true",
+       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter",
+       showCancelButton: "true",
+       imageUrl: "images/social-login.png",
+       imageSize:  "200x150",
+       showCancelButton:"true",
+       confirmButtonColor:"#008080",
+       animation:"false",
+       confirmButtonText:"Sign in"
+       });
 });
 
 

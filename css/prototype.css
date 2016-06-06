@@ -61,6 +61,7 @@ body{
     color: whitesmoke;
     font-weight: lighter;
     padding: 10px 0px 10px 25px;
+    width: 85%;
 }
 
 .pagetabs, .intTab, .updateTabs {

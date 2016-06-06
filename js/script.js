@@ -472,6 +472,18 @@ $(".NewsUpdate-check").on('click', function(){
 
 });
 
+//BANNER
+
+var duration = 'slow';
+
+$('.banner').click(function () {
+    $('.textBanner').show('slide', {direction: 'right'}, duration);
+  });
+       
+$('.banner').click(function () {
+    $('.textBanner').hide('slide', {direction: 'left'}, duration);
+  
+});
 
  
 

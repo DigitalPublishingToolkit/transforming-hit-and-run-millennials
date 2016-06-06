@@ -421,80 +421,18 @@ if($('#paginated-content').length){
     Swipe pages left and right
     ////// */
     //touch
-    //for reference, check http://www.javascriptkit.com/javatutors/touchevents2.shtml and http://stackoverflow.com/questions/13278087/determine-vertical-direction-of-a-touchmove
-    var lastY, lastX, direction;
-    var pxBuffer = 60; //minimal distance between start and end to be considered swipe
-    // var z = [];
-    // var pos = [];
-
-    // $('#mainArticlePage').on('touchmove', function (e){
-    //      var currentX = e.originalEvent.touches[0].clientX;
-    //      if(currentX > lastX && currentX - lastX >= pxBuffer){
-    //          // moved left
-    //          direction = 'left';
-    //          flipPages(direction);
-    //      }else if(currentX < lastX && lastX - currentX >= pxBuffer){
-    //          // moved right
-    //          direction = 'right';
-    //          flipPages(direction);
-    //      }
-    //      lastX = currentX;
-    //      e.preventDefault();
-    // });
-
-
-    //jqueryMobile (works, but wraps everything in ui-stuff divs)
-    // $('#mainArticlePage').on('swipeleft', flipLeft);
-    // $('#mainArticlePage').on('swiperight', flipRight);
-
-
+    //for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
       $("#mainArticlePage").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          //$(this).text("You swiped " + direction );
           flipPages(direction);
         }
       });
 
-      //Set some options later
-      //$("#test").swipe( {fingers:2} );
-
-
-    //var tPage = $('.topPage');
     var tPageIndex = $('.articleTextPage').index($('.topPage'));
     var w = $(window).width();
 
-    function flipLeft(e){
-      if(tPageIndex < (numPages - 1)){
-        $('.topPage').animate({
-          left: '-'+w+'px'
-        }, 400, function() {
-          // Animation complete.
-          //$('.topPage').fadeOut('fast');
-          //next should be topPage now
-          $('.topPage').removeClass('topPage').next().addClass('topPage');
-          tPageIndex++;
-        });
-
-      }
-    }
-
-    function flipRight(e){
-      $('.topPage').fadeIn('fast');
-      //prev should be topPage now
-      tPageIndex--;
-      $('.topPage').removeClass('topPage').prev().addClass('topPage');
-      if(tPageIndex < numPages ){
-        $('.topPage').animate({
-          left: leftPos[tPageIndex]+'px'
-        });
-
-
-      }
-    }
-
     function flipPages(d){
-
       if(d == 'left'){
         if(tPageIndex < (numPages - 1)){
           $('.topPage').animate({
@@ -506,15 +444,7 @@ if($('#paginated-content').length){
             $('.topPage').removeClass('topPage').next().addClass('topPage');
             tPageIndex++;
           });
-}
-        // if(tPageIndex < (numPages - 1)){
-        //   $('.topPage').animate({
-        //     left: '-300px'
-        //   });
-        //   //next should be topPage now
-        //   $('.topPage').removeClass('topPage').next().addClass('topPage');
-        //   tPageIndex++;
-
+        }
       }//end left
 
       if(d == 'right'){
@@ -526,22 +456,10 @@ if($('#paginated-content').length){
           $('.topPage').animate({
             left: leftPos[tPageIndex]+'px'
           });
-
-
-        }
-        // //$('.topPage').removeClass('topPage').next().addClass('topPage');
-        // if(tPageIndex < numPages ){
-        //   $('.topPage').animate({
-        //     left: leftPos[tPageIndex]+'px'
-        //   });
-        //   //next should be topPage now
-        //   tPageIndex--;
-        //   $('.topPage').removeClass('topPage').prev().addClass('topPage');
-        //
-        // }
+        }//end if
       }//end right
 
-    }
+    }//end flipPages()
 
     /* ////////
     Position all images from img-gallery in a stack

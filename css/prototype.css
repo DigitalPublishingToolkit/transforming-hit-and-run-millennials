@@ -154,6 +154,7 @@ body{
     font-size: x-large;
     font-weight: lighter;
     text-align: left;
+    margin-top: -5px;
   }
 
 .subheaderExWorld {
@@ -163,6 +164,7 @@ body{
     font-size: x-large;
     font-weight: lighter;
     text-align: left;
+    margin-top: -5px;
 }
 
 /* update tabs */
@@ -313,11 +315,12 @@ li.selected{
 
 .TitleYin {
     font-family: 'open sans';
+    font-size: large;
     background-color: black;
     color: white;
     text-align: -webkit-center;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
     padding-left: 40px;
 }
 
@@ -336,12 +339,28 @@ li.selected{
     content: "\f0d9";
     padding-left: 25px;
     color: darkcyan;
+    font-size: smaller;
 }
 
 .fa-caret-down:before {
     content: "\f0d7";
     padding-left: 25px;
     color: darkcyan;
+    font-size: smaller;
+}
+
+.caretYin {
+    content: "\f0d9";
+    padding-left: 25px;
+    color: darkcyan;
+    
+}
+
+.caretYin {
+    content: "\f0d7";
+    padding-left: 25px;
+    color: darkcyan;
+    
 }
 
 

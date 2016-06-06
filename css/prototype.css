@@ -54,7 +54,6 @@ body{
 }
 
 #banner p {
-    position: relative;
     background-color: firebrick;
     font-family: 'Open sans';
     font-size: larger;

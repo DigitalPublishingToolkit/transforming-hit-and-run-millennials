@@ -417,12 +417,20 @@ li.selected{
   top: 3px;
   margin: 8px 0px 13px 0px;
   padding-right: 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
-  font-family: 'LiberationSerif-Regular-webfont';
+  font-family: 'Open sans';
   line-height: 15px;
 
+}
 
+#presult {
+    font-size: 18px;
+    color: #2d2d2d;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    margin: 5px 0px;
+    padding-top: 10px;
 }
 
 
@@ -914,6 +922,18 @@ input[type="checkbox"]{display:none;}
   font-size: 12px;
   font-weight: bold;
   margin-left: 0px;
+}
+
+#No {
+    background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
+    top: 5px;
+    padding: 5px 1px 5px 20px;
+    float: left;
+    width: 94%;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 

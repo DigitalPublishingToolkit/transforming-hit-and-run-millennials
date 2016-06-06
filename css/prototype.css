@@ -53,24 +53,21 @@ body{
 
 }
 
-#banner {
-    background-color: transparent;
-    position: fixed;
-    bottom: 20%;
-    z-index: 500;
-}
 
-#banner p {
+#banner {
     background-color: firebrick;
     font-family: 'Open sans';
     font-size: larger;
     color: whitesmoke;
     font-weight: lighter;
-    padding: 10px 0px 10px 50px;
+    padding: 10px 15px 10px 25px;
     line-height: 23px;
     /*z-index: 500;*/
-    position: relative;
-    left: -375px;
+    position: fixed;
+    left: -340px;
+    bottom: 20%;
+    z-index: 500;
+    width: 80%;
 }
 
 .pagetabs, .intTab, .updateTabs {

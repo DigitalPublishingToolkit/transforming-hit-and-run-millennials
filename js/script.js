@@ -475,15 +475,15 @@ $(".NewsUpdate-check").on('click', function(){
 //BANNER       
 
 $('#banner').on('click', function () {
-  var bP = $('#banner p');
+  var bP = $('#banner');
   var bPPos = bP.position();
-  if(bPPos.left == -375){
-    $('#banner p').animate({
-    'left': '-40px'
+  if(bPPos.left == -340){
+    $('#banner').animate({
+    'left': '-5px'
     }, 800);
   }else{
-    $('#banner p').animate({
-    'left': '-375px'
+    $('#banner').animate({
+    'left': '-340px'
     }, 250);
   }
  

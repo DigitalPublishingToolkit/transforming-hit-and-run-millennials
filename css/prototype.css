@@ -63,6 +63,8 @@ body{
     padding: 10px 0px 10px 25px;
     line-height: 23px;
     width: 85%;
+    position: fixed;
+    bottom: 20%;
 }
 
 .pagetabs, .intTab, .updateTabs {

@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 
-
 $(".results").hide();
  // Changes the .options elements in the article page
 
@@ -75,7 +74,7 @@ $(".results").hide();
        confirmButtonColor:"#008080",
        animation:"false",
        confirmButtonText:"Sign in"
-       
+
        });
 
 
@@ -322,20 +321,27 @@ $('li#personal-explore').on("click", function(){
 
 if($('#paginated-content').length){ //if the div with the id 'paginated content' has a specific length, than do everything from the next lines
   var contentBox = $('#paginated-content');
-  //get the text as an array of word-like things
+  //first of all, get content of p.lead and remove it from its original place
+  var lead = $('p.lead').html();
+  //console.log(lead);
+  $('p.lead').remove();
+  //get the text as an array of word-like things (does not include p.lead content)
   var words = contentBox.html().split(' ');
 
   //define the page height
   var pageHeight = 300;
 
+
   function paginate() {
         //create a div to build the pages in
 
         var newPage = $('<div class="articleTextPage" />');
-        contentBox.empty().append(newPage);
 
-        //start off with no page text
-        var pageText = null;
+        contentBox.empty().append(newPage);
+        //this will add blank space to the end of pages so that they all have the same height
+        $('.articleTextPage').css('min-height',pageHeight+'px');
+        //start off with p.lead content
+        var pageText = '<p class="lead">' + lead + '</p>';
         for(var i = 0; i < words.length; i++) {
             //add the next word to the pageText (this will be done word by word)
             //if pageText exists, add a space (' ') to it and the next word (word[i])
@@ -350,7 +356,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
             var betterPageText = pageText ? pageText + ' ' + words[i]
                                           : words[i];
             //add betterPageText (defined in the line above) as content of newPage
-            newPage.html(betterPageText);
+            newPage.html('<p>'+betterPageText+'</p>');
 
             //Check if the page is too long
           //  if(newPage.height() > $(window).height()) {
@@ -388,24 +394,72 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
 if($('#paginated-content').length){
 
     var numPages = $('#paginated-content').children().length;
+    var leftPos = [];
 
     function pilePages(){
 
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n *  (- pageHeight - 16) - ( n * 4.5), //TO DO: check these values later
+            top: n *  (- pageHeight - 27),
             left: n  * 4
           });
-
+          leftPos.push(n*4);
       } //end for
 
        //  $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));
          $('#paginated-content').css('height',pageHeight + 30 + numPages * 4);
+         //set top page as current
+         $('.articleTextPage').eq(0).addClass('topPage');
 
     } //end pilePages function
 
    pilePages();
+   //console.log(leftPos);
+
+    /* ////////
+    Swipe pages left and right
+    ////// */
+    //touch
+    //for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
+      $("#mainArticlePage").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          flipPages(direction);
+        }
+      });
+
+    var tPageIndex = $('.articleTextPage').index($('.topPage'));
+    var w = $(window).width();
+
+    function flipPages(d){
+      if(d == 'left'){
+        if(tPageIndex < (numPages - 1)){
+          $('.topPage').animate({
+            left: '-'+w+'px'
+          }, 400, function() {
+            // Animation complete.
+            //$('.topPage').fadeOut('fast');
+            //next should be topPage now
+            $('.topPage').removeClass('topPage').next().addClass('topPage');
+            tPageIndex++;
+          });
+        }
+      }//end left
+
+      if(d == 'right'){
+        $('.topPage').fadeIn('fast');
+        //prev should be topPage now
+        tPageIndex--;
+        $('.topPage').removeClass('topPage').prev().addClass('topPage');
+        if(tPageIndex < numPages ){
+          $('.topPage').animate({
+            left: leftPos[tPageIndex]+'px'
+          });
+        }//end if
+      }//end right
+
+    }//end flipPages()
 
     /* ////////
     Position all images from img-gallery in a stack
@@ -472,7 +526,7 @@ $(".NewsUpdate-check").on('click', function(){
 
 });
 
-//BANNER       
+//BANNER
 
 $('#banner').on('click', function () {
   var bP = $('#banner');
@@ -486,11 +540,8 @@ $('#banner').on('click', function () {
     'left': '-340px'
     }, 250);
   }
- 
+
 });
-
-
- 
 
 
 });//end document.ready

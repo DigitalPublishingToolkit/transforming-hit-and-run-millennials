@@ -116,13 +116,13 @@ body{
   }
 
 .intTab a {
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     text-decoration: none;
     color: #696969;
 
 }
-  
+
   li.selected a {
    color: #008080;
    font-weight: bold;
@@ -187,7 +187,7 @@ body{
 .tabUpdContent span{
   background-color: rgb(241, 241, 241);
   padding: 12px 12px 6px 12px;
-  border-radius: 20px;  
+  border-radius: 20px;
   display: inline-block;
   font-size: 14px;
 
@@ -403,7 +403,7 @@ li.selected{
 }
 
 .pagetabs li a {
-  width: 100%; height: auto; display: inline-block; 
+  width: 100%; height: auto; display: inline-block;
    }
 
   /* This will 'remove' any rights from the <object> of responding to the mouse/pointer.
@@ -416,19 +416,6 @@ li.selected{
 /*#sortable{
 	cursor: move;
 }*/
-
-#mainArticlePage {
-  position:relative;
-  top:55px;
-
-}
-
-.lead{
-	color: #666;
-	font-size: 1.2em;
-	padding-left: .5em;
-	border-left: 3px solid #ddd;
-}
 
 .content {
 	background-color: #ebeced;
@@ -536,13 +523,28 @@ li.selected{
     float: left;
     line-height: 15px;
 }
+/
+#mainArticlePage {
+  position:relative;
+  top:55px;
+
+}
+
+.lead{
+	color: #666;
+	font-size: 1.2em;
+  /*font-family: Open Sans;*/
+	padding-left: .5em;
+	border-left: 3px solid #ddd;
+  margin-top: 1em !important;
+}
 
 #paginated-content{
 	white-space: pre-wrap; /* respect line breaks */
 	margin-bottom: 10px;
-  margin-top:15px;
+  margin-top:55px;
 	position: relative;
-	top: 40px;
+	/*top: 40px;*//* added to margin-top*/
 	left: 0;
 }
 
@@ -559,6 +561,9 @@ li.selected{
 		/* the top values will vary accod=rding to the page and will be set via JS */
 }
 
+.articleTextPage p{
+  margin-top:0;
+}
 
 .pagenr, .imgnr {
   text-align: center; font-size: .8em;
@@ -865,7 +870,7 @@ input[type="checkbox"]{display:none;}
   float:left;
   top: 400px;
   margin-left: 15px;
- 
+
 
 }
 
@@ -1212,3 +1217,6 @@ stroke-width: 4px;
     padding-left: 10px;
     padding-top: 10px;
 }
+
+/* jquery mobile stuff */
+.ui-loader.ui-corner-all.ui-body-a.ui-loader-default{display: none;}

@@ -6,9 +6,24 @@ $(".results").hide();
  // Changes the .options elements in the article page
 
 
-      $("#listen").click(function(){ //adds/removes teh class .active to the 'listen' svg when clicked
-      $(this).toggleClass('active');
-      });
+     $('#on').hide();
+
+
+    $('#listen').on('click', function() {
+    if($('#on').hasClass('listen-switch')){
+    $('#off').show();
+    $('#on').hide();
+    $('#on').removeClass('listen-switch');
+    $('#off').addClass('listen-switch');
+  } else{
+    $('#on').show();
+    $('#off').hide();
+    $('#off').removeClass('listen-switch');
+    $('#on').addClass('listen-switch');
+  }
+
+
+});
 
 
        // $("#User img").hide();
@@ -456,6 +471,9 @@ $(".NewsUpdate-check").on('click', function(){
   $(curUpdContent).show();
 
 });
+
+
+ 
 
 
 });//end document.ready

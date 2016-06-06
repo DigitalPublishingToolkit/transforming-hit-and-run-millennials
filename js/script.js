@@ -480,13 +480,15 @@ var BannerOn = '.textBanner'
        
 
 $('#banner').on('click', function () {
+  //$(this).toggle({width: 10%}, {duration: 500});
 
-  if ( $('#banner') == BannerOn) {
+ if ( $('#banner') == BannerOn) {
     $("#banner").animate({width:'toggle'}, 500).hide("slide", { direction: "left" }, 1200);
   }else{
     $("#banner").animate({width:'toggle'}, 500).show("slide", { direction: "right" }, 1200);
-}
+  }
 
+});
   
    // $('.banner').toggle().slide('left').hide();
    // $('.banner').toggle().slide('right').show();
@@ -494,7 +496,7 @@ $('#banner').on('click', function () {
  // }else{
   //  $('.textBanner').toggle('slide', {direction: 'right'} );
   //}
-});
+
 
 
  

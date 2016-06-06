@@ -863,7 +863,7 @@ input[type="checkbox"]{display:none;}
  background-color:#fff;
  text-align: center;
  color: black;
- border: 1px solid #5a5a5a;
+ border: none;
  position:relative;
  top: 15px;
  margin: 0px 5px 0px 0px;
@@ -873,10 +873,8 @@ input[type="checkbox"]{display:none;}
 }
 
 .clicked-poll {
- background-color:#008080;
- opacity: 0.5;
+ background-color:#C0E0E0;
  text-align: center;
- color: black;
  position:relative;
  top: 15px;
  margin: 0px 5px 0px 0px;

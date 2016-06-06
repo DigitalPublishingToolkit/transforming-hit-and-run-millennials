@@ -474,16 +474,18 @@ $(".NewsUpdate-check").on('click', function(){
 
 //BANNER
 
-var duration = 'slow';
-
-$('.banner').click(function () {
-    $('.textBanner').show('slide', {direction: 'right'}, duration);
-  });
+//var duration = 'slow';
+var currentBanner = '.textBanner'
        
-$('.banner').click(function () {
-    $('.textBanner').hide('slide', {direction: 'left'}, duration);
-  
+$('.banner').on('click', function () {
+
+  if ( $('.textBanner') == currentBanner) {
+    $('.textBanner').hide('slide', {direction: 'left'} );
+  }else{
+    $('.textBanner').show('slide', {direction: 'right'} );
+  }
 });
+
 
  
 

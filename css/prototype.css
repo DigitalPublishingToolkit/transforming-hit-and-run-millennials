@@ -905,7 +905,7 @@ input[type="checkbox"]{display:none;}
 }
 
 #Yes {
-  background: linear-gradient(90deg, #ffcc80 67%, #a5d6a7 33%);
+  background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
   top: 5px;
   float:left;
   width:85%;

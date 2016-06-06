@@ -48,13 +48,17 @@ body.stop-scrolling {
     margin: 25px 0;
     padding: 0;
     line-height: 40px;
-    display: block; }
+    display: block; 
+    top: -100px;
+    placeholder:"e-mail address";
+  }
   .sweet-alert p {
     color: #797979;
     font-size: 16px;
     text-align: center;
     font-weight: 300;
     position: relative;
+    top:-100px;
     text-align: inherit;
     float: none;
     margin: 0;
@@ -62,7 +66,8 @@ body.stop-scrolling {
     line-height: normal; }
   .sweet-alert fieldset {
     border: none;
-    position: relative; }
+    position: relative;
+         }
   .sweet-alert .sa-error-container {
     background-color: #f1f1f1;
     margin-left: -17px;
@@ -124,6 +129,14 @@ body.stop-scrolling {
       -webkit-transform: scale(1);
       transform: scale(1); }
   .sweet-alert input {
+
+   /*display: initial;
+   width: auto;
+   height: auto;
+   margin: auto;*/
+
+
+
     width: 100%;
     box-sizing: border-box;
     border-radius: 3px;
@@ -134,9 +147,10 @@ body.stop-scrolling {
     font-size: 18px;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
     padding: 0 12px;
-    display: none;
+    display: initial;
     -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
+    transition: all 0.3s; 
+    }
     .sweet-alert input:focus {
       outline: none;
       box-shadow: 0px 0px 3px #c4e6f5;
@@ -170,7 +184,7 @@ body.stop-scrolling {
     opacity: 0;
     visibility: hidden; }
   .sweet-alert button {
-    background-color: #8CD4F5;
+    background-color: #008080;
     color: white;
     border: none;
     box-shadow: none;
@@ -221,7 +235,10 @@ body.stop-scrolling {
     margin: 20px auto;
     padding: 0;
     position: relative;
-    box-sizing: content-box; }
+    box-sizing: content-box;
+    top: 145px;
+
+     }
     .sweet-alert .sa-icon.sa-error {
       border-color: #F27474; }
       .sweet-alert .sa-icon.sa-error .sa-x-mark {

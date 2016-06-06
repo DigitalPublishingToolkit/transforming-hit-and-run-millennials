@@ -17,8 +17,15 @@ $(".results").hide();
        // $("#User img").toggle();
        swal({
        title: "Login",
-       text: "Log in to save this article for reading it later",
-       imageUrl: "images/user.png"
+       html: "true",
+       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       showCancelButton: "true",
+       imageUrl: "images/social-login.png",
+       imageSize:  "200x80",
+       showCancelButton:"true",
+       confirmButtonColor:"#008080",
+       animation:"false",
+       confirmButtonText:"Sign in"
        });
 
 
@@ -44,14 +51,22 @@ $(".results").hide();
   $("#user").click(function(){
   swal({
        title: "Login",
-       text: "Log in or register on this website",
-       imageUrl: "images/user.png"
+       html: "true",
+       text: "Join us here by entering your e-mail address below or login with Facebook or Twitter",
+       showCancelButton: "true",
+       imageUrl: "images/social-login.png",
+       imageSize:  "200x80",
+       showCancelButton:"true",
+       confirmButtonColor:"#008080",
+       animation:"false",
+       confirmButtonText:"Sign in"
        });
 
 
   });
 
 
+/*<input type=\"text\" name=\"reason\" value=\"e-mail\"></br>*/
 
 /*
   $( "#sortable" ).sortable({

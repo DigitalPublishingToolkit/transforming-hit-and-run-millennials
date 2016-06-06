@@ -1203,13 +1203,12 @@ stroke-width: 4px;
   top:-5px;
 }
 
-#subscribe-arrow{
+#subscribe-arrow {
     stroke-width: 1px;
-    stroke:white;
-    fill:#008080;
-    position:relative;
-    float:right;
+    stroke: white;
+    fill: #008080;
+    position: relative;
+    float: right;
     padding-left: 10px;
-    padding-top: 3px;
-
+    padding-top: 10px;
 }

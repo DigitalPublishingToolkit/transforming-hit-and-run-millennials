@@ -335,11 +335,13 @@ li.selected{
 .fa-caret-left:before {
     content: "\f0d9";
     padding-left: 25px;
+    color: darkcyan;
 }
 
 .fa-caret-down:before {
     content: "\f0d7";
     padding-left: 25px;
+    color: darkcyan;
 }
 
 

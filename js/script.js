@@ -474,14 +474,19 @@ $(".NewsUpdate-check").on('click', function(){
 
 //BANNER
 
-//var duration = 'slow';
-//var currentBanner = '.textBanner'
+var duration = 'slow';
+var currentBanner = '.textBanner'
        
 
 $('#banner').on('click', function () {
-  $(".textBanner").animate({width:'toggle'}, 1.5);
 
-  //if ( $('.textBanner') == currentBanner) {
+  if ( $('#banner') == currentBanner) {
+    $("#banner").animate({width:'toggle'}, 500).toggle("slide", { direction: "left" }, 'slow');
+  }else{
+    $("#banner").animate({width:'toggle'}, 500).toggle("slide", { direction: "right" }, 'slow');
+}
+
+  
    // $('.banner').toggle().slide('left').hide();
    // $('.banner').toggle().slide('right').show();
 

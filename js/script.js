@@ -363,7 +363,6 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
             if(newPage.height() > pageHeight) { //page height is 300px (defined above)
                 //revert the text
                 newPage.html(pageText);
-
                 //and insert a copy of the page at the start of the document
                 newPage.clone().insertBefore(newPage);
 
@@ -373,6 +372,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
                 //this longer text still fits
                 pageText = betterPageText;
             }
+
         }
         //add 'MessagePage' after the second page ( .eq(1) )
         $('.articleTextPage').eq(1).after('<div id="MessagePage" class="articleTextPage" />');
@@ -405,6 +405,9 @@ if($('#paginated-content').length){
             left: n  * 4
           });
           leftPos.push(n*4);
+          //add page numbers (needs styling)
+          $('.articleTextPage').eq(n).append('<p class="pageNr">'+(n+1)+'/<span class="numPages">'+numPages+'</span></p>');
+
       } //end for
 
        //  $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));

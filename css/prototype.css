@@ -1024,7 +1024,7 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-	margin-top: 120px;
+	margin-top: 160px;
 	text-align: left;
   position:relative;
   background-color: #434343;
@@ -1208,15 +1208,14 @@ stroke-width: 4px;
   top:-5px;
 }
 
-#subscribe-arrow{
+#subscribe-arrow {
     stroke-width: 1px;
-    stroke:white;
-    fill:#008080;
-    position:relative;
-    float:right;
+    stroke: white;
+    fill: #008080;
+    position: relative;
+    float: right;
     padding-left: 10px;
-    padding-top: 3px;
-
+    padding-top: 10px;
 }
 
 /* jquery mobile stuff */

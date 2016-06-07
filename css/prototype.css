@@ -322,6 +322,7 @@ li.selected{
   /*position: fixed;*/
   z-index: 9999;
   width:100%;
+  padding-top: 90px;
 }
 
 
@@ -517,7 +518,7 @@ li.selected{
 }
 
 #article {
-	padding: 20px 0px;
+	padding: 120px 0px;
   position:relative;
   min-height:1400px;
 }

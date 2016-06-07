@@ -444,11 +444,11 @@ li.selected{
   text-align: left;
   position:relative;
   top: 3px;
-  margin: 8px 0px 13px 0px;
+  margin: 10px 0px 23px 0px;
   padding-right: 20px;
-  font-size: 16px;
+  font-size: 26px;
   color: black;
-  font-family: 'Open sans';
+  font-family: 'liberation_serifregular';
   line-height: 15px;
 
 }
@@ -622,7 +622,7 @@ li.selected{
  width:20%;
  float:left;
  margin-left: 15px;
- border:2px solid;
+ border:1.5px solid;
  color: #008080;
  background-color: #008080;
 
@@ -894,12 +894,11 @@ input[type="checkbox"]{display:none;}
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
-  margin: 5px 0px;
-  padding-top: 10px;
+  
   }
 
   .subheaderUpdate {
-  font-size: 18px;
+  font-size: 20px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -1149,17 +1148,17 @@ stroke-width: 4px;
    background-color: #008080;
    width:20%;
    text-align:left;
-   margin-left: 0px;
+   margin: 5px 0px 10px 0px;
  }
 
 .linesUpdate {
-    border: px solid;
+    border: 1.5px solid;
     color: #008080;
     background-color: #008080;
     width: 20%;
     text-align: left;
-    margin-left: 0px;
-    margin-bottom: 20px;
+    margin: 5px 0px 10px 0px;
+  
 }
 
 /*  Style for the top menu svgs*/

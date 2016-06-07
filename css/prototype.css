@@ -1142,7 +1142,7 @@ input[type="checkbox"]{display:none;}
   width: 276px;
 }*/
 
-/* General navigation svg styles */
+/* General navigation svg styles --------------------------------------------------*/
 .selected .tab-icon  {   /* the svg selected is turquiose */
   stroke: #008080;
   stroke-width: 2.5px;
@@ -1161,7 +1161,7 @@ input[type="checkbox"]{display:none;}
    fill: #008080;
 }
 
-/*  Style for the explore section svg*/
+/*  Style for the explore section svg ----------------------------------------------*/
 
  #compass {
  stroke-width: 1.3px;
@@ -1192,7 +1192,7 @@ stroke-width: 4px;
   
 }
 
-/*  Style for the top menu svgs*/
+/*  Style for the top menu svgs -------------------------------------------------*/
 
 .main-nav-svg {
    stroke: white;
@@ -1240,7 +1240,7 @@ stroke-width: 4px;
   stroke-width: 3px;
 }
 
-/*Social Media SVG in the footer */
+/*Social Media SVG in the footer ---------------------------------------------------------*/
 
 .footer-svg {
  stroke: white;
@@ -1282,19 +1282,17 @@ stroke-width: 4px;
     padding-top: 10px;
 }
 
-/* jquery mobile stuff */
+/* jquery mobile stuff -----------------------------------------------*/
 .ui-loader.ui-corner-all.ui-body-a.ui-loader-default{display: none;}
 
+
+/*-----------------------------------------------------------------------------
 /*Trending Voices animation*/
 
 #trending-voices-div {
    width:1400px;
    height: 121px;
-  animation-name:slider;
-  animation-duration:10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count:infinite;
-  }
+   }
 
 #container-div-trending-voices{
    width: 325px;
@@ -1312,19 +1310,11 @@ stroke-width: 4px;
   height: 121px;
   }
 
-@keyframes slider {
-  0% { transform: translateX(0px); }
-  20% { transform: translateX(0px); }
-  25% { transform: translateX(-329px); }
-  45% { transform: translateX(-329px); }
-  50% { transform: translateX(-655px); }
-  70% { transform: translateX(-655px); }
-  75% { transform: translateX(-985px); }
-  95% { transform: translateX(-985px); }
-  100% { transform: translateX(0px);  }
-}
 
-#trending-voice-button-right {
+
+input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px); }
+
+.trending-voice-button-right {
     color: white;
     float: right;
     padding: 3px 8px;
@@ -1340,7 +1330,7 @@ stroke-width: 4px;
     
 }
 
-#trending-voice-button-left {
+.trending-voice-button-left {
     color: white;
     float: left;
     padding: 3px 8px;
@@ -1355,8 +1345,6 @@ stroke-width: 4px;
     opacity:0.8;
     
 }
-
-
 
 
 #Trending-Voice-Container{

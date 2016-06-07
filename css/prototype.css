@@ -344,7 +344,7 @@ li.selected{
     color: white;
     text-align: -webkit-center;
     padding-top: 15px;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
     padding-left: 40px;
 }
 
@@ -441,7 +441,7 @@ li.selected{
 }
 
 
-#heading-div-discussion p {
+.artTitle {
   text-align: left;
   position:relative;
   top: 3px;
@@ -453,16 +453,6 @@ li.selected{
   line-height: 15px;
 
 }
-
-#presult {
-    font-size: 18px;
-    color: #2d2d2d;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    margin: 5px 0px;
-    padding-top: 5px;
-}
-
 
 #heading-div-explore {
    position:relative;
@@ -477,7 +467,7 @@ li.selected{
    color: #5a5a5a;
   font-weight: lighter;
   text-align:left;
-  font-size:18px;
+  font-size:20px;
   margin:10px 0px;
   
 }
@@ -636,7 +626,7 @@ li.selected{
  width:20%;
  float:left;
  margin-left: 15px;
- border:2px solid;
+ border:1.5px solid;
  color: #008080;
  background-color: #008080;
 
@@ -669,6 +659,7 @@ li.selected{
   font-family: 'Open Sans', sans-serif;
   /*font-style: italic;*/
   line-height: 18px;
+  font-size: 15px;
 }
 
 #updatetags {
@@ -742,7 +733,7 @@ li.selected{
 /* discussion */
 #discussion img {
     width: 100%;
-    margin-bottom: 70px;
+    margin: 20px 0px 70px 0px;
 }
 
 /* bottom */
@@ -901,7 +892,7 @@ input[type="checkbox"]{display:none;}
 */
 
   .subheader {
-  font-size: 24px;
+  font-size: 20px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -912,7 +903,7 @@ input[type="checkbox"]{display:none;}
   }
 
   .subheaderUpdate {
-  font-size: 24px;
+  font-size: 20px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -930,12 +921,13 @@ input[type="checkbox"]{display:none;}
   position:relative;
   float:left;
   line-height: 18px;
+  font-size: 15px;
 }
 
 
 #submit-button {
  font-family: 'Open Sans', sans-serif;
- font-size: 19px;
+ font-size: 18px;
  background-color: #008080;
  text-align: center;
  color:white;
@@ -988,42 +980,72 @@ input[type="checkbox"]{display:none;}
  color: white;
  position:relative;
  margin: 10px;
- padding:10px 5px;
+ padding: 10px 5px 0px 5px;
+ height:30px;
  /*border-radius: 20px;*/
 }
+
 
 #Yes {
   background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
   top: 5px;
   float:left;
   width:85%;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 18px;
   margin-left: 0px;
 }
 
 #No {
     background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
     top: 5px;
-    padding: 5px 1px 5px 20px;
+    padding: 15px 1px 5px 20px;
     float: left;
     width: 94%;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 
-#left {
+.left {
   position: relative;
   float:left;
 }
 
-#right {
+.right {
   position: relative;
   float:right;
 }
+
+#discussion-poll{
+  margin: 10px 0px 10px 0px;
+  width:100%;
+  font-family: 'Open Sans', sans-serif;
+  position: relative; 
+
+}
+
+
+.discussion-results {
+ text-align: left;
+ color: white;
+ position:relative;
+ margin: 10px;
+ padding: 10px 5px 0px 5px;
+ height:30px;
+ /*border-radius: 20px;*/
+}
+
+#discussion-Yes{
+  background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
+  top: 5px;
+  float:left;
+  width:90%;
+  font-size: 18px;
+  margin-left: 0px;
+  color: white;
+  }
+
 
 
 #backtotop {
@@ -1126,7 +1148,7 @@ stroke-width: 4px;
 }
 
  .lines {
-   border:2px solid;
+   border:1.5px solid;
    color: #008080;
    background-color: #008080;
    width:20%;
@@ -1135,7 +1157,7 @@ stroke-width: 4px;
  }
 
 .linesUpdate {
-    border: 2px solid;
+    border: 1.5px solid;
     color: #008080;
     background-color: #008080;
     width: 20%;

@@ -53,6 +53,13 @@ body{
 
 }
 
+.numPages, .pageNr {
+    text-align: center;
+    color: #928e8e;
+    position: relative;
+    padding-top: 20px;
+    font-size: medium;
+}
 
 #banner {
     background-color: firebrick;
@@ -587,8 +594,8 @@ li.selected{
 
 #MessagePage{
   /*height: 300px;*/ /* as defined in JS */
-  background-color: rgb(0, 128, 128);
-  color: #fff;
+    background-color: rgb(192, 199, 199);
+    color: #fff;
 }
 
 .pagenr, .imgnr {

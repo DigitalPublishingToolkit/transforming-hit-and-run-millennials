@@ -377,7 +377,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
         //add 'MessagePage' after the second page ( .eq(1) )
         $('.articleTextPage').eq(1).after('<div id="MessagePage" class="articleTextPage" />');
         //define content for #MessagePage
-        $('#MessagePage').html('<p>Don\'t want to miss your<br>must-read articles?<br><br>Sign up today to get your PERSONAL NEWS UPDATES!<br><br><span class="link-check-update"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></span></p>');
+        $('#MessagePage').html('<p>Don\'t want to miss your<br>must-read articles?<br><br>Sign up today to get your PERSONAL NEWS UPDATES!<br><br><span class="link-check-update"><a name="linkUpdate"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></a></span></p>');
         //define a height to this div
         $('#MessagePage').css('height', pageHeight+'px');
     }
@@ -549,6 +549,14 @@ $('#banner').on('click', function () {
   }  
 
 });
+
+//CHECKBOX LINK TO NEWS UPDATES
+
+$('.linkUpdate').on('click', function () {
+ $('#linkUpdate').scrollTo({duration:800})
+});
+
+
 
 
 

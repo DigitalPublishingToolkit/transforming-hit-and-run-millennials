@@ -83,6 +83,11 @@ body{
     padding-left: 145px;
 }
 
+.fa-check-square-o:before {
+    content: "\f046";
+    color: darkcyan;
+}
+
 .linkYin {
   font-weight: bolder;
 }
@@ -591,10 +596,14 @@ li.selected{
 }
 
 
-#MessagePage{
-  /*height: 300px;*/ /* as defined in JS */
+#MessagePage {
+    /* height: 300px; */
     background-color: rgb(192, 199, 199);
     color: #fff;
+    font-family: 'liberation_serifregular';
+    font-size: x-large;
+    text-align: center;
+    line-height: 33px;
 }
 
 .pagenr, .imgnr {

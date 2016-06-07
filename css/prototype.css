@@ -53,13 +53,6 @@ body{
 
 }
 
-.numPages, .pageNr {
-    text-align: center;
-    color: #928e8e;
-    position: relative;
-    padding-top: 20px;
-    font-size: medium;
-}
 
 #banner {
     background-color: firebrick;
@@ -455,13 +448,12 @@ li.selected{
 
 #heading-div-discussion {
    position:relative;
-   top:115px;
    margin:0px 0px 15px 0px;
-   padding: 0px 15px 0px 15px;
+   
 }
 
 
-#heading-div-discussion p {
+.artTitle {
   text-align: left;
   position:relative;
   top: 3px;
@@ -474,16 +466,6 @@ li.selected{
 
 }
 
-#presult {
-    font-size: 18px;
-    color: #2d2d2d;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    margin: 5px 0px;
-    padding-top: 5px;
-}
-
-
 #heading-div-explore {
    position:relative;
    top:13px;
@@ -491,15 +473,12 @@ li.selected{
    background-color: #d9d9d9;
 }
 
-#hedingTrendingVoices {
+#discussion {
+
    position:relative;
-   font-family: 'open sans';
-   color: #5a5a5a;
-  font-weight: lighter;
-  text-align:left;
-  font-size:18px;
-  margin:10px 0px;
-  
+   padding:120px 15px 1px 15px;
+   background-color: #F1F1F1;
+
 }
 
 
@@ -570,7 +549,7 @@ li.selected{
 	font-size: 1.2em;
   /*font-family: Open Sans;*/
 	padding-left: .5em;
-	border-left: 3px solid #ddd;
+	border-left: 2px solid #848484;
   margin-top: 1em !important;
 }
 
@@ -607,8 +586,8 @@ li.selected{
 
 #MessagePage{
   /*height: 300px;*/ /* as defined in JS */
-    background-color: rgb(192, 199, 199);
-    color: #fff;
+  background-color: rgb(0, 128, 128);
+  color: #fff;
 }
 
 .pagenr, .imgnr {
@@ -689,6 +668,7 @@ li.selected{
   font-family: 'Open Sans', sans-serif;
   /*font-style: italic;*/
   line-height: 18px;
+  font-size: 15px;
 }
 
 #updatetags {
@@ -762,7 +742,7 @@ li.selected{
 /* discussion */
 #discussion img {
     width: 100%;
-    margin-bottom: 70px;
+    margin: 20px 0px 70px 0px;
 }
 
 /* bottom */
@@ -921,7 +901,7 @@ input[type="checkbox"]{display:none;}
 */
 
   .subheader {
-  font-size: 24px;
+  font-size: 20px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -932,7 +912,7 @@ input[type="checkbox"]{display:none;}
   }
 
   .subheaderUpdate {
-  font-size: 24px;
+  font-size: 18px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -950,12 +930,13 @@ input[type="checkbox"]{display:none;}
   position:relative;
   float:left;
   line-height: 18px;
+  font-size: 15px;
 }
 
 
 #submit-button {
  font-family: 'Open Sans', sans-serif;
- font-size: 19px;
+ font-size: 18px;
  background-color: #008080;
  text-align: center;
  color:white;
@@ -1008,42 +989,72 @@ input[type="checkbox"]{display:none;}
  color: white;
  position:relative;
  margin: 10px;
- padding:10px 5px;
+ padding: 10px 5px 0px 5px;
+ height:30px;
  /*border-radius: 20px;*/
 }
+
 
 #Yes {
   background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
   top: 5px;
   float:left;
   width:85%;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 18px;
   margin-left: 0px;
 }
 
 #No {
     background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
     top: 5px;
-    padding: 5px 1px 5px 20px;
+    padding: 15px 1px 5px 20px;
     float: left;
     width: 94%;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 
-#left {
+.left {
   position: relative;
   float:left;
 }
 
-#right {
+.right {
   position: relative;
   float:right;
 }
+
+#discussion-poll{
+  margin: 10px 0px 10px 0px;
+  width:100%;
+  font-family: 'Open Sans', sans-serif;
+  position: relative; 
+
+}
+
+
+.discussion-results {
+ text-align: left;
+ color: white;
+ position:relative;
+ margin: 10px;
+ padding: 10px 5px 0px 5px;
+ height:30px;
+ /*border-radius: 20px;*/
+}
+
+#discussion-Yes{
+  background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
+  top: 5px;
+  float:left;
+  width:90%;
+  font-size: 18px;
+  margin-left: 0px;
+  color: white;
+  }
+
 
 
 #backtotop {
@@ -1060,7 +1071,7 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-	margin-top: 90px;
+	margin-top: 50px;
 	text-align: left;
   position:relative;
   background-color: #434343;
@@ -1146,7 +1157,7 @@ stroke-width: 4px;
 }
 
  .lines {
-   border:2px solid;
+   border:1.5px solid;
    color: #008080;
    background-color: #008080;
    width:20%;
@@ -1155,7 +1166,7 @@ stroke-width: 4px;
  }
 
 .linesUpdate {
-    border: 2px solid;
+    border: px solid;
     color: #008080;
     background-color: #008080;
     width: 20%;
@@ -1232,16 +1243,6 @@ stroke-width: 4px;
     padding-right: 10px;
 }
 
-.link-check-update {
-    stroke-width: 1.5px;
-    stroke: white;
-    fill: #008080;
-    position: relative;
-    float: right;
-    padding-right: 10px;
-    bottom: 50px;
-}
-
 .NewsUpdate-svg {
   stroke-width: 1px;
   stroke:#696969;
@@ -1281,10 +1282,10 @@ stroke-width: 4px;
 #container-div-trending-voices{
    width: 325px;
    height: 121px;
-   border: none;margin-bottom: 70px;
+   border: none;margin-bottom: 20px;
    background: #f1f1f1;
    overflow: hidden;   
-   margin: 10px 0px;
+   
 }
 
 #trending-voices-div img {

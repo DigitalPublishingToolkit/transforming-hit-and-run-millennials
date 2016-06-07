@@ -546,5 +546,12 @@ $('#banner').on('click', function () {
 
 });
 
+//Trending voices
+
+$('##container-div-trending-voices')on('click', function () {
+  
+
+});
+
 
 });//end document.ready

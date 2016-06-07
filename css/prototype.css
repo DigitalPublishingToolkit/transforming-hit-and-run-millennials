@@ -344,7 +344,7 @@ li.selected{
     color: white;
     text-align: -webkit-center;
     padding-top: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     padding-left: 40px;
 }
 
@@ -435,9 +435,8 @@ li.selected{
 
 #heading-div-discussion {
    position:relative;
-   top:115px;
    margin:0px 0px 15px 0px;
-   padding: 0px 15px 0px 15px;
+   
 }
 
 
@@ -461,15 +460,12 @@ li.selected{
    background-color: #d9d9d9;
 }
 
-#hedingTrendingVoices {
+#discussion {
+
    position:relative;
-   font-family: 'open sans';
-   color: #5a5a5a;
-  font-weight: lighter;
-  text-align:left;
-  font-size:20px;
-  margin:10px 0px;
-  
+   padding:120px 15px 1px 15px;
+   background-color: #F1F1F1;
+
 }
 
 
@@ -626,7 +622,7 @@ li.selected{
  width:20%;
  float:left;
  margin-left: 15px;
- border:1.5px solid;
+ border:2px solid;
  color: #008080;
  background-color: #008080;
 
@@ -903,7 +899,7 @@ input[type="checkbox"]{display:none;}
   }
 
   .subheaderUpdate {
-  font-size: 20px;
+  font-size: 18px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -1062,7 +1058,7 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-	margin-top: 90px;
+	margin-top: 50px;
 	text-align: left;
   position:relative;
   background-color: #434343;
@@ -1157,7 +1153,7 @@ stroke-width: 4px;
  }
 
 .linesUpdate {
-    border: 1.5px solid;
+    border: px solid;
     color: #008080;
     background-color: #008080;
     width: 20%;
@@ -1273,10 +1269,10 @@ stroke-width: 4px;
 #container-div-trending-voices{
    width: 325px;
    height: 121px;
-   border: none;margin-bottom: 70px;
+   border: none;margin-bottom: 20px;
    background: #f1f1f1;
    overflow: hidden;   
-   margin: 10px 0px;
+   
 }
 
 #trending-voices-div img {

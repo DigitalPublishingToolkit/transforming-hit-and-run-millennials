@@ -575,7 +575,7 @@ li.selected{
 }
 
 .articleTextPage, #MessagePage {
-		width: 250px;
+		width: 320px;
     background-color: #fff;
     /*border: 1px solid black;*/
 		box-shadow: 1px 1px 3px #999;

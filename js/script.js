@@ -541,12 +541,16 @@ $('#banner').on('click', function () {
     'left': '-5px'
     }, 800);
   }else{
+    $('.fa-times-circle').on('click', function(){
     $('#banner').animate({
     'left': '-340px'
     }, 250);
-  }
+  });
+  }  
 
 });
+
+
 
 
 });//end document.ready

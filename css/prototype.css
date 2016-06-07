@@ -563,6 +563,7 @@ li.selected{
 	padding-left: .5em;
 	border-left: 2px solid #848484;
   margin-top: 1em !important;
+  line-height: 20px;
 }
 
 #paginated-content{
@@ -575,7 +576,7 @@ li.selected{
 }
 
 .articleTextPage, #MessagePage {
-		width: 250px;
+		width: 320px;
     background-color: #fff;
     /*border: 1px solid black;*/
 		box-shadow: 1px 1px 3px #999;
@@ -585,6 +586,7 @@ li.selected{
 		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
 		position: relative;
 		/* the top values will vary accod=rding to the page and will be set via JS */
+    padding-bottom: 5px;
 }
 
 .articleTextPage p{
@@ -919,7 +921,7 @@ input[type="checkbox"]{display:none;}
 */
 
   .subheader {
-  font-size: 20px;
+  font-size: 17px;
   /*position:relative;
   float:left;*/
   color: #5a5a5a;
@@ -943,7 +945,7 @@ input[type="checkbox"]{display:none;}
 #question {
   padding:0px 30px 0px 0px;
   text-align:left;
-  margin: 10px 10px 10px 0px;
+  margin: 0px 10px 10px 0px;
   position:relative;
   float:left;
   line-height: 18px;

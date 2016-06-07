@@ -586,6 +586,7 @@ li.selected{
 		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
 		position: relative;
 		/* the top values will vary accod=rding to the page and will be set via JS */
+    padding-bottom: 5px;
 }
 
 .articleTextPage p{

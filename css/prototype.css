@@ -1219,6 +1219,16 @@ stroke-width: 4px;
     padding-right: 10px;
 }
 
+.link-check-update {
+    stroke-width: 1.5px;
+    stroke: white;
+    fill: #008080;
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    bottom: 50px;
+}
+
 .NewsUpdate-svg {
   stroke-width: 1px;
   stroke:#696969;

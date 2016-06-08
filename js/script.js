@@ -461,6 +461,13 @@ if($('#paginated-content').length){
     }//end flipPages()
 
     /* ////////
+    Attach on click event to icon inside #MessagePage
+    ////// */
+    $('body').on('click', '#MessagePage a', function(){
+      alert('hey');
+    });
+
+    /* ////////
     Position all images from img-gallery in a stack
     ////// */
     var numImages = $('#img-gallery').children().length;

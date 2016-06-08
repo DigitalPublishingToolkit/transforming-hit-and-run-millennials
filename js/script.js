@@ -316,7 +316,8 @@ $('li#personal-explore').on("click", function(){
   Paginated content, retrieved from http://stackoverflow.com/questions/11277529/wrap-text-every-2500-characters-in-a-div-for-pagination-using-php-or-javascrip
 
   with some slight changes
-  (html() instead of text(), fixed page height instead of window.height() )
+  - html() instead of text(), fixed page height instead of window.height()
+  - the last word in each page was missing (that has been fixed now)
   ////// */
 
 if($('#paginated-content').length){ //if the div with the id 'paginated content' has a specific length, than do everything from the next lines
@@ -331,12 +332,9 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
   //define the page height
   var pageHeight = 300;
 
-
   function paginate() {
         //create a div to build the pages in
-
         var newPage = $('<div class="articleTextPage" />');
-
         contentBox.empty().append(newPage);
         //this will add blank space to the end of pages so that they all have the same height
         $('.articleTextPage').css('min-height',pageHeight+'px');
@@ -355,22 +353,21 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
             // }
             var betterPageText = pageText ? pageText + ' ' + words[i]
                                           : words[i];
+            console.log('here ' +betterPageText);
             //add betterPageText (defined in the line above) as content of newPage
             newPage.html('<p>'+betterPageText+'</p>');
 
             //Check if the page is too long
-          //  if(newPage.height() > $(window).height()) {
-            if(newPage.height() > pageHeight) { //page height is 300px (defined above)
-                //revert the text
+            if(newPage.height() <= pageHeight) { //page height is 300px (defined above)
+              //text still fits
+              pageText = betterPageText;
+            } else {
+                //reset the text
                 newPage.html(pageText);
                 //and insert a copy of the page at the start of the document
                 newPage.clone().insertBefore(newPage);
-
-                //start a new page
-                pageText = null;
-            } else {
-                //this longer text still fits
-                pageText = betterPageText;
+                //start new page content where it stopped (fix for last word missing)
+                pageText = words[i];
             }
 
         }
@@ -546,7 +543,7 @@ $('#banner').on('click', function () {
     'left': '-340px'
     }, 250);
   });
-  }  
+  }
 
 });
 

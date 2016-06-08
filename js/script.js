@@ -116,9 +116,15 @@ $(".results").hide();
           t.removeClass("tabFix");
           //remove margin from tab1
           $('#tab1').css('margin-top','0px');
-      }
+      } 
   });
   //end fixed tab stuff
+
+ /* //trying to fix the scrolling here... 
+
+ $('body').scrollTo('#newsUpdate', 800, {offset: function() { return {top:pos}; }});
+
+});*/
 
   //hide all divs except #article
   $("#explore").hide();

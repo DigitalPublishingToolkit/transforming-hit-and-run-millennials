@@ -597,6 +597,67 @@ $('#banner').on('click', function () {
 
 });
 
+//
+
+
+
+// LINK BANNER TO PERSONAL EXPLORE TAB WITH LOG IN
+
+//$('.linkPEx').on('click', function(){
+  //$(this).toggleClass('clicked');
+//});
+
+/*
+var toTab2;
+toTab2 = '#tab2'
+
+
+$('.linkPEx').on('click', function(){
+    //hide all divs except #explore
+  $("#article").hide();
+  $("#discussion").hide();
+    //show explore div
+  $("#explore").show('#tab2');
+
+  // defines the next tab as being the next to the currently selected tab
+  nextTab = $('.updateTabs li.selected').next();
+  //gets the href of the next tab (which is related to the id of the content to be displayed)
+  nextTabID = $(nextTab).find('a').attr('href');
+
+  //remove .selected from all li
+  $('.updateTabs li').removeClass('selected');
+  //add .selected to selected tab
+  curUpdTab = $(nextTab);
+  $(curUpdTab).addClass('selected');
+  //defines the current content tab
+  curUpdContent = nextTabID;
+  //hides all itesm with class .tabContent
+  $('.tabUpdContent').hide();
+  //shows current content tab
+  $(curUpdContent).show();
+
+});
+
+
+  //define variables that we're going to use later
+  var curContent;
+  var curTab;
+
+  $('.pagetabs a').on('click', function(blaEvent){
+    //remove .selected from all li
+    $('.pagetabs li').removeClass('selected');
+    //add .selected to selected tab
+    curTab = $(this).parent();
+    $(curTab).addClass('selected');
+    //defines the current content tab
+    curContent = $(this).attr('href');
+    //hides all itesm with class .tabContent
+    $('.tabContent').hide();
+
+*/
+
+
+
 //CHECKBOX LINK TO NEWS UPDATES
 
 $('.linkUpdate').on('click', function () {

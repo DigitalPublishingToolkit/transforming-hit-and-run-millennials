@@ -602,12 +602,13 @@ $('#banner').on('click', function () {
 
 
 // LINK BANNER TO PERSONAL EXPLORE TAB WITH LOG IN
-
+/*
 //$('.linkPEx').on('click', function(){
   //$(this).toggleClass('clicked');
 //});
 
-/*
+//var curContent;
+//var curTab;
 var toTab2;
 toTab2 = '#tab2'
 
@@ -617,8 +618,20 @@ $('.linkPEx').on('click', function(){
   $("#article").hide();
   $("#discussion").hide();
     //show explore div
-  $("#explore").show('#tab2');
+  $("#explore", ).show('#tab2');
+*/
+  // $('.pagetabs .selected').removeClass('selected');
+ // $('.pagetabs .exploreTour').addClass('selected');
 
+    //add .selected to selected tab
+  // curTab = $(this).parent();
+//  $(curTab).addClass('selected');
+    //defines the current content tab
+  //  curContent = $(this).attr('href');
+    //hides all itesm with class .tabContent
+ //   $('.tabContent').hide();
+
+  /*
   // defines the next tab as being the next to the currently selected tab
   nextTab = $('.updateTabs li.selected').next();
   //gets the href of the next tab (which is related to the id of the content to be displayed)
@@ -635,10 +648,10 @@ $('.linkPEx').on('click', function(){
   $('.tabUpdContent').hide();
   //shows current content tab
   $(curUpdContent).show();
+*/
+//});
 
-});
-
-
+/*
   //define variables that we're going to use later
   var curContent;
   var curTab;

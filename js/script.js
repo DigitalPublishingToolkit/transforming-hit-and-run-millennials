@@ -116,11 +116,11 @@ $(".results").hide();
           t.removeClass("tabFix");
           //remove margin from tab1
           $('#tab1').css('margin-top','0px');
-      } 
+      }
   });
   //end fixed tab stuff
 
- /* //trying to fix the scrolling here... 
+ /* //trying to fix the scrolling here...
 
  $('body').scrollTo('#newsUpdate', 800, {offset: function() { return {top:pos}; }});
 
@@ -487,7 +487,8 @@ if($('#paginated-content').length){
             top: n * (- imgHeight - 8 ) ,
             left: n  * 4
           });
-
+          //write nrPhoto
+          $('.imgnr').eq(n).html((n+1)+'/'+numImages);
 
       } //end for
 
@@ -497,8 +498,7 @@ if($('#paginated-content').length){
         height: galHeight+'px'
       });
 
-      //set top photo as current
-      $('.article-img').eq(0).addClass('topPhoto');
+
 
     }// end pileImages function
 
@@ -541,7 +541,7 @@ function flipPhotos(event, direction){
     $('.topPhoto').fadeIn('fast');
     //prev should be topPage now
     tPhotoIndex--;
-    console.log(tPhotoIndex, numImages);
+    //console.log(tPhotoIndex, numImages);
     $('.topPhoto').removeClass('topPhoto').prev().addClass('topPhoto');
     if(tPhotoIndex < numImages ){
       $('.topPhoto').animate({

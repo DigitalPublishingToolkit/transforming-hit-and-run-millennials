@@ -425,31 +425,29 @@ if($('#paginated-content').length){
     //touch
     //for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
       $("#mainArticlePage").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          flipPages(direction);
-        }
+         swipeLeft:flipPages,
+         swipeRight:flipPages,
+         allowPageScroll:"auto"
       });
 
     var tPageIndex = $('.articleTextPage').index($('.topPage'));
     var w = $(window).width();
 
-    function flipPages(d){
-      if(d == 'left'){
+    function flipPages(event, direction){
+      if(direction == 'left'){
         if(tPageIndex < (numPages - 1)){
           $('.topPage').animate({
             left: '-'+w+'px'
           }, 400, function() {
-            // Animation complete.
-            //$('.topPage').fadeOut('fast');
-            //next should be topPage now
+            // animation is complete.
+            // next should be topPage now
             $('.topPage').removeClass('topPage').next().addClass('topPage');
             tPageIndex++;
           });
         }
       }//end left
 
-      if(d == 'right'){
+      if(direction == 'right'){
         $('.topPage').fadeIn('fast');
         //prev should be topPage now
         tPageIndex--;

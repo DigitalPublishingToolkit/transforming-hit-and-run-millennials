@@ -238,7 +238,7 @@ margin: 6px 2px;
 #newsUpdate {
   margin: 10px 15px;
   position:relative;
-  top: 400px;
+  /*top: 400px;*/
 }
 
 
@@ -251,7 +251,7 @@ margin: 6px 2px;
   padding: 20px 20px 20px 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
-  margin-bottom: 400px;
+  /*margin-bottom: 400px;*/
 }
 
 #when {
@@ -259,7 +259,7 @@ margin: 6px 2px;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 1px 1px 3px #999;
-  margin-bottom: 400px;
+  /*margin-bottom: 400px;*/
 }
 
 #where {
@@ -267,7 +267,7 @@ margin: 6px 2px;
     padding: 20px 20px 60px 20px;
     font-family: 'Open Sans', sans-serif;
     box-shadow: 1px 1px 3px #999;
-    margin-bottom: 400px;
+    /*margin-bottom: 400px;*/
 }
 
 .fa-arrow-circle-right:before {
@@ -402,14 +402,14 @@ li.selected{
     content: "\f0d9";
     padding-left: 25px;
     color: darkcyan;
-    
+
 }
 
 .caretYin {
     content: "\f0d7";
     padding-left: 25px;
     color: darkcyan;
-    
+
 }
 
 
@@ -452,16 +452,14 @@ li.selected{
 }
 
 #heading-div-article {
-   position:relative;
-   top:-10px;
-   margin:12px 0px 0px 0px;
+   margin:2px 0px 0px 0px;
    padding: 0px 15px 0px 15px;
 }
 
 #heading-div-discussion {
    position:relative;
    margin:0px 0px 15px 0px;
-   
+
 }
 
 
@@ -487,7 +485,7 @@ li.selected{
 
 #discussion {
 
-   position:relative;
+   /*position:relative;*/
    padding:120px 15px 1px 15px;
    background-color: #F1F1F1;
 
@@ -546,15 +544,14 @@ li.selected{
     color: #696969;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    float: left;
+    /*float: left;*/
     line-height: 15px;
 }
-/
-#mainArticlePage {
+
+/*#mainArticlePage {
   position:relative;
   top:55px;
-
-}
+}*/
 
 .lead{
 	color: #666;
@@ -568,10 +565,9 @@ li.selected{
 
 #paginated-content{
 	white-space: pre-wrap; /* respect line breaks */
-	margin-bottom: 10px;
+	margin-bottom: 30px;
   margin-top:55px;
 	position: relative;
-	/*top: 40px;*//* added to margin-top*/
 	left: 0;
 }
 
@@ -613,8 +609,11 @@ li.selected{
 }
 
 .imgnr{
-  position: relative;
-  top: -420px;
+  /*position: relative;
+  top: -2.3em;*/
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   z-index: 200;
   background-color: rgba(255, 255, 255, .5);
   padding: 3px 0;
@@ -635,6 +634,9 @@ li.selected{
   }
 
 #img-gallery img{
+width: 290px;
+}
+.article-img{
 	box-shadow: 1px 1px 3px #999;
 	border: 10px solid #fff;
 	width: 290px;
@@ -642,14 +644,14 @@ li.selected{
   }
 
 .relatedArticles {
-    position: relative;
+    /*position: relative;*/
     width: 100%;
-    top:400px;
+    /*top:400px;*/
 }
 
 #related-lines{
  position:relative;
- top:400px;
+ /*top:400px;*/
  width:20%;
  float:left;
  margin-left: 15px;
@@ -762,7 +764,7 @@ li.selected{
     width: 100%;
     position: relative;
     top: 30px;
-   
+
 }
 
 /* bottom */
@@ -891,8 +893,8 @@ input[type="checkbox"]{display:none;}
   width:100%;
   font-family: 'Open Sans', sans-serif;
   /*background-color: white;*/
-  position: relative;
-  top:400px;
+  /*position: relative;
+  top:400px;*/
   }
 
 #belowarticle {
@@ -904,7 +906,7 @@ input[type="checkbox"]{display:none;}
 
   position: relative;
   float:left;
-  top: 400px;
+  /*top: 400px;*/
   margin-left: 15px;
 
 
@@ -927,7 +929,7 @@ input[type="checkbox"]{display:none;}
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
-  
+
   }
 
   .subheaderUpdate {
@@ -1049,7 +1051,7 @@ input[type="checkbox"]{display:none;}
   margin: 10px 0px 10px 0px;
   width:100%;
   font-family: 'Open Sans', sans-serif;
-  position: relative; 
+  position: relative;
 
 }
 
@@ -1085,7 +1087,7 @@ input[type="checkbox"]{display:none;}
     text-align: center;
     background-color: rgba(255,255,255,1);
     padding-top: 10px;
-  
+
 }
 
 
@@ -1191,7 +1193,7 @@ stroke-width: 4px;
     width: 20%;
     text-align: left;
     margin: 5px 0px 10px 0px;
-  
+
 }
 
 /*  Style for the top menu svgs -------------------------------------------------*/
@@ -1301,14 +1303,14 @@ stroke-width: 4px;
    height: 121px;
    border: none;margin-bottom: 20px;
    background: #f1f1f1;
-   overflow: hidden;   
+   overflow: hidden;
    position: relative;
    top: -20px;
-   
+
 }
 
 #trending-voices-div img {
-  width: 325px; 
+  width: 325px;
   height: 121px;
   }
 
@@ -1329,7 +1331,7 @@ input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px
     z-index:999;
     margin:10px;
     opacity:0.8;
-    
+
 }
 
 .trending-voice-button-left {
@@ -1345,7 +1347,7 @@ input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px
     z-index:999;
     margin:5px;
     opacity:0.8;
-    
+
 }
 
 

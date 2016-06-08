@@ -353,7 +353,6 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
             // }
             var betterPageText = pageText ? pageText + ' ' + words[i]
                                           : words[i];
-            console.log('here ' +betterPageText);
             //add betterPageText (defined in the line above) as content of newPage
             newPage.html('<p>'+betterPageText+'</p>');
 
@@ -410,7 +409,7 @@ if($('#paginated-content').length){
       } //end for
 
        //  $('#paginated-content').css('margin-bottom', - ( numPages * pageHeight) + (pageHeight  * 3/2));
-         $('#paginated-content').css('height',pageHeight + 30 + numPages * 4);
+         $('#paginated-content').css('height',pageHeight + 60 + numPages * 4);
          //set top page as current
          $('.articleTextPage').eq(0).addClass('topPage');
 
@@ -424,7 +423,7 @@ if($('#paginated-content').length){
     ////// */
     //touch
     //for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
-      $("#mainArticlePage").swipe( {
+      $("#paginated-content").swipe( {
          swipeLeft:flipPages,
          swipeRight:flipPages,
          allowPageScroll:"auto"
@@ -465,17 +464,20 @@ if($('#paginated-content').length){
     Position all images from img-gallery in a stack
     ////// */
     var numImages = $('#img-gallery').children().length;
-    var imgHeight;
-    var galHeight = numImages * 210; //check/fix
+    var imgHeight = 194; //hardcoded value
+    // var galHeight = numImages * 210; //check/fix
+    var galHeight = imgHeight + 20 + (numImages * 8);
 
     function pileImages(){
 
       for(var n=0; n < numImages; n++){
-        imgHeight = $('.article-img').eq(n).height();
+        //imgHeight = $('.article-img').eq(n).height();
+        //using hardcoded value (194px) instead
+        // imgHeight = 194;
 
         $('.article-img').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- imgHeight - 16 ) - ( n * 4.5), //TO DO: check these values later
+            top: n * (- imgHeight - 8 ) ,
             left: n  * 4
           });
 
@@ -483,9 +485,13 @@ if($('#paginated-content').length){
       } //end for
 
       $('#img-gallery').css({
-        marginBottom: - (galHeight/2) + 50,
-        marginTop: 50
+        //marginBottom: - (galHeight/2) + 50,
+        marginTop: 50,
+        height: galHeight+'px'
       });
+
+      //set top photo as current
+      $('.article-img').eq(0).addClass('topPhoto');
 
     }// end pileImages function
 
@@ -493,6 +499,51 @@ if($('#paginated-content').length){
     pileImages();
 
 }// end if
+
+/* ////////
+Swipe photos left and right
+-> this is a copy of the mechanism for swiping pages, with some changes in variable names
+-> ideally, we would write a function and pass parameters to accomodate that instead of writing the same functions twice.
+////// */
+//for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
+  $("#img-gallery").swipe( {
+     swipeLeft:flipPhotos,
+     swipeRight:flipPhotos,
+     allowPageScroll:"auto"
+  });
+
+var tPhotoIndex = $('.article-img').index($('.topPhoto'));
+//var w = $(window).width();
+
+function flipPhotos(event, direction){
+  if(direction == 'left'){
+    //console.log('swipe left');
+    if(tPhotoIndex < (numImages - 1)){
+      $('.topPhoto').animate({
+        left: '-'+w+'px'
+      }, 400, function() {
+        // animation is complete.
+        // next should be topPage now
+        $('.topPhoto').removeClass('topPhoto').next().addClass('topPhoto');
+        tPhotoIndex++;
+      });
+    }
+  }//end left
+
+  if(direction == 'right'){
+    $('.topPhoto').fadeIn('fast');
+    //prev should be topPage now
+    tPhotoIndex--;
+    console.log(tPhotoIndex, numImages);
+    $('.topPhoto').removeClass('topPhoto').prev().addClass('topPhoto');
+    if(tPhotoIndex < numImages ){
+      $('.topPhoto').animate({
+        left: leftPos[tPhotoIndex]+'px'
+      });
+    }//end if
+  }//end right
+
+}//end flipPhotos()
 
 //update tab clicks
 $('.tabUpdContent span').on('click', function(){

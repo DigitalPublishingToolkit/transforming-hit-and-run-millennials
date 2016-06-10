@@ -53,6 +53,27 @@ body{
 
 }
 
+a{ color: #008080;}
+
+button, input[type="submit"]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    background-color: #008080;
+    text-align: center;
+    color:white;
+    border-radius: 6px;
+    /*padding:2px 10px 2px 10px;*/
+    padding: 24px;
+    border:none;
+    vertical-align: top;
+    width: 100%;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+button.cancel{
+    width: auto;
+}
 
 #banner {
     background-color: firebrick;
@@ -68,17 +89,29 @@ body{
     bottom: 20%;
     z-index: 500;
     width: 80%;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    border-radius: 0px 6px 6px 0;
+    box-shadow: 1px 1px 6px #999;
 }
 
 
-.fa-times-circle:before {
-    content: "\f057";
-    padding-left: 145px;
-}
+/*.fa-times-circle:before {*/
+/*    content: "\f057";*/
+/*    padding-left: 145px;*/
+/*}*/
 
 .fa-check-square-o:before {
     content: "\f046";
     color: darkcyan;
+}
+
+.close-banner{
+    float: right;
+    position: relative;
+    top: -3px;
+    left: 6px;
+    visibility: hidden;
+    text-shadow: none;
 }
 
 .linkPEx {
@@ -134,12 +167,12 @@ body{
     font-size: 1em;
     text-decoration: none;
     color: #696969;
-
+    font-weight: lighter;
 }
 
   li.selected a {
    color: #008080;
-   font-weight: bold;
+   /*font-weight: bold;*/
  }
 
 
@@ -521,8 +554,8 @@ li.selected{
   min-height:1400px;
 }
 
-#title {
-	  font-family: 'liberation_serifregular';
+#title, .main-title {
+    font-family: 'liberation_serifregular';
     font-size: 26px;
     margin: 8px 0px;
     line-height: 25px;
@@ -565,19 +598,26 @@ li.selected{
     background-color: #fff;
     /*border: 1px solid black;*/
     box-shadow: 1px 1px 3px #999;
-    padding: 15px;
+    padding: 21px;
     font-size: 1em;
-    line-height: 1.15em;
+    line-height: 1.25em;
     margin: 0 auto; /* this line will place the pages horizontally centered in the window */
     position: relative;
     /* the top values will vary according to the page and will be set via JS */
+    
+    font-family: 'Open Sans';
+    color: #666;
+    font-size: 13px;
 }
 
 .articleTextPage p{
   margin-top:0;
 }
 
-
+.articleTextPage br{
+    margin-top: 16px;
+    display: block;
+}
 
 #MessagePage, #BlockMessagePage {
     background-color: rgb(192, 199, 199);
@@ -778,13 +818,16 @@ width: 290px;
 
 .label  {
   text-align: center;
-	background-color: #008080;
-	width: 30px;
+    background-color: #008080;
+    width: 30px;
   height: 30px;
-  padding: 5px;
+  padding: 9px;
+  padding-left: 4px;
   left: 0;
   position: fixed;
   bottom: 10%;
+  border-radius: 0px 6px 6px 0;
+  box-shadow: 1px 1px 6px #999;
 }
 
 input[type="checkbox"]{display:none;}
@@ -896,6 +939,16 @@ input[type="checkbox"]{display:none;}
   top:400px;*/
   }
 
+#pollOptionsWrapper{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+#pollOptionsWrapper > *{
+    box-shadow: 1px 1px 3px #999;
+}
+
 #belowarticle {
  position:relative;
 
@@ -928,7 +981,7 @@ input[type="checkbox"]{display:none;}
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
-
+  margin-bottom: 20px;
   }
 
   .subheaderUpdate {
@@ -944,7 +997,7 @@ input[type="checkbox"]{display:none;}
 
 
 #question {
-  padding:0px 30px 0px 0px;
+  /*padding:0px 30px 0px 0px;*/
   margin: 0px 10px 10px 0px;
   line-height: 18px;
   font-size: 15px;
@@ -952,42 +1005,72 @@ input[type="checkbox"]{display:none;}
 
 
 #submit-button {
- font-family: 'Open Sans', sans-serif;
- font-size: 18px;
- background-color: #008080;
- text-align: center;
- color:white;
- border-radius: 20px;
- border:none;
- vertical-align: top;
- padding:10px;
- position:relative;
- margin: 10px 20px;
+    /* Common to ALL buttons */
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-size: 18px;*/
+    /*background-color: #008080;*/
+    /*text-align: center;*/
+    /*color:white;*/
+    /*border-radius: 20px;*/
+    /*border:none;*/
+    /*vertical-align: top;*/
+    /*padding:10px;*/
+ 
+    /* Specific to THIS button */
+    margin-top: 24px;
+    /*position:relative;
+    margin: 10px 20px;*/
+    box-shadow: 1px 1px 3px #999;
 }
 
+
 .pollOptions {
- background-color:#fff;
- text-align: center;
- color: black;
- border: none;
- position:relative;
- top: 15px;
- margin: 0px 5px 0px 0px;
- float:left;
- padding:10px;
- border-radius: 20px;
+   background-color:#fff;
+   text-align: center;
+   color: black;
+   border: none;
+ /*
+   position:relative;
+   top: 15px;
+   border-radius: 20px;
+*/
+   margin: 0px 10px 0px 0px;
+   padding: 12px;
+   /*display: block;*/
+   /*float: left;*/
+   width: 50%;
+   height: 40px;
+   border-radius: 6px;
+}
+.pollOptions:last-of-type{
+    margin: 0px 0px 0px 0px;
+}
+
+.yep{
+    color: green !important;
+}
+
+.nope{
+    color: #D9534F;
 }
 
 .clicked-poll {
- background-color:#C0E0E0;
- text-align: center;
- position:relative;
- top: 15px;
- margin: 0px 5px 0px 0px;
- float:left;
- padding:11px;
- border-radius: 20px;
+ /*background-color:#C0E0E0;*/
+ /*text-align: center;*/
+ /*position:relative;*/
+ /*top: 15px;*/
+ /*margin: 0px 5px 0px 0px;*/
+ /*float:left;*/
+ /*padding:11px;*/
+ /*border-radius: 20px;*/
 
+}
+
+.clicked-poll:first-of-type{
+    background-color: #D9534F;
+}
+.clicked-poll:last-of-type{
+    background-color: green;
 }
 
 .clicked {
@@ -1013,12 +1096,16 @@ input[type="checkbox"]{display:none;}
 
 
 #Yes {
-  background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
-  top: 5px;
-  float:left;
-  width:85%;
-  font-size: 18px;
-  margin-left: 0px;
+    /*background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);*/
+    background: linear-gradient(90deg, #D9534F 67%, green 33%);
+    top: 5px;
+    /*float:left;*/
+    width:100%;
+    font-size: 18px;
+    margin-left: 0px;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px #999;
 }
 
 #No {
@@ -1063,13 +1150,16 @@ input[type="checkbox"]{display:none;}
 }
 
 #discussion-Yes{
-  background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);
-  top: 5px;
-  float:left;
-  width:90%;
-  font-size: 18px;
-  margin-left: 0px;
-  color: white;
+    /*background: linear-gradient(90deg, #e1b7b7 67%, #b7cce1 33%);*/
+    background: linear-gradient(90deg, #D9534F 67%, green 33%);
+    top: 5px;
+    /*float:left;*/
+    width:100%;
+    font-size: 18px;
+    margin-left: 0px;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px #999;
   }
 
 
@@ -1083,7 +1173,7 @@ input[type="checkbox"]{display:none;}
     text-align: center;
     background-color: rgba(255,255,255,1);
     padding-top: 10px;
-
+    z-index: 400;
 }
 
 
@@ -1108,6 +1198,7 @@ input[type="checkbox"]{display:none;}
   padding: 15px;
   width: inherit;
   vertical-align: middle;
+   text-shadow: 1px 1px 0px rgb(0, 0, 0);
 }
 
 #footer ul{
@@ -1121,19 +1212,21 @@ input[type="checkbox"]{display:none;}
 
 .subscribe {
 
- font-family: 'Open Sans', sans-serif;
+/* This should be common to ALL buttons */
+ /*font-family: 'Open Sans', sans-serif;
  font-size: 19px;
  background-color: #008080;
  text-align: center;
  color:white;
  border-radius: 20px;
+ padding:16px 10px 2px 10px;
  border:none;
- vertical-align: top;
- padding:10px;
+ vertical-align: top;*/
+ 
+ /* This may be specific to THIS button */
  position:relative;
  margin: 10px 0px;
- padding:16px 10px 2px 10px;
-
+ 
 }
 
 
@@ -1292,12 +1385,13 @@ stroke-width: 4px;
 #container-div-trending-voices{
    width: 325px;
    height: 121px;
-   border: none;margin-bottom: 20px;
+   border: none;
+   margin-bottom: 20px;
    background: #f1f1f1;
    overflow: hidden;
-   position: relative;
-   top: -20px;
-
+   /*position: relative;*/
+   /*top: -20px;*/
+   margin: 0 auto;
 }
 
 #trending-voices-div img {
@@ -1305,7 +1399,28 @@ stroke-width: 4px;
   height: 121px;
   }
 
+#trending-voices-navig{
+    position: relative;
+    top: -80px;
+}
 
+#tv-left{float:left;}
+#tv-right{float:right;}
+#discussion-poll{clear: both;}
+
+.tv-navig{
+    width: 30px;
+    height: 26px;
+    background-color: #008080;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 3px 3px 3px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px #999;
+}
 
 input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px); }
 

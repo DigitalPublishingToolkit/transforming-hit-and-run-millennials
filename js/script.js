@@ -41,8 +41,14 @@ $(document).ready(function(){
   }); // end #saveLater on click
   
   //poll simulation
+  var pollChecked = false;
   $(".pollOptions").click(function(){
-   $(this).toggleClass('clicked-poll');
+      if($(this).siblings().hasClass('clicked-poll')){
+        $(this).toggleClass('clicked-poll');
+        $(this).siblings().toggleClass('clicked-poll');
+      }else{
+        $(this).toggleClass('clicked-poll');
+      }
   });
 
   $("#submit-button").click(function(){
@@ -341,7 +347,6 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
                                           : words[i];
             //add betterPageText (defined in the line above) as content of newPage
             newPage.html('<p>'+betterPageText+'</p>');
-            console.log(newPage.height());
             //Check if the page is too long
             if(newPage.height() > pageHeight ) { //page height is 300px (defined above)
               
@@ -361,7 +366,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
         //add 'BlockMessagePage' after the first page ( .eq(0) )
         $('.articleTextPage').eq(0).after('<div id="BlockMessagePage" class="articleTextPage" />');
         //define content for #BlockMessagePage
-        $('#BlockMessagePage').html('<p>BLOCK MESSAGE<br><br><span class="link-check-update"><a class="linkUpdate"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></a></span></p>');
+        $('#BlockMessagePage').html('<p>BLOCK MESSAGE<br><br>Lorem ipsum here you will place some text/content.<span class="unlockText"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></span></p>');
         //define a height to this div
         //$('#BlockMessagePage').css('height', pageHeight+'px');
          $('#BlockMessagePage').height(pageHeight  +'px').css('min-height', pageHeight+'px !important');
@@ -386,23 +391,29 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
     /* ////////
     Position all pages in a stack
     ////// */
-
+  var numPages
+    
 if($('#paginated-content').length){
 
-    var numPages = $('#paginated-content').children().length;
+    //numPages = $('#paginated-content').children().length;
     var leftPos = [];
 
     function pilePages(){
+      numPages = $('#paginated-content').children().length;
 
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- 33 - pageHeight),
+            top: n * (- 45 - pageHeight),
             left: n  * 3
           });
           leftPos.push(n*4);
           //add page numbers (needs styling)
-          $('.articleTextPage').eq(n).append('<p class="pageNr">'+(n+1)+'/<span class="numPages">'+numPages+'</span></p>');
+          if(textUnlocked){
+           $('.pageNr').eq(n).html((n+1)+'/<span class="numPages">'+numPages+'</span>');
+          }else{
+            $('.articleTextPage').eq(n).append('<p class="pageNr">'+(n+1)+'/<span class="numPages">'+numPages+'</span></p>');
+          }
 
       } //end for
 
@@ -419,6 +430,28 @@ if($('#paginated-content').length){
     /* ////////
     Swipe pages left and right
     ////// */
+    
+    var textUnlocked = false;
+    // We will use this variable to allow/prvent user from swiping through pages.
+    // Text will be unlocked when user clicks on icon inside the BlockMessagePage
+    // Change, if you want. :)
+    $('.unlockText').on('click', function(){
+      textUnlocked = true;
+      
+      $('#BlockMessagePage').animate({
+        'background-color': 'white',
+        'color':'#666'
+        });
+      $('#BlockMessagePage').html('Continue reading...');
+      
+      //remove the message
+      //$('#BlockMessagePage').remove();
+      //update numPages
+      //numPages--;
+      //rebuild the pages/pageNr, positions
+      //pilePages();
+    });
+    
     //touch
     //for reference, check http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html
       $("#paginated-content").swipe( {
@@ -431,30 +464,43 @@ if($('#paginated-content').length){
     var w = $(window).width();
 
     function flipPages(event, direction){
-      if(direction == 'left'){
-        if(tPageIndex < (numPages - 1)){
-          $('.topPage').animate({
-            left: '-'+w+'px'
-          }, 400, function() {
-            // animation is complete.
-            // next should be topPage now
-            $('.topPage').removeClass('topPage').next().addClass('topPage');
-            tPageIndex++;
-          });
-        }
-      }//end left
-
-      if(direction == 'right'){
-        $('.topPage').fadeIn('fast');
-        //prev should be topPage now
-        tPageIndex--;
-        $('.topPage').removeClass('topPage').prev().addClass('topPage');
-        if(tPageIndex < numPages ){
-          $('.topPage').animate({
-            left: leftPos[tPageIndex]+'px'
-          });
-        }//end if
-      }//end right
+      if(textUnlocked == true || tPageIndex < 1){
+        
+        if(direction == 'left'){
+          if(tPageIndex < (numPages - 1)){
+            $('.topPage').animate({
+              left: '-'+w+'px'
+            }, 400, function() {
+              // animation is complete.
+              // next should be topPage now
+              $('.topPage').removeClass('topPage').next().addClass('topPage');
+              tPageIndex++;
+            });
+          }
+          
+          
+        }//end left
+        
+       } //end check textUnlocked
+       
+      if(textUnlocked == true || tPageIndex < 2){
+        if(direction == 'right'){
+          $('.topPage').fadeIn('fast');
+          if(tPageIndex >= 1){
+             //prev should be topPage now
+            tPageIndex--;
+            $('.topPage').removeClass('topPage').prev().addClass('topPage');
+          }
+         
+          
+          if(tPageIndex < numPages ){
+            $('.topPage').animate({
+              left: leftPos[tPageIndex]+'px'
+            });
+          }
+        }//end right
+        
+    } //end check textUnlocked
 
     }//end flipPages()
 
@@ -584,89 +630,55 @@ $('#banner').on('click', function () {
   if(bPPos.left == -340){
     $('#banner').animate({
     'left': '-5px'
-    }, 800);
+    }, 800, function(){
+      $('.close-banner').css('visibility','visible');
+    });
   }else{
-    $('.fa-times-circle').on('click', function(){
-    $('#banner').animate({
-    'left': '-340px'
-    }, 250);
-  });
+    $('.close-banner').on('click', function(){
+      $('.close-banner').css('visibility','hidden');
+      $('#banner').animate({
+      'left': '-340px'
+      }, 250);
+    });
   }
 
 });
 
-//
-
-
 
 // LINK BANNER TO PERSONAL EXPLORE TAB WITH LOG IN
-/*
-//$('.linkPEx').on('click', function(){
-  //$(this).toggleClass('clicked');
-//});
-
-//var curContent;
-//var curTab;
-var toTab2;
-toTab2 = '#tab2'
-
 
 $('.linkPEx').on('click', function(){
-    //hide all divs except #explore
-  $("#article").hide();
-  $("#discussion").hide();
-    //show explore div
-  $("#explore", ).show('#tab2');
-*/
-  // $('.pagetabs .selected').removeClass('selected');
- // $('.pagetabs .exploreTour').addClass('selected');
-
-    //add .selected to selected tab
-  // curTab = $(this).parent();
-//  $(curTab).addClass('selected');
-    //defines the current content tab
-  //  curContent = $(this).attr('href');
-    //hides all itesm with class .tabContent
- //   $('.tabContent').hide();
-
-  /*
-  // defines the next tab as being the next to the currently selected tab
-  nextTab = $('.updateTabs li.selected').next();
-  //gets the href of the next tab (which is related to the id of the content to be displayed)
-  nextTabID = $(nextTab).find('a').attr('href');
-
+  //must select tab explore, subTab Personal #personal-explore
+  
   //remove .selected from all li
-  $('.updateTabs li').removeClass('selected');
-  //add .selected to selected tab
-  curUpdTab = $(nextTab);
-  $(curUpdTab).addClass('selected');
-  //defines the current content tab
-  curUpdContent = nextTabID;
-  //hides all itesm with class .tabContent
-  $('.tabUpdContent').hide();
-  //shows current content tab
-  $(curUpdContent).show();
-*/
-//});
-
-/*
-  //define variables that we're going to use later
-  var curContent;
-  var curTab;
-
-  $('.pagetabs a').on('click', function(blaEvent){
-    //remove .selected from all li
     $('.pagetabs li').removeClass('selected');
-    //add .selected to selected tab
-    curTab = $(this).parent();
+    curTab = $('#exploreTour');
     $(curTab).addClass('selected');
-    //defines the current content tab
-    curContent = $(this).attr('href');
-    //hides all itesm with class .tabContent
+    curContent = '#explore';
     $('.tabContent').hide();
 
-*/
-
+  //hides/shows the share button
+    if(curContent == "#article"){
+      $('#share').show();
+      $('#comment').hide();
+    }else{
+      $('#share').hide();
+      if(curContent == "#discussion"){
+        $('#comment').show();
+      }else{
+        $('#comment').hide();
+      }
+    }
+    $(curContent).show();
+  
+  //remove .selected from all li
+    $('.intTab li').removeClass('selected');
+    curIntTab = $('#personal-explore');
+    $(curIntTab).addClass('selected');
+    curIntContent = '#tab2';
+    $('.tabIntContent').hide();
+    $(curIntContent).show();
+});
 
 
 //CHECKBOX LINK TO NEWS UPDATES

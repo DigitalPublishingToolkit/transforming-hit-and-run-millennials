@@ -118,7 +118,7 @@
 		</div>
 	
 		<div class="title-header">
-			<h2 id="title">'Blue magic': Algeria opens 'Facebook addiction' clinic </h2>
+			<h2 id="title" class="main-title">'Blue magic': Algeria opens 'Facebook addiction' clinic </h2>
 			<span class="meta">Alex Hern @alexhern <br/> Friday 22 April 2016 11.50 BST</span>
 			<span class= "options" id="listen" >
 				<span id="off" class="listen-switch">
@@ -149,7 +149,8 @@
 	
 		<div id="paginated-content">
 <p class="lead">When someone says they're an addict, people usually think drugs or alcohol, or maybe even porn, but the fight for some is with Facebook and the people of Algeria have made a stand by opening a clinic to help people overcome the addiction.</p>
-<p>Algeria joins a growing list of countries around the world to open such a clinic in the hope of helping those with a "Facebook dependency."<br>The private clinic opened in May in the eastern city of Constantine with a number of addiction specialists and psychologists leading treatments, according to <a href="https://www.alaraby.co.uk/english/news/2016/6/5/blue-magic-the-first-arab-clinic-treating-facebook-addiction">The New Arab</a>.<br>"There is some danger in underestimating the damage of Facebook addiction compared to the risk of physical drugs," said Human development scientist Raouf Boqafa, director of the clinic.<br>The North African country has around 10 million Facebook users, which is about 25 percent of the population, and the number of users is growing by around 10 percent year on year.<br>While such interest in the social network is not uncommon, Boqafa is of the belief that Facebook poses a greater danger than the use of "black magic."<br>Describing the effects of addiction as the cause of "blue magic... the magic of Facebook and the wider internet," Boqafa's treatment programme aims to "reduce the psychological, social, and security damage experienced by one who lives in the virtual world."<br>As well as becoming more removed from the "real world," Boqafa says that "Facebook addicts" are more susceptible to being brainwashed by extremists groups who use the web as a recruitment tool.</p>
+<p>Algeria joins a growing list of countries around the world to open such a clinic in the hope of helping those with a "Facebook dependency." The private clinic opened in May in the eastern city of Constantine with a number of addiction specialists and psychologists leading treatments, according to The New Arab.</p>
+<p>"There is some danger in underestimating the damage of Facebook addiction compared to the risk of physical drugs," said Human development scientist Raouf Boqafa, director of the clinic. The North African country has around 10 million Facebook users, which is about 25 percent of the population, and the number of users is growing by around 10 percent year on year.<br>While such interest in the social network is not uncommon, Boqafa is of the belief that Facebook poses a greater danger than the use of "black magic." Describing the effects of addiction as the cause of "blue magic... the magic of Facebook and the wider internet," Boqafa's treatment programme aims to "reduce the psychological, social, and security damage experienced by one who lives in the virtual world."<br>As well as becoming more removed from the "real world," Boqafa says that "Facebook addicts" are more susceptible to being brainwashed by extremists groups who use the web as a recruitment tool.</p>
 		</div><!-- end #paginated-content -->
 	
 	
@@ -175,12 +176,25 @@
 				<hr class="lines">
 				<h2 class="subheader">POLL</h2>
 					<p id="question">Do you find Facebook's privacy settings clear in relation to the collection and use of data by Facebook itself or by third-parties?</p>
-					<span class="pollOptions">No</span>
-					<span class="pollOptions">Yes</span>
-					<span class="results" id="Yes" >
+					<div id="pollOptionsWrapper">
+					<span class="pollOptions">
+						
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x nope"></i>
+							<i class="fa fa-times fa-stack-1x fa-inverse"></i>
+						</span>
+						<!--No--></span>
+					<span class="pollOptions">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x yep"></i>
+							<i class="fa fa-check fa-stack-1x fa-inverse"></i>
+						</span>
+						<!--Yes--></span>
+					</div>
+					<div class="results" id="Yes" >
 						<p class="left">67% No</p>
 						<p class="right"> 33% Yes</p>
-					</span>
+					</div>
 					<input id="submit-button" type="submit" name="submit" value="Submit"></input>
 			</div><!-- #poll-->
 
@@ -355,14 +369,15 @@
 			<hr class="linesExSection">
 		</div>
 	
-		<p class="artTitle">'Blue magic': Algeria opens 'Facebook addiction' clinic </p>
+		<!--<p class="artTitle">'Blue magic': Algeria opens 'Facebook addiction' clinic </p>-->
+		<h2 id="title" class="main-title">'Blue magic': Algeria opens 'Facebook addiction' clinic </h2>
 	
 		<div id="Trending-Voice-Container">
 	
 			<hr class="lines">
 			<h1 class="subheader">Trending Voices</h1>
-			<input type="checkbox" id="button">
-			<label class="trending-voice-button-left" for="button"><</label>
+			<!--<input type="checkbox" id="button">
+			<label class="trending-voice-button-left" for="button"><</label>-->
 			<div id="container-div-trending-voices">
 			    <div id="trending-voices-div" >
 				<img src="images/voice-1.png" alt="TrendingDiscussion">
@@ -371,18 +386,27 @@
 				<img src="images/voice-2.png" alt="TrendingDiscussion">
 			    </div> <!-- #trending-voices-div -->
 			</div><!-- #container-div-trending-voices-->
-			<input type="checkbox" id="button">
-			<label class="trending-voice-button-right" for="button">></label>
+			<!--<input type="checkbox" id="button">
+			<label class="trending-voice-button-right" for="button">></label>-->
+			
+			<!-- right left arrows -->
+			<div id="trending-voices-navig">
+				<div id="tv-left" class="tv-navig" ><i class="fa fa-angle-left" aria-hidden="true"></i>
+</div>
+				<div id="tv-right" class="tv-navig" ><i class="fa fa-angle-right" aria-hidden="true"></i>
+</div>
+			</div>
+			
 		</div><!-- Trending-Voice-Container -->
 	
 		<div id="discussion-poll">
 			<hr class="lines">
 			<h2 class="subheader">Poll results</h2>
 			<span id="question">Do you find Facebook's privacy settings clear in relation to the collection and use of data by Facebook itself or by third-parties?</span>
-			<span class="discussion-results" id="discussion-Yes" >
+			<div class="discussion-results" id="discussion-Yes" >
 				<p class="left">67% No</p>
 				<p class="right"> 33% Yes</p>
-			</span>
+			</div>
 		</div><!-- #discussion-poll -->
 	
 		<img id="comments-img" src="images/commentsonly.png" alt="CommentsDiscussion">
@@ -396,14 +420,14 @@
 	<div id="footer">
 		<ul>
 	
-			<li><button class="subscribe">SUBSCRIBE NOW <br> TO THE DUTCH JOURNAL! <br> View All Print + Digital Pack Offers
+			<li><button class="subscribe">SUBSCRIBE NOW <!--<br> <br> TO THE DUTCH JOURNAL! View All Print + Digital Pack Offers
 	
 	
 				<svg id="subscribe-arrow" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewbox="0 0 18 18" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	
 					<path d="M0.5,5.8036,12.369,5.8667" />
 					<path d="m7.3189,0.5,5.2402,5.3664-5.2887,5.3642"/>
-				</svg>
+				</svg>-->
 			</button></li>
 	
 			<li>Follow us </li>
@@ -433,7 +457,7 @@
 		</ul>
 		<p id="love">Made with
 			<svg class="footer-svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewbox="0 0 23 25" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-				<path d="M16.152,0.5c-1.505,0-3.001,1.394-4.23,2.242-1.215-0.838-2.62-2.242-4.102-2.242-1.955,0-3.792,0.762-5.172,2.144-1.385,1.385-2.148,3.227-2.148,5.185,0,1.959,0.764,3.801,2.129,5.165l9.356,10.688,9.339-10.668c2.859-2.858,2.859-7.51,0.002-10.369-1.382-1.383-3.22-2.145-5.174-2.145z" style="stroke-width:1px;"/>
+				<path d="M16.152,0.5c-1.505,0-3.001,1.394-4.23,2.242-1.215-0.838-2.62-2.242-4.102-2.242-1.955,0-3.792,0.762-5.172,2.144-1.385,1.385-2.148,3.227-2.148,5.185,0,1.959,0.764,3.801,2.129,5.165l9.356,10.688,9.339-10.668c2.859-2.858,2.859-7.51,0.002-10.369-1.382-1.383-3.22-2.145-5.174-2.145z" style="stroke-width:.1px;fill:#fff;"/>
 			</svg> in Amsterdam</p>
 	   </div><!-- #footer-->
 	
@@ -453,7 +477,9 @@
 	</div>
 	</a>
 	
-	<p id="banner">Check updates on your <span class="linkPEx">'Year in News'</span> and personalize your own <span class="linkPEx">'Explore'!</span><br><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+	<!--<p id="banner"><i class="fa fa-times-circle close-banner" aria-hidden="true" ></i>Check updates on your <span class="linkPEx">'Year in News'</span> and personalize your own <span class="linkPEx">'Explore'!</span></p>-->
+	
+	<p id="banner"><i class="fa fa-times-circle close-banner" aria-hidden="true" ></i>Check your <span class="linkPEx">YEAR IN NEWS</span>!</p>
 	
 	<script src="js/script.js"></script>
 	

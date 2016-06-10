@@ -1,14 +1,16 @@
 
 $(document).ready(function(){
 
-$(".results").hide();
- // Changes the .options elements in the article page
+  $(".results").hide();
+  $('#on').hide();
+  
+  //hide all divs except #article
+  $("#explore").hide();
+  $("#discussion").hide();
+  
+  // Changes the .options elements in the article page
 
-
-     $('#on').hide();
-
-
-    $('#listen').on('click', function() {
+  $('#listen').on('click', function() {
     if($('#on').hasClass('listen-switch')){
       $('#off').show();
       $('#on').hide();
@@ -20,34 +22,25 @@ $(".results").hide();
       $('#off').removeClass('listen-switch');
       $('#on').addClass('listen-switch');
     }
+  }); // end #listen on click
 
-
-});
-
-
-       // $("#User img").hide();
-
-       $("#saveLater").click(function(){ //this calls the aler window on click of the save for later icon
-       // $("#User img").toggle();
-       swal({
-       title: "Login",
-       html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter <input placeholder=\"e-mail\" type=\"text\"/>",
-       showCancelButton: "true",
-       imageUrl: "images/social-login.png",
-       imageSize:  "200x150",
-       showCancelButton:"true",
-       confirmButtonColor:"#008080",
-       animation:"false",
-       confirmButtonText:"Sign in"
-       });
-
-
-     });
-$(".results").hide();
-
-//poll simulation
-
+  //this calls the alert window on click of the save for later icon
+  $("#saveLater").click(function(){ 
+    swal({
+    title: "Login",
+    html: "true",
+    text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter <input placeholder=\"e-mail\" type=\"text\"/>",
+    showCancelButton: "true",
+    imageUrl: "images/social-login.png",
+    imageSize:  "200x150",
+    showCancelButton:"true",
+    confirmButtonColor:"#008080",
+    animation:"false",
+    confirmButtonText:"Sign in"
+   });//end swal
+  }); // end #saveLater on click
+  
+  //poll simulation
   $(".pollOptions").click(function(){
    $(this).toggleClass('clicked-poll');
   });
@@ -56,32 +49,24 @@ $(".results").hide();
     $(".pollOptions").hide();
     $("#submit-button").hide();
     $(".results").show();
-
-
   });
 
-// action for click on the user icon in the top nav bar
-
+  // action for click on the user icon in the top nav bar
   $("#user").click(function(){
-  swal({
-       title: "Login",
-       html: "true",
-       text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter  <input placeholder=\"e-mail\" type=\"text\"/>",
-       showCancelButton: "true",
-       imageUrl: "images/social-login.png",
-       imageSize:  "200x150",
-       showCancelButton:"true",
-       confirmButtonColor:"#008080",
-       animation:"false",
-       confirmButtonText:"Sign in"
+    swal({
+         title: "Login",
+         html: "true",
+         text: "Join us here by entering your e-mail address below or login with Facebook, Google or Twitter  <input placeholder=\"e-mail\" type=\"text\"/>",
+         showCancelButton: "true",
+         imageUrl: "images/social-login.png",
+         imageSize:  "200x150",
+         showCancelButton:"true",
+         confirmButtonColor:"#008080",
+         animation:"false",
+         confirmButtonText:"Sign in"
+    }); //end swal
+  }); // end #user on click
 
-       });
-
-
-  });
-
-
-/*<input type=\"text\" name=\"reason\" value=\"e-mail\"></br>*/
 
 /*
   $( "#sortable" ).sortable({
@@ -100,8 +85,14 @@ $(".results").hide();
       }
   });
   */
-
   //still not saving the position of the items, just allowing the user to play around with the interface for now.
+
+  /* //trying to fix the scrolling here...
+
+  $('body').scrollTo('#newsUpdate', 800, {offset: function() { return {top:pos}; }});
+
+  });
+  */
 
   //fixed tab stuff
   var t = $(".intTab");
@@ -120,15 +111,6 @@ $(".results").hide();
   });
   //end fixed tab stuff
 
- /* //trying to fix the scrolling here...
-
- $('body').scrollTo('#newsUpdate', 800, {offset: function() { return {top:pos}; }});
-
-});*/
-
-  //hide all divs except #article
-  $("#explore").hide();
-  $("#discussion").hide();
 
   //define variables that we're going to use later
   var curContent;
@@ -164,12 +146,10 @@ $(".results").hide();
     $(window).scrollTop(- tabOffset);
     //disables page 'scroll' to anchor tag
     blaEvent.preventDefault();
-    //alert('clicked on '+bla.target.nodeName);
   });
 
 //EXPLORE
 $('#GOEXPLORE').on('click', function(bla){
-  //alert('clicked on '+bla.target.nodeName);
     //remove .selected from all li
     $('.pagetabs li').removeClass('selected');
     //add .selected to selected tab

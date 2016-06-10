@@ -70,13 +70,6 @@ body{
     width: 80%;
 }
 
-.numPages, .pageNr {
-    text-align: center;
-    color: #928e8e;
-    position: relative;
-    padding-top: 20px;
-    font-size: medium;
-}
 
 .fa-times-circle:before {
     content: "\f057";
@@ -566,32 +559,27 @@ li.selected{
 	position: relative;
 	left: 0;
 }
-
-.articleTextPage, #MessagePage {
-		width: 320px;
+/**/
+.articleTextPage, #MessagePage, #BlockMessagePage {
+    width: 320px;
     background-color: #fff;
     /*border: 1px solid black;*/
-		box-shadow: 1px 1px 3px #999;
+    box-shadow: 1px 1px 3px #999;
     padding: 15px;
-		font-size: 1em;
-		line-height: 1.15em;
-		margin: 0 auto; /* this line will place the pages horizontally centered in the window */
-		position: relative;
-		/* the top values will vary accod=rding to the page and will be set via JS */
-    padding-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.15em;
+    margin: 0 auto; /* this line will place the pages horizontally centered in the window */
+    position: relative;
+    /* the top values will vary according to the page and will be set via JS */
 }
 
 .articleTextPage p{
   margin-top:0;
 }
 
-.pagenr, .imgnr {
-  text-align: center; font-size: .8em;
-}
 
 
-#MessagePage {
-    /* height: 300px; */
+#MessagePage, #BlockMessagePage {
     background-color: rgb(192, 199, 199);
     color: #fff;
     font-family: 'Open Sans';
@@ -599,8 +587,23 @@ li.selected{
     text-align: center;
     line-height: 33px;
 }
+.numPages, .pageNr {
+    text-align: center;
+    color: #928e8e;
+    /*padding-top: 20px;*/
+    font-size: small;
+}
+.pageNr{
+    position: absolute;
+    bottom: 0.25em;
+    width: inherit;
+}
 
-.pagenr, .imgnr {
+#MessagePage .pageNr , #BlockMessagePage .pageNr{
+    visibility: hidden;
+}
+
+/*.pagenr, */.imgnr {
   text-align: center; font-size: .8em;
 }
 
@@ -886,7 +889,7 @@ input[type="checkbox"]{display:none;}
 
 #poll {
   margin: 10px 15px 10px 15px;
-  width:100%;
+  /*width:100%;*/
   font-family: 'Open Sans', sans-serif;
   /*background-color: white;*/
   /*position: relative;
@@ -942,10 +945,7 @@ input[type="checkbox"]{display:none;}
 
 #question {
   padding:0px 30px 0px 0px;
-  text-align:left;
   margin: 0px 10px 10px 0px;
-  position:relative;
-  float:left;
   line-height: 18px;
   font-size: 15px;
 }
@@ -1088,22 +1088,30 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-	margin-top: 50px;
-	text-align: left;
-  position:relative;
-  background-color: #434343;
-  color: white;
-  font-family: 'Open Sans';
-  font-weight:lighter;
-  padding:5px;
-  display:inline-block;
-  width: 100%;
+    margin-top: 50px;
+    text-align: left;
+    /*position:relative;*/
+    background-color: #434343;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight:lighter;
+    /*padding:5px;*/
+    /*display:inline-block;
+    width: 100%;*/
+    padding-bottom: 40px;
 }
 
 #love {
-
+  background-color: #008080;
   text-align: center;
   font-size: 14px;
+  padding: 15px;
+  width: inherit;
+  vertical-align: middle;
+}
+
+#footer ul{
+    padding: 5px;
 }
 
 #footer li {
@@ -1128,19 +1136,6 @@ input[type="checkbox"]{display:none;}
 
 }
 
-
-  /*.explore-graphic{
-	/* just as an example! */
-	/* if you comment this out, the center will be filled as the rest of the svg */
-	/*fill: white; */
-	/*stroke: #008080;
-  stroke-width:2px;
-} */
-
-/* tour */
-/* .popover{
-  width: 276px;
-}*/
 
 /* General navigation svg styles --------------------------------------------------*/
 .selected .tab-icon  {   /* the svg selected is turquiose */
@@ -1247,7 +1242,7 @@ stroke-width: 4px;
  stroke-width: 6px;
  fill:none;
  margin:0px 5px;
-
+ vertical-align: middle;
 }
 
 .NewsUpdate-check {

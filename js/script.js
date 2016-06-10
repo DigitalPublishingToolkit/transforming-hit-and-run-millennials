@@ -323,7 +323,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
         var newPage = $('<div class="articleTextPage" />');
         contentBox.empty().append(newPage);
         //this will add blank space to the end of pages so that they all have the same height
-        $('.articleTextPage').css('min-height',pageHeight+'px');
+        $('.articleTextPage').css({'min-height':pageHeight+'px'});
         //start off with p.lead content
         var pageText = '<p class="lead">' + lead + '</p>';
         for(var i = 0; i < words.length; i++) {
@@ -341,27 +341,39 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
                                           : words[i];
             //add betterPageText (defined in the line above) as content of newPage
             newPage.html('<p>'+betterPageText+'</p>');
-
+            console.log(newPage.height());
             //Check if the page is too long
-            if(newPage.height() <= pageHeight) { //page height is 300px (defined above)
-              //text still fits
-              pageText = betterPageText;
-            } else {
-                //reset the text
+            if(newPage.height() > pageHeight ) { //page height is 300px (defined above)
+              
+              //reset the text
                 newPage.html(pageText);
                 //and insert a copy of the page at the start of the document
                 newPage.clone().insertBefore(newPage);
                 //start new page content where it stopped (fix for last word missing)
                 pageText = words[i];
+              
+            } else {
+                //text still fits
+                pageText = betterPageText;
             }
-
+          //newPage.css({'max-height':pageHeight + 'px !important','min-height':pageHeight + 'px !important'});
         }
-        //add 'MessagePage' after the second page ( .eq(1) )
-        $('.articleTextPage').eq(1).after('<div id="MessagePage" class="articleTextPage" />');
+        //add 'BlockMessagePage' after the first page ( .eq(0) )
+        $('.articleTextPage').eq(0).after('<div id="BlockMessagePage" class="articleTextPage" />');
+        //define content for #BlockMessagePage
+        $('#BlockMessagePage').html('<p>BLOCK MESSAGE<br><br><span class="link-check-update"><a class="linkUpdate"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></a></span></p>');
+        //define a height to this div
+        //$('#BlockMessagePage').css('height', pageHeight+'px');
+         $('#BlockMessagePage').height(pageHeight  +'px').css('min-height', pageHeight+'px !important');
+        
+        //add 'MessagePage'  after the last text/content page
+        $('.articleTextPage').last().after('<div id="MessagePage" class="articleTextPage" />');
         //define content for #MessagePage
         $('#MessagePage').html('<p>Don\'t want to miss your<br>must-read articles?<br><br>Sign up today to get your PERSONAL NEWS UPDATES!<br><br><span class="link-check-update"><a class="linkUpdate"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></a></span></p>');
         //define a height to this div
-        $('#MessagePage').css('height', pageHeight+'px');
+        $('#MessagePage').height(pageHeight +'px').css('min-height', pageHeight+'px !important');
+        
+        $('.articleTextPage').css({'max-height':pageHeight + 'px !important','min-height':pageHeight + 'px !important'});
     }
 
     //$(window).resize(paginate).resize();
@@ -385,8 +397,8 @@ if($('#paginated-content').length){
       for(var n=0; n < numPages; n++){
         $('.articleTextPage').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n *  (- pageHeight - 27),
-            left: n  * 4
+            top: n * (- 33 - pageHeight),
+            left: n  * 3
           });
           leftPos.push(n*4);
           //add page numbers (needs styling)
@@ -464,8 +476,8 @@ if($('#paginated-content').length){
 
         $('.article-img').eq(n).css({
             zIndex: 100 - n , //change 100 by another number if there are too many pages
-            top: n * (- imgHeight - 8 ) ,
-            left: n  * 4
+            top: n * (- imgHeight - 6 ) ,
+            left: n  * 3
           });
           //write nrPhoto
           $('.imgnr').eq(n).html((n+1)+'/'+numImages);

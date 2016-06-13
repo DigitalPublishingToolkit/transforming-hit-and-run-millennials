@@ -622,15 +622,14 @@ li.selected{
 }
 
 #MessagePage, #BlockMessagePage {
-    background-color: rgb(192, 199, 199);
-    color: #fff;
+    /*background-color: rgb(192, 199, 199);*/
+    color: #666;
     font-family: 'Open Sans';
     font-size: x-large;
     text-align: center;
     line-height: 33px;
 }
-
-#BlockMessagePage{
+/*#BlockMessagePage{
   padding: 0;
 }
 
@@ -1116,12 +1115,12 @@ input[type="checkbox"]{display:none;}
     background: linear-gradient(90deg, #D9534F 67%, green 33%);
     top: 5px;
     /*float:left;*/
-    width:100%;
+    width:95%;
     font-size: 18px;
     margin-left: 0px;
     color: white;
     border-radius: 6px;
-    box-shadow: 1px 1px 3px #999;
+    /*box-shadow: 1px 1px 3px #999;*/
 }
 
 #No {
@@ -1176,7 +1175,7 @@ input[type="checkbox"]{display:none;}
     margin-left: 0px;
     color: white;
     border-radius: 6px;
-    box-shadow: 1px 1px 3px #999;
+    /*box-shadow: 1px 1px 3px #999;*/
   }
 
 

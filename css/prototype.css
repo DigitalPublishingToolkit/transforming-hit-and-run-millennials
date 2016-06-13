@@ -1195,7 +1195,7 @@ input[type="checkbox"]{display:none;}
 
 
 #footer {
-    margin-top: 140px;
+    margin-top: 40px;
     text-align: left;
     /*position:relative;*/
     background-color: #434343;
@@ -1519,7 +1519,7 @@ span.comments-header {
   float:left;*/
   color: #5a5a5a;
   font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
+  font-weight: lfighter;
   margin: 0px 15px;
 
 }

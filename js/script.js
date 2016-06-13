@@ -438,11 +438,11 @@ if($('#paginated-content').length){
     $('.unlockText').on('click', function(){
       textUnlocked = true;
       
-      $('#BlockMessagePage').animate({
+     /* $('#BlockMessagePage').animate({
         'background-color': 'white',
         'color':'#666'
         });
-      $('#BlockMessagePage').html('Continue reading...');
+      $('#BlockMessagePage').html('Continue reading...');*/
       
       //remove the message
       //$('#BlockMessagePage').remove();

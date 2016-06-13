@@ -692,6 +692,43 @@ $('.linkUpdate').on('click', function () {
 });
 
 
+//img gallery Trending Voices
+
+var galHeight = $('.gallery').find('img').height(); /*+ $('.gallery').find('figcaption').height();*/
+
+$('.gallery').css('height',galHeight);
+
+var curFigure = 0;
+var totalPics = $('.gallery').children().length;
+
+$('#tv-left').on("click", function(){
+    $('.gallery').find('figure').eq(curFigure).removeClass('active-trend');
+     if(curFigure > 0) {
+        curFigure = curFigure - 1; 
+     }else{
+        curFigure = totalPics - 1;
+     }
+
+    $('.gallery').find('figure').eq(curFigure).addClass('active-trend');
+
+    });
+
+
+
+$('#tv-right').on("click", function(){
+    $('.gallery').find('figure').eq(curFigure).removeClass('active-trend');
+     if(curFigure < (totalPics - 1) ){
+        curFigure = curFigure + 1; 
+    }else{
+
+        curFigure = 0; 
+    }
+
+    $('.gallery').find('figure').eq(curFigure).addClass('active-trend');
+
+    });
+
+
 
 
 

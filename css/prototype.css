@@ -716,6 +716,22 @@ width: 290px;
 
 }
 
+.rel-subheader {
+ font-size: 20px;
+  /*position:relative;
+  float:left;*/
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  margin: 0px 15px;
+
+}
+
+#relatedArticles-container{
+margin-top:30px;
+
+}
+
 #TextCard1 {
 	text-align:center;
 }
@@ -818,10 +834,35 @@ width: 290px;
 #comments-img {
     width: 100%;
     position: relative;
-    
+    }
+
+#comments-container {
+ margin: 120px 0px 0px 0px
 
 }
 
+span.comments-header {
+  float:right;
+  position:relative;
+  top: -20px;
+}
+
+.comments-header{
+  font-size: 20px;
+  /*position:relative;
+  float:left;*/
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+
+
+#top{
+ font-weight:bold;
+}
+
+    
 /* bottom */
 
 #share-content{
@@ -1493,42 +1534,4 @@ input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px
   opacity: 1;
 }
 
-#comments-container {
- margin: 120px 0px 0px 0px
 
-}
-
-span.comments-header {
-  float:right;
-  position:relative;
-  top: -20px;
-}
-
-.comments-header{
-  font-size: 20px;
-  /*position:relative;
-  float:left;*/
-  color: #5a5a5a;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
-}
-
-.rel-subheader {
- font-size: 20px;
-  /*position:relative;
-  float:left;*/
-  color: #5a5a5a;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lfighter;
-  margin: 0px 15px;
-
-}
-
-#top{
- font-weight:bold;
-}
-
-#relatedArticles-container{
-margin-top:30px;
-
-}

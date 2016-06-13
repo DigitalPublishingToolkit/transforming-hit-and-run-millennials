@@ -605,7 +605,7 @@ li.selected{
     position: relative;
     /* the top values will vary according to the page and will be set via JS */
     
-    font-family: 'Open Sans';
+    font-family: 'LiberationSerif-Regular-webfont';
     color: #666;
     font-size: 13px;
 }
@@ -817,7 +817,7 @@ width: 290px;
 #comments-img {
     width: 100%;
     position: relative;
-    top: 130px;
+    
 
 }
 
@@ -1490,4 +1490,28 @@ input:checked ~ #container-div-trending-voices img{ transform: translateX(-329px
 
 .gallery figure.active-trend{
   opacity: 1;
+}
+
+#comments-container {
+ margin:120px 0px;
+
+}
+
+span.comments-header {
+  float:right;
+  position:relative;
+  top: -20px;
+}
+
+.comments-header{
+  font-size: 19px;
+  /*position:relative;
+  float:left;*/
+  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+#top{
+ font-weight:bold;
 }

@@ -610,6 +610,8 @@ li.selected{
     font-size: 13px;
 }
 
+
+
 .articleTextPage p{
   margin-top:0;
 }
@@ -627,6 +629,20 @@ li.selected{
     text-align: center;
     line-height: 33px;
 }
+
+#BlockMessagePage{
+  padding: 0;
+}
+
+/*#BlockMessagePage #articleTextPage #topPage{
+height: 300px;
+    z-index: 99;
+    top: -345px;
+    left: 3px;
+    background-color: #f27147;
+}*/
+
+
 .numPages, .pageNr {
     text-align: center;
     color: #928e8e;

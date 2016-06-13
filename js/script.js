@@ -366,7 +366,7 @@ if($('#paginated-content').length){ //if the div with the id 'paginated content'
         //add 'BlockMessagePage' after the first page ( .eq(0) )
         $('.articleTextPage').eq(0).after('<div id="BlockMessagePage" class="articleTextPage" />');
         //define content for #BlockMessagePage
-        $('#BlockMessagePage').html('<p>BLOCK MESSAGE<br><br>Lorem ipsum here you will place some text/content.<span class="unlockText"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></span></p>');
+        $('#BlockMessagePage').html('<p><img src="images/interaction-signup.png" class="unlockText" width="315" height="321" /></p>');
         //define a height to this div
         //$('#BlockMessagePage').css('height', pageHeight+'px');
          $('#BlockMessagePage').height(pageHeight  +'px').css('min-height', pageHeight+'px !important');

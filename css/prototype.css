@@ -1385,7 +1385,12 @@ stroke-width: 4px;
 }
 
 #tv-left{float:left;}
-#tv-right{float:right;}
+#tv-right{
+  float:right;
+  right: 13px;
+  position: relative;
+}
+
 #discussion-poll{clear: both;}
 
 .tv-navig{

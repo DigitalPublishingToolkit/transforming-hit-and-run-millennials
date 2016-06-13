@@ -627,7 +627,7 @@ $(".NewsUpdate-check").on('click', function(){
 $('#banner').on('click', function () {
   var bP = $('#banner');
   var bPPos = bP.position();
-  if(bPPos.left == -340){
+  if(bPPos.left == -330){
     $('#banner').animate({
     'left': '-5px'
     }, 800, function(){
@@ -637,7 +637,7 @@ $('#banner').on('click', function () {
     $('.close-banner').on('click', function(){
       $('.close-banner').css('visibility','hidden');
       $('#banner').animate({
-      'left': '-340px'
+      'left': '-330px'
       }, 250);
     });
   }

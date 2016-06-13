@@ -85,7 +85,7 @@ button.cancel{
     line-height: 23px;
     /*z-index: 500;*/
     position: fixed;
-    left: -340px;
+    left: -330px;
     bottom: 20%;
     z-index: 500;
     width: 80%;
